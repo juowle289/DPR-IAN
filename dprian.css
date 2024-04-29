@@ -203,10 +203,12 @@ header ul li a{
 
 /* //TODO: BARS         */
 
-#hamburger {display: none;  transition: transform 0.3s ease;}
+#hamburger, #hamburger-label {display: none;}
+
 
 header .fa-bars {
     display: none;
+    font-size: 1.3em;
     z-index: 52;
 }
 
@@ -215,8 +217,9 @@ header .fa-bars {
     position: absolute;
     top: 0; right: -15em;
     background-color: #000;
-    width: 30vh;
+    width: 40vh;
     height: 100vh;
+    font-size: 1.3em;
     z-index: -1;
     transition: 450ms ease;
     opacity: 0.5;
