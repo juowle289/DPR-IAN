@@ -10,11 +10,6 @@ button.addEventListener('click', () => {
     
     message.style.display = 'block';
     message.textContent = 'Submited !';
-
-    // Thời gian biến mất
-    // setTimeout(() => {
-    //     message.style.display = 'none';
-    // }, 3000)
 })
 
 var Vietnam = document.getElementById('Vietnam');
