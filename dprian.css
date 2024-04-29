@@ -58,7 +58,7 @@
 
     body article {
         width: 100%;
-        margin: -7em 0 -3em 0;
+        margin: 0 0 -3em 0;
         font-size: .8em;
     }
 
@@ -355,32 +355,30 @@ article p {font-family: 'Niveau Grotesk', sans-serif;}
     cursor: pointer;
 }
 
-.reference .title button a {
+.reference button a {
     color: #eff0f3;
     font-size: 4em;
     z-index: 3;
 }
 
-.reference .title button:hover a{
+.reference button:hover a{
     color: #000;
 }
 
-.reference .title button::before {
+.reference button::before {
     content: '';
-    width: 0em; height: 8em;
+    width: 0em; height: 100%;
     background-color: #feec93;
     position: absolute;
     left: 0;
-    margin-top: -1em;
+    margin-top: -.8em;
     z-index: -1;
     transition: 250ms ease;
 }
 
-.reference .title button:hover::before{
+.reference button:hover::before{
     width: 100%;
 }
-
-
 
 .videos :is(.song1, .song2) {
     font-size: 1.2em;
@@ -496,6 +494,7 @@ footer {
     text-align: center;
     padding: 3em 0;
     color: #eff0f3;
+    border-top: .1em solid #feec93;
 }
 
 footer h4 {
@@ -545,14 +544,13 @@ footer ul {
     text-decoration: underline;
 }
 
-details summary i {transition: 300ms ease;}
-
 summary {
     font-size: 1.3em;
     margin-bottom: 1em;
     margin-top: 1em;
     cursor: pointer;
     text-align: center;
+    text-decoration: underline;
     transition: 300ms ease;
 }
 
@@ -560,9 +558,4 @@ summary:hover {
     transform: translateY(.2em);
     color: #feec93;
     filter: drop-shadow(1px 1px 5px rgba(254, 236, 147, .8));
-}
-
-summary:hover i {
-    transform: rotate(90deg) translateY(-.2em);
-    color: #feec93;
 }
