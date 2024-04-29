@@ -16,7 +16,10 @@
 
 <body>
     <header>
-        <div class="logo">Juowle</div>
+        <div class="logo">
+            <a href="dprian.html"><img src="Image-source/logo-J.png"></a>
+            Juowle
+            </div>
         <ul>
             <li><a href="https://www.facebook.com/Duocthattha"><i class="fa-brands fa-facebook"></i></a></li>
 
@@ -26,6 +29,28 @@
 
             <li><a href="letienduoc5@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
         </ul>
+
+        <input type="checkbox" id="hamburger">
+        <label for="hamburger" id="hamburger-label"><i class="fa-solid fa-bars" id="bars-icon"></i></label>
+        
+        <div class="bars">
+            <ul id="head-bars">
+                <li><a href="https://www.facebook.com/Duocthattha"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://open.spotify.com/user/31pm2sncp7nyw7o7i4ncnep25k3i?si=4a087f6556c94839"><i class="fa-brands fa-spotify"></i></a></li>
+                <li><a href="https://www.instagram.com/juowlee/"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="mailto:letienduoc5@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+            </ul>
+            <footer>
+                <div class="logo"><img src="Image-source/logo-J.png" alt=""></div>
+                <div id="foot-bars">
+                    <p>&copy;2024 Juowle. All Rights Reserved.</p>
+                    <p id="text-underline">Terms & conditions.</p>
+                    <p id="text-underline">Privacy Policy.</p>
+                    <p id="text-underline">Cookie Policy.</p>
+                </div>
+            </footer>
+        </div>
+        
     </header>
 
     <figure>
@@ -33,7 +58,7 @@
         <figcaption>
             <h1>Nerves</h1>
             <h6><span style="color: #feec93;">|</span> DPR IAN</h6>
-            <button><a href="https://youtu.be/KlEbnOZ9DZQ?si=Pii4HoZl-A6-ob5t" target="_blank">LISTEN NOW</a></button>
+            <button><a href="https://youtu.be/KlEbnOZ9DZQ?si=Pii4HoZl-A6-ob5t" target="_blank" id="listen">LISTEN NOW</a></button>
         </figcaption>
     </figure>
     <article>
@@ -44,6 +69,7 @@
         </p>
 
     </article>
+    
     <main>
         <div class="title-large">MY PLAYLIST</div>
         <section class="play-list">
@@ -176,20 +202,30 @@
                         <p><a href="https://fonts.google.com/specimen/Poppins" target="_blank">Google fonts</a></p>
                     </div>
                     <div class="bookmark">
-                        <h3>Icons/Illustrations</h3>
+                        <h3>Icons</h3>
                         <p><a href="https://fontawesome.com/search" target="_blank">Font Awesome</a></p>
                         <p><a href="https://iconscout.com" target="_blank">IconScout</a></p>
                         <p><a href="https://icons8.com/icons" target="_blank">icon8</a></p>
-                        <p><a href="https://undraw.co/illustrations" target="_blank">unDraw</a></p>
+                        <p><a href="https://www.iconfinder.com" target="_blank">iconfinder</a></p>
+                    </div>
+                    <div class="bookmark">
+                        <h3>Illustrations</h3>
+                        <p><a href="https://dribbble.com" target="_blank">Dribbble</a></p>
                         <p><a href="https://www.openpeeps.com" target="_blank">Open Peeps</a></p>
                         <p><a href="https://opendoodles.com" target="_blank">Open Doodles</a></p>
-                        <p><a href="https://www.iconfinder.com" target="_blank">iconfinder</a></p>
                     </div>
                 </div>
             </main>
         </details>
 
     <footer>
+        <div class="logo"><img src="Image-source/logo-J.png" alt=""></div>
+        <ul>
+            <p>&copy;2024 Juowle. All Rights Reserved.</p>
+            <p id="text-underline">Terms & conditions.</p>
+            <p id="text-underline">Privacy Policy.</p>
+            <p id="text-underline">Cookie Policy.</p>
+        </ul>
         <ul>
             <li><a href="https://www.facebook.com/Duocthattha"><i class="fa-brands fa-facebook"></i></a></li>
 
@@ -199,11 +235,19 @@
 
             <li><a href="letienduoc5@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
         </ul>
-        <h4>&copy;2024 All Rights Reserved</h4>
-        <h4>Powered by <span style="color: #feec93;">Duoc</span></h4>
     </footer>
 
     <script src="dprian.js"></script>
+    <script>
+        document.getElementById('hamburger-label').addEventListener('click', function() {
+            const barsIcon = document.getElementById('bars-icon');
+            if (document.getElementById('hamburger').checked) {
+                barsIcon.style.transform = 'rotate(0deg)';
+            } else {
+                barsIcon.style.transform = 'rotate(90deg)';
+            }
+        });
+    </script>
 </body>
 
 </html>

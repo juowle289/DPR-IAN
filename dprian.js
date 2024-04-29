@@ -12,6 +12,8 @@ button.addEventListener('click', () => {
     message.textContent = 'Submited !';
 })
 
+// TODO: SPOTIFY 
+
 var Vietnam = document.getElementById('Vietnam');
 var idiosyncrasy = document.getElementById('idiosyncrasy');
 var female = document.getElementById('female');
@@ -29,3 +31,4 @@ female.addEventListener('click', function(){
 male.addEventListener('click', function(){
     window.open('https://open.spotify.com/playlist/0x9GQNsycTnRauVDsVej4l?si=445aeb8d04044393', '_blank');
 })
+
