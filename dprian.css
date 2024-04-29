@@ -31,6 +31,11 @@
     body header {
         width: 100%;
         font-size: 1em;
+        height: 4em;
+    }
+
+    body header a img {
+        font-size: 1.3em;
     }
 
     body header ul {display: none;}
@@ -39,6 +44,8 @@
         display: block;
         transition: 300ms ease;
     }
+
+    body header #hamburger-label {display: block;}
 
     header #hamburger:checked ~ .bars {
         transform: translateX(-15em);
@@ -176,12 +183,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 50;
+    z-index: 56;
 }
 
 header .logo {
     display: flex;
     align-items: center;
+    z-index: -1;
 }
 
 header .logo img {
@@ -193,12 +201,12 @@ header ul{
     display: flex;
     color: #eff0f3;
     gap: 1.3em;
-    z-index: 999;
+    z-index: 55;
 }
 
 header ul li a{
     color: #eff0f3;
-    z-index: 999;
+    z-index: 55;
 }
 
 /* //TODO: BARS         */
@@ -208,7 +216,7 @@ header ul li a{
 
 header .fa-bars {
     display: none;
-    font-size: 1.3em;
+    font-size: 1.6em;
     z-index: 52;
 }
 
@@ -222,7 +230,7 @@ header .fa-bars {
     font-size: 1.3em;
     z-index: -1;
     transition: 450ms ease;
-    opacity: 0.5;
+    opacity: 0;
 }
 
 .bars #head-bars {
@@ -307,7 +315,7 @@ article {
     text-align: center;
     font-size: 1.3em;
     position: absolute;
-    margin-top: -6em;
+    margin-top: -10em;
 }
 
 article p {font-family: 'Niveau Grotesk', sans-serif;}
@@ -572,7 +580,11 @@ form button:hover::before{
     flex-wrap: wrap;
 }
 
-.bookmark {margin-bottom: 1em;}
+.bookmark {
+    width: 30%;
+    margin-bottom: 1em;
+    text-align: left;
+}
 
 .bookmark p a,
 .bookmark h3 {
