@@ -240,6 +240,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const playList     = document.querySelector('.play-list');
     const titleLarge   = document.querySelector('.title-large');
     const reference    = document.querySelector('.reference');
+
     const titleSongs   = document.getElementById('songs');
     const videos       = document.querySelector('.videos');
     const titleContact = document.getElementById('contact');
@@ -257,32 +258,34 @@ document.addEventListener('DOMContentLoaded', function () {
             header.classList.remove('effHeader');
         }
 
-        if(scrollPos > 500) { // fix play-list 
+        if(500 < scrollPos && scrollPos < 1450) { // fix play-list 
             playList.classList.add('toPos');
             titleLarge.classList.add('toPos');
+            clfeatured.classList.add('border');
         }else {
             playList.classList.remove('toPos');
             titleLarge.classList.remove('toPos');
+            clfeatured.classList.remove('border');
         }
 
-        if(scrollPos > 1400) { // fix reference 
+        if(1400 < scrollPos && scrollPos < 2150) { // fix reference 
             reference.classList.add('leftPos');
+            clnews.classList.add('border');
         }else {
             reference.classList.remove('leftPos');
+            clnews.classList.remove('border');
         }
 
-        if(scrollPos > 2100) { // fix title 
+        if(scrollPos > 2100) { // fix  songs
             titleSongs.classList.add('reveal');
             titleContact.classList.add('reveal');
+            videos.classList.add('toPos');
+            clsongs.classList.add('border');
         }else {
             titleSongs.classList.remove('reveal');
             titleContact.classList.remove('reveal');
-        }
-
-        if(scrollPos > 2150) { // fix  songs
-            videos.classList.add('toPos');
-        }else {
             videos.classList.remove('toPos');
+            clsongs.classList.remove('border');
         }
     });
 });

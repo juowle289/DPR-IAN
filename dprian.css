@@ -242,6 +242,11 @@ ul label i {
   font-size: 1.3em;
 }
 
+#header-menu a{
+  border: .1em solid #0000;
+  padding: .1em .3em;
+}
+
 #header-menu a::before {
   position: absolute;
   content: "";
@@ -488,7 +493,6 @@ article p {
 
 .play-list {
   width: 100%;
-  margin-bottom: 8em;
   flex-wrap: wrap;
   display: flex;
   justify-content: space-around;
@@ -559,6 +563,7 @@ article p {
     transform: rotate(-360deg);
   }
 }
+
 .anirorate {
   position: absolute;
   margin-top: -7em;
@@ -574,10 +579,12 @@ article p {
 .reference .title {
   z-index: 5;
 }
+
 .reference .title :is(h1, h5) {
   font-size: 3.6em;
   font-weight: 300;
 }
+
 .reference .title button {
   position: relative;
   width: 30em;
@@ -619,7 +626,7 @@ article p {
 /* // TODO  Video / Songs  */
 .videos {
   opacity: 0;
-  margin-top: 8em;
+  margin-bottom: 10em;
 }
 
 .videos :is(.song1, .song2) {
@@ -852,5 +859,10 @@ footer .logo {
 .reveal {
   opacity: 1;
   letter-spacing: 0;
+  margin-top: 0;
   transition: 1s ease;
-}/*# sourceMappingURL=dprian.css.map */
+}
+
+.border{
+  border: .1em solid var(--color-main);
+}
