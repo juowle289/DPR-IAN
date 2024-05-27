@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 
-// TODO Search 
+//  Search 
 const search = document.getElementById('search');
 const searchBox = document.getElementById('search-box');
 
@@ -39,68 +39,11 @@ search.addEventListener('change', function(){
     }
 });
 
-document.getElementById('hamburger-label').addEventListener('click', () => {
-    const bars = document.querySelector('.bars');
-    const barsIcon =  document.getElementById('bars-icon');
-    const hbgCheckbox = document.getElementById('hamburger');
-    
-    if (hbgCheckbox.checked) {
-        barsIcon.style.transform = "rotate(180deg)";
-        barsIcon.style.color = "#feec93";
 
-        bars.style.transform = "translateX(-15em)";
-        bars.style.opacity = "1";
-        bars.style.boxShadow = "-10em 0px 10px rgba(0, 0, 0, 0.6)";
-    } else {
-        barsIcon.style.transform = "rotate(0deg)";
-        barsIcon.style.color = "#fff";
-
-        bars.style.transform = "translateX(0em)";
-        bars.style.opacity = "0";
-        bars.style.boxShadow = "none";
-    }
-});
-
-
-
-// TODO SPOTIFY 
-
-const Vietnam = document.getElementById('Vietnam');
-const idiosyncrasy = document.getElementById('idiosyncrasy');
-const female = document.getElementById('female');
-const male = document.getElementById('male');
-
-Vietnam.addEventListener('click', function(){
-    window.open('https://open.spotify.com/playlist/4YJnIVHbU50DhkGKGWKsiv?si=e24da81abcd84fdc', '_blank');
-});
-idiosyncrasy.addEventListener('click', function(){
-    window.open('https://open.spotify.com/playlist/5FUYKwQRiVasnuxYSd32Ti?si=66071eacc48b4804', '_blank');
-});
-female.addEventListener('click', function(){
-    window.open('https://open.spotify.com/playlist/031gqm3DJuYIITCgJFV0oC?si=576f4b88dfec48d2', '_blank');
-});
-male.addEventListener('click', function(){
-    window.open('https://open.spotify.com/playlist/0x9GQNsycTnRauVDsVej4l?si=445aeb8d04044393', '_blank');
-});
-
-// TODO Btn Message 
-const button = document.getElementById('alertBtn');
-const message = document.getElementById('alertMessage');
-
-button.addEventListener('click', () => {
-
-    preventDefault();
-
-    button.style.display = 'none';
-    
-    message.style.display = 'block';
-    message.textContent = 'Submited !';
-})
-
-
-// TODO Suggest   
+//  Suggest   
 const searchSuggest = document.getElementById('search-suggest');
 
+// FIX song 
 const songs = [
     {
         imgSrc: 'Image-source/Collections/MoodswingsInThisOrder.jpg',
@@ -216,7 +159,7 @@ searchBox.addEventListener('input', () => {
     }
 });
 
-// TODO sự kiện cho icon search 
+//  sự kiện cho icon search 
 document.querySelector('label i.fa-magnifying-glass').addEventListener('click', () => {
     const query = searchBox.value.toLowerCase();
     const toSong = songs.find(song => song.title.toLowerCase() === query);
@@ -225,7 +168,7 @@ document.querySelector('label i.fa-magnifying-glass').addEventListener('click', 
     }
 } );
 
-// TODO Log in && Sign up 
+//  Log in && Sign up 
 
 const logIn  = document.getElementById('logIn');
 const signUp = document.getElementById('signUp');
@@ -235,18 +178,14 @@ const signUp = document.getElementById('signUp');
 
 // fix EFFECT  
 document.addEventListener('DOMContentLoaded', function () {
-    const header       = document.getElementById('header');
+    const header = document.getElementById('header');
+    const lyric  = document.querySelector('lyric');
 
-    const playList     = document.querySelector('.play-list');
-    const titleLarge   = document.querySelector('.title-large');
-    const reference    = document.querySelector('.reference');
-    const titleSongs   = document.getElementById('songs');
-    const videos       = document.querySelector('.videos');
-    const titleContact = document.getElementById('contact');
+    const clLyrics = document.querySelector('.clLyrics');
+    const clAbout  = document.querySelector('.clAbout');
+    const clQamsA  = document.querySelector('.clQamsA');
+    const comments = document.querySelector('.comments');
 
-    const clfeatured = document.querySelector('.clfeatured');
-    const clnews     = document.querySelector('.clnews');
-    const clsongs    = document.querySelector('.clsongs');
 
     window.addEventListener('scroll', function () {
         const scrollPos = window.scrollY || document.documentElement.scrollTop;
@@ -257,12 +196,10 @@ document.addEventListener('DOMContentLoaded', function () {
             header.classList.remove('effHeader');
         }
 
-        if(scrollPos > 500) { // fix play-list 
-            playList.classList.add('toPos');
-            titleLarge.classList.add('toPos');
+        if(scrollPos > 500 && scrollPos <1400) { // fix Lyric 
+            clLyrics.classList.add('boder');
         }else {
-            playList.classList.remove('toPos');
-            titleLarge.classList.remove('toPos');
+            clLyrics.classList.remove('boder');
         }
 
         if(scrollPos > 1400) { // fix reference 
@@ -279,7 +216,7 @@ document.addEventListener('DOMContentLoaded', function () {
             titleContact.classList.remove('reveal');
         }
 
-        if(scrollPos > 2150) { // fix  songs
+        if(scrollPos > 2300) { // fix  songs
             videos.classList.add('toPos');
         }else {
             videos.classList.remove('toPos');
