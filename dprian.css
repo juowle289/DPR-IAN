@@ -105,13 +105,17 @@
     margin: 0 0 -3em 0;
     font-size: 0.8em;
   }
-
+  
   main .title-large {
     font-size: 2em;
     margin-top: 3em;
+    letter-spacing: 0em;
+    opacity: 1;
   }
 
   main .play-list {
+    margin-top: 0em;
+    opacity: 1;
     margin-bottom: 0;
   }
 
@@ -125,6 +129,8 @@
 
   body .reference {
     gap: 5em;
+    opacity: 1;
+    margin-left: 0em;
   }
 
   body .reference .title :is(h1, h5) {
@@ -284,7 +290,7 @@ body header .fa-bars-staggered {
   top: 0;
   right: -15em;
   background-color: #000;
-  width: 40vh;
+  width: 20em;
   height: 100vh;
   font-size: 1.3em;
   z-index: -1;
@@ -295,6 +301,7 @@ body header .fa-bars-staggered {
 .bars #head-bars {
   gap: 0.6em;
   display: flex;
+  font-size: .8em;
   margin: 5em 0;
   justify-content: center;
 }

@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 
-//  Search 
+// todo  Search 
 const search = document.getElementById('search');
 const searchBox = document.getElementById('search-box');
 
@@ -40,7 +40,7 @@ search.addEventListener('change', function(){
 });
 
 
-//  Suggest   
+// todo Suggest   
 const searchSuggest = document.getElementById('search-suggest');
 
 // FIX song 
@@ -159,7 +159,7 @@ searchBox.addEventListener('input', () => {
     }
 });
 
-//  sự kiện cho icon search 
+// todo icon search 
 document.querySelector('label i.fa-magnifying-glass').addEventListener('click', () => {
     const query = searchBox.value.toLowerCase();
     const toSong = songs.find(song => song.title.toLowerCase() === query);
@@ -168,23 +168,176 @@ document.querySelector('label i.fa-magnifying-glass').addEventListener('click', 
     }
 } );
 
-//  Log in && Sign up 
+// todo  CONTROL SONG
+document.addEventListener("DOMContentLoaded", function () {
+    const audio = document.getElementById('audio');
+    const playBtn = document.querySelector('.control');
+    const range = document.querySelector('.range');
+    const timeEl = document.querySelector('.current-time');
+    const durationEl = document.querySelector('.duration');
 
-const logIn  = document.getElementById('logIn');
-const signUp = document.getElementById('signUp');
+    playBtn.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            playBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+        } else {
+            audio.pause();
+            playBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+        }
+    });
+
+    audio.addEventListener('timeupdate', () => {
+        const currentTime = audio.currentTime;
+        const duration = audio.duration;
+        range.value = (currentTime / duration) * 100;
+
+        const currMinute = Math.floor(currentTime / 60);
+        const currSecond = Math.floor(currentTime % 60);
+        const durationMinute = Math.floor(duration / 60);
+        const durationSecond = Math.floor(duration % 60);
+
+        timeEl.textContent = `${currMinute}:${currSecond.toString().padStart(2, '0')}`;
+        durationEl.textContent = `-${durationMinute - currMinute}:${Math.abs(durationSecond - currSecond).toString().padStart(2, '0')}`;
+    });
+
+    range.addEventListener('input', () => {
+        const duration = audio.duration;
+        const value = range.value;
+        audio.currentTime = (value / 100) * duration;
+    });
+
+    audio.addEventListener('loadedmetadata', () => {
+        const duration = audio.duration;
+        const durationMinute = Math.floor(duration / 60);
+        const durationSecond = Math.floor(duration % 60);
+
+        durationEl.textContent = `${durationMinute}:${durationSecond.toString().padStart(2, '0')}`;
+    });
 
 
+    // fix disk 
+    const audioPlay = document.querySelector('.audio-play');
+    const imgAudio = document.querySelector('.img-control');
+    const imgAudioSize = document.querySelector('.img-control img');
+    const contentAudio = document.querySelector('.content-control');
+    const btnAudio = document.querySelector('.control');
+    const timeAudio = document.querySelector('.time');
+    const logoAudio = document.querySelector('.audio-play .logo');
+
+    const vinylDisk = document.getElementById('vinylMusicDisk');
+    const pioneer = document.getElementById('pioneer');
 
 
-// fix EFFECT  
+    imgAudio.addEventListener('click', () => {
+        if (imgAudioSize.style.width == "3.125em" || imgAudio.style.width == '') {
+
+            audioPlay.style.backdropFilter = "none";
+            audioPlay.style.boxShadow = "none";
+            audioPlay.style.background = "none";
+            audioPlay.style.border = "none";
+            audioPlay.style.left = "3em";
+            audioPlay.style.width = "8em";
+            audioPlay.style.transition = "350ms";
+
+            imgAudio.style.width = "fit-content";
+            imgAudio.style.borderRadius = "50%";
+            imgAudio.style.boxShadow = ".1em .2em .8em rgba(0, 0, 0, .25)";
+            imgAudio.style.transition = "550ms";
+
+            imgAudioSize.style.width = "4em";
+            imgAudioSize.style.height = "4em";
+            imgAudioSize.style.borderRadius = "50%";
+            imgAudioSize.style.transition = "550ms";
+
+            contentAudio.style.display = "none";
+            btnAudio.style.display = "none";
+            timeAudio.style.display = "none";
+            logoAudio.style.display = "none";
+
+            vinylDisk.style.opacity = "1";
+            vinylDisk.style.marginLeft = "-2.7em"
+            pioneer.style.opacity = "1";
+            pioneer.style.transform = "rotate(-30deg)";
+        }else {
+            audioPlay.style.backdropFilter = "blur(10px)";
+            audioPlay.style.boxShadow = ".1em .2em .8em rgba(0, 0, 0, .25)";
+            audioPlay.style.background = "rgba(255, 255, 255, .3)";
+            audioPlay.style.border = ".1em solid #000";
+            audioPlay.style.left = "13em";
+            audioPlay.style.width = "76em";
+
+            imgAudio.style.width = "23em";
+            imgAudio.style.borderRadius = "0";
+            imgAudio.style.boxShadow = "none";
+            
+            imgAudioSize.style.width = "3.125em";
+            imgAudioSize.style.height = "3.125em";
+            imgAudioSize.style.borderRadius = "0";
+
+            contentAudio.style.display = "flex";
+            btnAudio.style.display = "flex";
+            timeAudio.style.display = "flex";
+            logoAudio.style.display = "flex";
+
+            vinylDisk.style.opacity = "0";
+            vinylDisk.style.marginLeft = "-3em"
+            pioneer.style.opacity = "0";
+            pioneer.style.transform = "rotate(-45deg)";
+        }
+        
+        imgAudio.classList.toggle('rotateAudio');
+
+    });
+});
+
+// todo comment 
+document.addEventListener("DOMContentLoaded", () => {
+    const cmtContainer = document.getElementById('cmt-container');
+    const cmtInput = document.getElementById('cmt-input');
+    const cmtSubmit = document.getElementById('cmt-submit');
+
+    function showCmt(text) {
+        const cmtEl = document.createElement('div');
+        cmtEl.classList.add('comment');
+        cmtEl.textContent = text;
+        cmtContainer.appendChild(cmtEl);
+    }
+    
+    function loadCmt() {
+        const cmts = JSON.parse(localStorage.getItem('cmts')) || [];
+        cmts.forEach(showCmt);
+    }
+
+    cmtSubmit.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        const cmtText = cmtInput.value.trim();
+
+        if (cmtText !== '') {
+            showCmt(cmtText);
+                saveCmt(cmtText); // save comment 
+            cmtInput.value = '';
+        }
+    });
+
+    function saveCmt(cmt) {
+        const cmts = JSON.parse(localStorage.getItem('cmts')) || [];
+        cmts.push(cmt);
+        localStorage.setItem('cmts', JSON.stringify(cmt));
+    }
+
+    loadCmt();
+
+});
+
+// todo EFFECT  
 document.addEventListener('DOMContentLoaded', function () {
     const header = document.getElementById('header');
-    const lyric  = document.querySelector('lyric');
 
     const clLyrics = document.querySelector('.clLyrics');
     const clAbout  = document.querySelector('.clAbout');
     const clQamsA  = document.querySelector('.clQamsA');
-    const comments = document.querySelector('.comments');
+    const clcomments = document.querySelector('.clcomments');
 
 
     window.addEventListener('scroll', function () {
@@ -196,30 +349,30 @@ document.addEventListener('DOMContentLoaded', function () {
             header.classList.remove('effHeader');
         }
 
-        if(scrollPos > 500 && scrollPos <1400) { // fix Lyric 
-            clLyrics.classList.add('boder');
+        if(500 < scrollPos && scrollPos < 2000) { // fix Lyric 
+            clLyrics.classList.add('border');
         }else {
-            clLyrics.classList.remove('boder');
+            clLyrics.classList.remove('border');
         }
 
-        if(scrollPos > 1400) { // fix reference 
-            reference.classList.add('leftPos');
+        if(2000 < scrollPos && scrollPos < 2400) { // fix reference 
+            clAbout.classList.add('border');
         }else {
-            reference.classList.remove('leftPos');
+            clAbout.classList.remove('border');
         }
 
-        if(scrollPos > 2100) { // fix title 
-            titleSongs.classList.add('reveal');
-            titleContact.classList.add('reveal');
+        if(2400 < scrollPos && scrollPos < 2600 ) { //  fix title 
+            clQamsA.classList.add('border');
         }else {
-            titleSongs.classList.remove('reveal');
-            titleContact.classList.remove('reveal');
+            clQamsA.classList.remove('border');
         }
 
-        if(scrollPos > 2300) { // fix  songs
-            videos.classList.add('toPos');
+        if(2600 < scrollPos && scrollPos < 2900) { // fix  songs
+            clcomments.classList.add('border');
         }else {
-            videos.classList.remove('toPos');
+            clcomments.classList.remove('border');
         }
     });
 });
+
+

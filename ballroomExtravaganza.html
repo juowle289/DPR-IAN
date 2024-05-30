@@ -24,12 +24,12 @@
                 <li id="header-menu" class="clLyrics"><a href="#lyrics">Lyrics </a></li>
                 <li id="header-menu" class="clAbout"><a href="#about">About </a></li>
                 <li id="header-menu" class="clQamsA"><a href="#QampersandA">Q&A </a></li>
-                <li id="header-menu" class="comments"><a href="#cmt">Comments</a></li>
+                <li id="header-menu" class="clcomments"><a href="#cmt">Comments</a></li>
             </ul>
         </div>
         <ul>
             <input type="checkbox" id="search">
-            <input type="search" name="search" id="search-box" placeholder="Name songs...">
+            <input type="search" name="search" id="search-box" placeholder="Search for songs">
             <label for="search">
                 <li><i class="fa-solid fa-magnifying-glass"></i></li>
             </label>
@@ -163,7 +163,7 @@
 
             <aside>
                 <div class="head-aside">
-                    You may also like
+                    <p>You may also like</p>
                 </div>
                 <div class="recommend-song" onclick="window.location.href = 'nerves.html'">
                     <div class="rcm-song-img">
@@ -196,39 +196,112 @@
             </aside>
         </section>
 
-        <!-- About -->
+<!-- About -->
         <section class="about">
             <h1>About</h1>
-            <p>
-                This song is about when the world is ending. You're still looking for that perfect moment in this world
-                and who you're dancing with. Whether it could be the opposite person or just the moment where everything
-                comes together.
-                The world's ending but it doesn't even phase you because you're just so honed in on finding this perfect
-                moment on this dance floor.
-            </p>
+            <div class="summary-content">
+                <p>
+                    This song is about when the world is ending. You're still looking for that perfect moment in this
+                    world
+                    and who you're dancing with. Whether it could be the opposite person or just the moment where
+                    everything
+                    comes together.
+                    The world's ending but it doesn't even phase you because you're just so honed in on finding this
+                    perfect
+                    moment on this dance floor.
+                </p>
+            </div>
         </section>
-
+        <!-- Question and Answer -->
         <section class="QapsA">
             <h1>Q&A</h1>
             <details>
-                <summary>
-                    <div class="quote">
-                        <p>
-                            <i class="fa-solid fa-quote-left"></i>
-                            "Ballroom Extravaganza" by DPR IAN is an emotive song about a relationship that has come to
-                            an end. The narrator wishes for the relationship to be "the same again," but realizes it is
-                            too late. He describes the moments leading up to and after the breakup, from the moment "the
-                            world stopped for you" to the “ballroom extravaganza” that ultimately pulls the narrator in.
-                            Even with all of the “king’s horsemen and all the king’s men,” they could not “put [the
-                            relationship] back together again.” The song illustrates the sadness of letting go and
-                            coming to terms with a life-altering event.
-                        </p>
-                    </div>
+                <summary class="summary-title">
+                    <p>What is the mean of "Ballroom Extravaganza"?</p>
+                    <i class="fa-solid fa-angle-right"></i>
                 </summary>
+                <div class="summary-content">
+                    <p>
+                        "Ballroom Extravaganza" by DPR IAN is an emotive song about a relationship that has come to
+                        an end. The narrator wishes for the relationship to be "the same again," but realizes it is
+                        too late. He describes the moments leading up to and after the breakup, from the moment "the
+                        world stopped for you" to the “ballroom extravaganza” that ultimately pulls the narrator in.
+                        Even with all of the “king's horsemen and all the king's men,” they could not “put [the
+                        relationship] back together again.” The song illustrates the sadness of letting go and
+                        coming to terms with a life-altering event.
+                    </p>
+                </div>
+            </details>
+
+            <details>
+                <summary class="summary-title">
+                    <p>What did DPR IAN say about "Ballroom Extravaganza"?</p>
+                    <i class="fa-solid fa-angle-right"></i>
+                </summary>
+                <div class="summary-content">
+                    <p>
+                        <i class="fa-solid fa-quote-left"></i>
+                        This song is about when the world is ending. You're still looking for that perfect moment on
+                        this world and who you're dancing with. Whether it could be the opposite person or just the
+                        moment where everything comes together. The world's ending but it doesn't even phase you because
+                        you're just so honed in on finding this perfect moment on this dance floor. <br><br>
+
+                        — DPR IAN via Consequence Sound
+                    </p>
+                </div>
+            </details>
+
+            <details>
+                <summary class="summary-title">
+                    <p>Movie Teaser</p>
+                    <i class="fa-solid fa-angle-right"></i>
+                </summary>
+                <div class="summary-content">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/0cRPTCZv32s?si=rIrBllVXxi0sHEti"
+                        frameborder="0" allowfullscreen></iframe>
+                </div>
             </details>
         </section>
-
+        <!-- comment -->
+        <section class="comments">
+            <h1>Comments</h1>
+            <div class="summary-content">
+                <div class="cmt-container" id="cmt-container"></div>
+                <form class="cmt-form">
+                    <textarea id="cmt-input" placeholder="Write your comment ..."></textarea>
+                    <button type="submit" id="cmt-submit"><i class="fa-regular fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </section>
     </main>
+
+<!-- Control audio  -->
+    <article>
+        <div class="audio-play">
+            <div class="img-control">
+                <img src="Image-source/Collections/MITO.png" alt="">
+                <div class="content-control">
+                    <p>Ballroom Extravaganza</p>
+                    <p>DPR IAN</p>
+                </div>
+            </div>
+            <div class="control">
+                <i class="fa-solid fa-play"></i>
+            </div>
+            <div class="time">
+                <span class="current-time">0:00</span>
+                <input type="range" value="0" class="range">
+                <span class="duration">-3:10</span>
+            </div>
+            <div class="logo"><img src="Image-source/logo-J.png" alt=""></div>
+            <audio id="audio" src="Music-source/DPR IAN - Ballroom Extravaganza.mp3"></audio>
+        </div>
+    </article>
+
+    <div class="disk">
+        <img src="Image-source/Collections/vinylMusicDisk.jpg" alt="" id="vinylMusicDisk">
+        <img src="Image-source/Collections/pioneer.jpg" alt="" id="pioneer">
+    </div>
 
     <footer>
         <div class="logo"><img src="Image-source/logo-J.png" alt=""></div>
