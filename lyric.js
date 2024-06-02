@@ -349,19 +349,19 @@ document.addEventListener('DOMContentLoaded', function () {
             header.classList.remove('effHeader');
         }
 
-        if(500 < scrollPos && scrollPos < 2000) { // fix Lyric 
+        if(500 < scrollPos && scrollPos < 1999) { // fix Lyric 
             clLyrics.classList.add('border');
         }else {
             clLyrics.classList.remove('border');
         }
 
-        if(2000 < scrollPos && scrollPos < 2400) { // fix reference 
+        if(2000 < scrollPos && scrollPos < 2399) { // fix reference 
             clAbout.classList.add('border');
         }else {
             clAbout.classList.remove('border');
         }
 
-        if(2400 < scrollPos && scrollPos < 2600 ) { //  fix title 
+        if(2400 < scrollPos && scrollPos < 2599 ) { //  fix title 
             clQamsA.classList.add('border');
         }else {
             clQamsA.classList.remove('border');

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link href="https://fonts.cdnfonts.com/css/niveau-grotesk-regular" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/tanamera" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/anton" rel="stylesheet">
+
+    <link rel="stylesheet" href="register.css">
+    <link rel="icon" href="Image-source/logo-J.png">
+    <title>Log In</title>
+</head>
+<body>
+    <header id="header">
+        <div class="logo">
+            <a href="dprian.html"><img src="Image-source/logo-J.png"></a>
+            <!-- Juowle -->
+        </div>
+
+        <input type="checkbox" id="hamburger">
+        <label for="hamburger" id="hamburger-label"><i class="fa-solid fa-bars-staggered" id="bars-icon"></i></label>
+
+        <div class="bars">
+            <ul id="head-bars">
+                <li id="header-menu" class="clfeatured"><a href="#featured">Featured</a></li>
+                <li id="header-menu"     class="clnews"><a href="#news">News</a></li>
+                <li id="header-menu"    class="clsongs"><a href="#songs">Songs</a></li>
+    
+                <input type="checkbox" id="search">
+                <input type="search" name="search" id="search-box" placeholder="Name songs...">
+                <label for="search">
+                    <li><i class="fa-solid fa-magnifying-glass"></i></li>
+                </label>
+    
+                <div id="search-suggest" class="suggestions"></div>
+            </ul>
+
+            <footer>
+                <div class="logo"><img src="Image-source/logo-J.png" alt=""></div>
+                <div id="foot-bars">
+                    <p>&copy;2024 Juowle. All Rights Reserved.</p>
+                    <p id="text-underline">Terms & conditions.</p>
+                    <p id="text-underline">Privacy Policy.</p>
+                    <p id="text-underline">Cookie Policy.</p>
+                </div>
+            </footer>
+        </div>
+    </header>
+
+    <main>
+        <form id="login-form">
+            <div class="heading">
+                <h1>Welcome back</h1>
+                <p>Let's Sign You In</p>
+            </div>
+        <!-- input box -->
+            <div class="inputBox">
+                <label for="text">Username</label>
+                <input type="text" id="lg-userName" placeholder="Username" required>
+                <i class="fa-regular fa-circle-check" id="iconCheckUsername"></i>
+            </div>
+    
+            <div class="inputBox">
+                <label for="password">Password</label>
+                <input type="password" id="lg-password" placeholder="Password" required>
+                <i class="fa-solid fa-eye" id="revealPw"></i>
+                <i class="fa-regular fa-circle-check" id="iconCheckPassword"></i>
+            </div>
+        <!-- check box -->
+            <div class="forgotPas">
+                <a href="fogotPass.html">Forgot password?</a>
+            </div>
+
+            <button type="lg-submit" id="submit"><a href="ballroomExtravaganza.html">Log In</a></button>
+    
+            <div class="ctn">
+                <hr>
+                <p>Or Log In With </p>
+                <hr>
+            </div>
+        <!-- other acc -->
+        <div class="other-acc">
+            <button id="other">
+                <img src="https://companieslogo.com/img/orig/GOOG-0ed88f7c.png?t=1633218227" alt="">
+            </button>
+
+            <button id="other">
+                <img src="https://cdn.freebiesupply.com/images/large/2x/apple-logo-transparent.png" alt="">
+            </button>
+        </div>
+        <!-- sign up -->
+            <div class="register">
+                <p>Don't have an account? <a href="signup.html"> Sign up.</a></p>
+            </div>
+        </form>
+
+        <!-- aside - picture -->
+        <aside id="banner">
+
+        </aside>
+    </main>
+
+
+    <script src="auth.js"></script>
+    <script src="register.js"></script>
+</body>
+</html>

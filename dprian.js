@@ -258,21 +258,18 @@ document.addEventListener('DOMContentLoaded', function () {
             header.classList.remove('effHeader');
         }
 
-        if(500 < scrollPos && scrollPos < 1450) { // fix play-list 
+        if(600 < scrollPos && scrollPos < 1449) { // fix play-list 
             playList.classList.add('toPos');
             titleLarge.classList.add('toPos');
             clfeatured.classList.add('border');
         }else {
-            playList.classList.remove('toPos');
-            titleLarge.classList.remove('toPos');
             clfeatured.classList.remove('border');
         }
 
-        if(1400 < scrollPos && scrollPos < 2150) { // fix reference 
+        if(1450 < scrollPos && scrollPos < 2099) { // fix reference 
             reference.classList.add('leftPos');
             clnews.classList.add('border');
         }else {
-            reference.classList.remove('leftPos');
             clnews.classList.remove('border');
         }
 
@@ -282,9 +279,6 @@ document.addEventListener('DOMContentLoaded', function () {
             videos.classList.add('toPos');
             clsongs.classList.add('border');
         }else {
-            titleSongs.classList.remove('reveal');
-            titleContact.classList.remove('reveal');
-            videos.classList.remove('toPos');
             clsongs.classList.remove('border');
         }
     });

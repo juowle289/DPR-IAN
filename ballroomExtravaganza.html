@@ -10,7 +10,7 @@
     <link href="https://fonts.cdnfonts.com/css/anton" rel="stylesheet">
 
     <link rel="icon" href="Image-source/logo-J.png">
-    <link rel="stylesheet" href="ballroomExtravaganza.css">
+    <link rel="stylesheet" href="lyrics.css">
 
     <title>DPR IAN - Ballroom Extravaganza</title>
 </head>
@@ -36,8 +36,8 @@
 
             <div id="search-suggest" class="suggestions"></div>
 
-            <li id="signUp"><a href="singUp.html">Sign Up</a></li>
-            <li id="logIn"><a href="logIn.html">Log In</a></li>
+            <li id="signUp"><a href="signup.html">Sign Up</a></li>
+            <li id="logIn"><a href="login.html">Log In</a></li>
         </ul>
 
         <input type="checkbox" id="hamburger">
@@ -84,7 +84,7 @@
     </nav>
 
     <main>
-        <section class="Lyric-song">
+        <section class="Lyric-song" id="lyrics">
             <!-- Lyrics -->
             <div class="lyric">
                 <span><i class="fa-solid fa-circle-info"></i> Ballroom Extravaganza Lyrics</span>
@@ -197,7 +197,7 @@
         </section>
 
 <!-- About -->
-        <section class="about">
+        <section class="about" id="about">
             <h1>About</h1>
             <div class="summary-content">
                 <p>
@@ -212,8 +212,8 @@
                 </p>
             </div>
         </section>
-        <!-- Question and Answer -->
-        <section class="QapsA">
+<!-- Question and Answer -->
+        <section class="QapsA" id="QampersandA">
             <h1>Q&A</h1>
             <details>
                 <summary class="summary-title">
@@ -262,8 +262,8 @@
                 </div>
             </details>
         </section>
-        <!-- comment -->
-        <section class="comments">
+<!-- comment -->
+        <section class="comments" id="cmt">
             <h1>Comments</h1>
             <div class="summary-content">
                 <div class="cmt-container" id="cmt-container"></div>
@@ -321,7 +321,8 @@
         </ul>
     </footer>
 
-    <script src="ballroomExtravaganza.js"></script>
+    <script src="lyric.js"></script>
+    <script src="auth.js"></script>
 
 </body>
 

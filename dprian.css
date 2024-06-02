@@ -188,6 +188,7 @@
     overflow-x: hidden;
   }
 }
+
 body {
   background-color: #000;
   overflow-x: hidden;
@@ -503,6 +504,7 @@ article p {
   flex-wrap: wrap;
   display: flex;
   justify-content: space-around;
+  margin-bottom: 5em;
     margin-top: 6em;
     opacity: 0;
 }
@@ -540,6 +542,7 @@ article p {
   justify-content: center;
   gap: 8em;
   padding: 5em 0;
+  margin-bottom: 5em;
     opacity: 0;
     margin-left: -10em;
 }
