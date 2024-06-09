@@ -77,7 +77,7 @@ const songs = [
         imgSrc: 'Image-source/Collections/hitMeHardAndSoft.jpg',
         title : 'BLUE',
         artist: 'Billie Eilish',
-        views : '611.1k',
+        views : '814.7k',
         link  : 'blue.html'
     },
     {

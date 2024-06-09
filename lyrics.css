@@ -44,7 +44,7 @@
 }
 
 body {
-  background: #fff;
+  background: #000;
   overflow-x: hidden;
 }
 
@@ -58,7 +58,7 @@ header {
   color: var(--color-white);
   background-color: rgba(0, 0, 0, 0);
   border-bottom: 0.01em solid rgba(0, 0, 0, 0);
-  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   font-weight: 500;
   justify-content: space-between;
   align-items: center;
@@ -269,6 +269,7 @@ nav img {
   border-radius: 0.1em;
   margin: 6em 0 0 0;
   position: absolute;
+  /* image-rendering: pixelated; */
 }
 
 .album-img {
@@ -352,11 +353,18 @@ section {color: #000;}
   line-height: 1.6em;
 }
 
+/* change color theme */
 .lyric b {
-  color: #a00000;
+  /* color: #0d3552; */
   text-decoration: underline;
+  text-decoration-thickness: .1em;
+  text-underline-offset: .15em;
 }
-
+  
+.lyric q {
+  /* color: #0d3552; */
+  quotes: '[' ']';
+}
 
 aside {
   position: sticky;
@@ -393,6 +401,7 @@ aside .recommend-song:hover {
 aside .recommend-song img {
   width: 4em; height: 4em;
   object-fit: contain;
+  image-rendering: pixelated;
 }
 
 aside .recommend-song .rcm-song-content h3 {
@@ -434,6 +443,8 @@ details {
   padding: 1em;
   font-size: 1.2em;
   color: #000;
+  overflow-wrap: break-word;
+  text-indent: 1em;
 }
 
 .summary-title {
@@ -482,6 +493,7 @@ article .img-control {
 article .img-control img {
   width:  3.125em; height:  3.125em;
   border-radius: .1em;
+  image-rendering: pixelated;
 }
 
 article .control i {
@@ -520,6 +532,7 @@ article .time {
 
 article .content-control {
   flex-direction: column;
+  text-overflow: ellipsis;
 }
 
 article .logo {
@@ -625,7 +638,6 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 2.6em 0;
-  color: var(--color-white);
   border-top: 0.1em solid var(--color-main);
 }
 
