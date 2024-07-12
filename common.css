@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    scroll-behavior: smooth;
+    font-family: var(--font-NiveauGrotesk);
+}
+
+:root {
+    --color-main: #feec93;
+    --color-white: #eff0f3;
+    --color-gray: #ddd;
+    --opac-clmain: rgba(254, 236, 147, .3);
+    --opac-white: rgba(255, 255, 255, .3);
+    --opac-black: rgba(0, 0, 0, .3);
+    --border-black: .1em solid #000;
+    --border-gray: .1em solid #ddd;
+    --font-NiveauGrotesk: "Niveau Grotesk", sans-serif;
+    --font-Anton: "Anton", sans-serif;
+}

@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
     const inputUsername = document.getElementById('lg-userName');
     const inputPassword = document.getElementById('lg-password');
@@ -42,4 +43,18 @@ document.addEventListener('DOMContentLoaded', () => {
             iconRevealPw.classList.replace("fa-eye-slash", "fa-eye");
         }
     });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('scroll', () => {
+        const header = document.getElementById('header');
+        const scrPos = window.scrollY || document.documentElement.scrollTop;
+
+        if (scrPos > 1) {
+            header.classList.add('hidden');
+        }else {
+            header.classList.remove('hidden');
+        }
+    });
+    
 });

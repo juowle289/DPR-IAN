@@ -1,28 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
-  text-decoration: none;
-  outline: none;
-  border: none;
-  scroll-behavior: smooth;
-  color: #000;
-  font-family: var(--font-NiveauGrotesk);
-}
-
-:root {
-  --color-main: #feec93;
-  --color-white: #eff0f3;
-  --color-gray: #ddd;
-  --opac-clmain: rgba(254, 236, 147, .3);
-  --opac-white: rgba(255, 255, 255, .3);
-  --opac-black: rgba(0, 0, 0, .3);
-  --border-black: .1em solid #000;
-  --border-gray: .1em solid #ddd;
-  --font-NiveauGrotesk: "Niveau Grotesk", sans-serif;
-  --font-Anton: "Anton", sans-serif;
-}
 
 ::-moz-selection {
   background-color: var(--color-main);
@@ -36,7 +11,7 @@
 
 body {
   background: #fff;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 /*  header  */
@@ -161,13 +136,12 @@ main {
 }
 
 form {
-  padding: 3em 10em ;
+  padding: 1em 8em 0 8em;
   margin: 2em 0em 3em 0em;
   border-radius: 1.8em;
   backdrop-filter: blur(20px);
   background-color: rgba(255, 255, 255, .2);
   text-shadow: 0px 1px 1px rgba(0, 0, 0, .1);
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, .26);
 }
 
 form :is(
@@ -196,14 +170,19 @@ form .inputBox {
 }
 
 .inputBox label {
+  font-size: 1em;
+}
+
+.inputBox span {
+  color: red;
   font-size: 1.2em;
 }
 
 .inputBox input, #submit {
   position: relative;
   width: 100%; height: 3.3em;
-  font-size: 1.2em;
-  border-radius: 1.3em;
+  font-size: 1.1em;
+  border-radius: 1em;
   padding: 0em 3em 0em 1em;
   margin-top: .3em;
   border: .1em solid var(--color-gray);
@@ -316,4 +295,15 @@ form .inputBox {
 
 .register a {
   font-weight: bold;
+}
+
+.hidden {
+  display: none;
+  transition: 555ms ease;
+}
+
+/* FOR Sign UP */
+#signup-form {
+  width: 50vw;
+  height: calc(100vh - 4.3em);
 }
