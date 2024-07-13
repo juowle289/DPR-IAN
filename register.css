@@ -154,6 +154,10 @@ form :is(
   height: calc(100vh - 4.3em);
 }
 
+form div a {
+  color: #000;
+}
+
 .heading {text-align: center;}
 
 .heading h1 {
