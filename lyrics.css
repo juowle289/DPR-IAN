@@ -1,25 +1,33 @@
+@media screen and (min-width: 1000px) and (max-width: 1280px) {
+  
+  body :is(header, nav) {
+    font-size: .9em;
+  }
 
-::-moz-selection {
-  background-color: var(--color-main);
-  color: #000;
-}
+  header ul label li i {
+    margin-top: .2em;
+  }
 
-::selection {
-  background-color: var(--color-main);
-  color: #000;
-}
+  main aside {
+    font-size: .9em;
+  }
 
-::-webkit-scrollbar {
-  width: 0.4em;
-}
+  body article .audio-play {
+    font-size: .9em;
+      width: calc(90% - 10%); height: 4em;
+    padding: .3em;
+    position: fixed;
+      bottom: 3em; left: 10%;
+  }
 
-::-webkit-scrollbar-track {
-  color: #000;
-}
+  main .lyric {
+    font-size: 1.2em;
+  }
 
-::-webkit-scrollbar-thumb {
-  background-color: #fff;
-  border-radius: 0.3em;
+  :is(.about, .QapsA, .comments) {
+    font-size: .9em;
+  }
+
 }
 
 body {
@@ -312,12 +320,13 @@ section {color: #000;}
 
 .Lyric-song {
   display: flex;
-  padding: 5em 13em;
+  padding: 5% 10%;
   justify-content: space-between;
   background: #fff;
 }
 
 .lyric {
+  width: calc(90% - 40%);
   font-size: 1.3em;
 }
 
@@ -355,7 +364,7 @@ aside {
 aside .head-aside {
   height: 2em;
   margin-top: 5em;
-  font-size: 1.3em;
+  font-size: 1.2em;
   text-align: center;
   align-content: center;
   border-radius: 0.1em;
@@ -386,12 +395,12 @@ aside .recommend-song img {
 aside .recommend-song .rcm-song-content h3 {
   color: #000;
   margin-bottom: 0.3em;
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 
 aside .recommend-song .rcm-song-content p {
   color: #7b7b7b;
-  font-size: 1.1em;
+  font-size: 1em;
   bottom: 0;
 }
 
@@ -406,8 +415,8 @@ details {
 }
 
 :is(.about, .QapsA, .comments) {
-  width: 60em;
-  margin-left: 13em;
+  width: calc(90% - 30%);
+  margin-left: 10%;
   margin-bottom: 3em;
   border-bottom: .3em solid #a00000;
 }
@@ -447,10 +456,10 @@ details {
 
 article .audio-play {
   display: flex;
-    width: 76em; height: 4em;
+    width: calc(90% - 10%); height: 4em;
   padding: .3em;
   position: fixed;
-    bottom: 3em; left: 13em;
+    bottom: 6%; left: 10%;
   column-gap: 1.3em;
   align-items: center;
   border: var(--border-black);
@@ -467,6 +476,10 @@ article .img-control {
   align-items: center;
   column-gap: .3em;
   cursor: grab;
+}
+
+article .img-control:hover {
+  background: var(--color-main);
 }
 
 article .img-control img {
@@ -511,7 +524,13 @@ article .time {
 
 article .content-control {
   flex-direction: column;
+}
+
+#singer {
+  overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 190px; 
 }
 
 article .logo {
@@ -557,9 +576,9 @@ article .logo {
   margin-left: -8.5em;
   margin-bottom: 2em;
   object-fit: contain;
-  transform: rotate(-30deg);
-  transition: 550ms;
-  transition-delay: 350ms;
+  transform: rotate(-45deg);
+  /* transition: 550ms;
+  transition-delay: 350ms; */
   opacity: 0;
   z-index: 5;
 }

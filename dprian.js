@@ -1,17 +1,16 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    const video = document.getElementById('video');
-
+    const video = $('#video');
     const startTime = 10;
 
-    video.addEventListener('loadedmetadata', () => {
-        video.currentTime = startTime;
+    video.on('loadedmetadata', function() {
+        video[0].currentTime = startTime;
     });
 
-    video.addEventListener('canplay', () => {
-        video.muted = true;
-        video.loop = true;
-        video.play();
-    });
+    // video.on('canplay', function() {
+    //     video[0].muted = true;
+    //     video[0].loop = true;
+    //     video[0].play();
+    // });
 
     video.load();
 });
@@ -144,85 +143,92 @@ const songs = [
         imgSrc: 'Image-source/Collections/MoodswingsInThisOrder.jpg',
         title : 'Nerves',
         artist: 'DPR IAN',
-        views : '36.2K',
+        views : '162.9K',
         link  : 'nerves.html'
     },
     {
         imgSrc: 'Image-source/Collections/MITO.png',
         title : 'Ballroom Extravaganza',
         artist: 'DPR IAN',
-        views : '611.1k',
+        views : '611.1K',
         link  : 'ballroomExtravaganza.html'
     },
     {
         imgSrc: 'Image-source/Collections/oneOfTheGirls.jpg',
         title : 'One Of The Girls',
         artist: 'The Weeknd, JENNIE, Lily-Rose Deep',
-        views : '611.1k',
+        views : '1.1M',
         link  : 'oneOfTheGirls.html'
     },
     {
         imgSrc: 'Image-source/Collections/popular.png',
         title : 'Popular',
-        artist: 'Billie Eilish',
-        views : '611.1k',
+        artist: 'The Weeknd',
+        views : '619.1K',
         link  : 'popular.html'
     },
     {
         imgSrc: 'Image-source/Collections/hitMeHardAndSoft.jpg',
         title : 'BLUE',
         artist: 'Billie Eilish',
-        views : '611.1k',
+        views : '611.1K',
         link  : 'blue.html'
     },
     {
         imgSrc: 'Image-source/Collections/hitMeHardAndSoft.jpg',
         title : 'CHIHIRO',
         artist: 'Billie Eilish',
-        views : '856.1k',
+        views : '856.1K',
         link  : 'chihiro.html'
     },
     {
         imgSrc: 'Image-source/Collections/DrawnFM.jpg',
         title : 'Is There Someone Else',
         artist: 'The Weeknd',
-        views : '611.1k',
+        views : '830.7K',
         link  : 'isThereSomeOneElse.html'
     },
     {
         imgSrc: 'Image-source/Collections/Dear-Melancholy.jpg',
         title : 'I Was Never There',
         artist: 'The Weeknd, Gesaffelstein',
-        views : '611.1k',
+        views : '1.5M',
         link  : '#'
     },
     {
         imgSrc: 'Image-source/Collections/DearInsanity.jpg',
         title : 'Violet Crazy',
         artist: 'DPR IAN',
-        views : '611.1k',
+        views : '611.1K',
         link  : 'VioletCrazy.html'
     },
     {
         imgSrc: 'Image-source/Collections/starboy.jpg',
         title : 'Die For You',
         artist: 'The Weeknd',
-        views : '611.1k',
+        views : '4.3M',
         link  : '#'
     },
     {
         imgSrc: 'Image-source/Collections/starboy.jpg',
         title : 'Starboy',
         artist: 'The Weeknd',
-        views : '611.1k',
+        views : '8.9M',
         link  : '#'
     },
     {
         imgSrc: 'Image-source/Collections/MoodswingsInThisOrder.jpg',
         title : 'So Beautiful',
         artist: 'DPR IAN',
-        views : '611.1k',
+        views : '90.1K',
         link  : '#'
+    },
+    {
+        imgSrc: 'Image-source/Collections/chungTaCuaTuongLai.jpg',
+        title : 'Chúng Ta Của Tương Lai',
+        artist: 'Sơn Tùng M-TP',
+        views : '6.3M',
+        link  : 'chungTaCuaTuongLai.html'
     },
 
 ];
@@ -302,4 +308,3 @@ $(window).on('scroll', function() {
         $('.clsongs').removeClass('border');
     }
 });
-

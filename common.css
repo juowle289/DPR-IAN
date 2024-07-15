@@ -22,3 +22,26 @@
     --font-NiveauGrotesk: "Niveau Grotesk", sans-serif;
     --font-Anton: "Anton", sans-serif;
 }
+
+::-moz-selection {
+    background-color: var(--color-main);
+    color: #000;
+  }
+  
+  ::selection {
+    background-color: var(--color-main);
+    color: #000;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 0.4em;
+  }
+  
+  ::-webkit-scrollbar-track {
+    color: #000;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 0.3em;
+  }

@@ -1,21 +1,3 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-    const video = document.getElementById('video');
-
-    const startTime = 10;
-
-    video.addEventListener('loadedmetadata', () => {
-        video.currentTime = startTime;
-    });
-
-    video.addEventListener('canplay', () => {
-        video.muted = true;
-        video.loop = true;
-        video.play();
-    });
-
-    video.load();
-});
-
 
 // todo  Search 
 const search = document.getElementById('search');
@@ -49,85 +31,92 @@ const songs = [
         imgSrc: 'Image-source/Collections/MoodswingsInThisOrder.jpg',
         title : 'Nerves',
         artist: 'DPR IAN',
-        views : '36.2K',
+        views : '162.9K',
         link  : 'nerves.html'
     },
     {
         imgSrc: 'Image-source/Collections/MITO.png',
         title : 'Ballroom Extravaganza',
         artist: 'DPR IAN',
-        views : '611.1k',
+        views : '611.1K',
         link  : 'ballroomExtravaganza.html'
     },
     {
         imgSrc: 'Image-source/Collections/oneOfTheGirls.jpg',
         title : 'One Of The Girls',
         artist: 'The Weeknd, JENNIE, Lily-Rose Deep',
-        views : '611.1k',
+        views : '1.1M',
         link  : 'oneOfTheGirls.html'
     },
     {
         imgSrc: 'Image-source/Collections/popular.png',
         title : 'Popular',
-        artist: 'Billie Eilish',
-        views : '611.1k',
+        artist: 'The Weeknd',
+        views : '619.1K',
         link  : 'popular.html'
     },
     {
         imgSrc: 'Image-source/Collections/hitMeHardAndSoft.jpg',
         title : 'BLUE',
         artist: 'Billie Eilish',
-        views : '814.7k',
+        views : '611.1K',
         link  : 'blue.html'
     },
     {
         imgSrc: 'Image-source/Collections/hitMeHardAndSoft.jpg',
         title : 'CHIHIRO',
         artist: 'Billie Eilish',
-        views : '856.1k',
+        views : '856.1K',
         link  : 'chihiro.html'
     },
     {
         imgSrc: 'Image-source/Collections/DrawnFM.jpg',
         title : 'Is There Someone Else',
         artist: 'The Weeknd',
-        views : '611.1k',
+        views : '830.7K',
         link  : 'isThereSomeOneElse.html'
     },
     {
         imgSrc: 'Image-source/Collections/Dear-Melancholy.jpg',
         title : 'I Was Never There',
         artist: 'The Weeknd, Gesaffelstein',
-        views : '611.1k',
+        views : '1.5M',
         link  : '#'
     },
     {
         imgSrc: 'Image-source/Collections/DearInsanity.jpg',
         title : 'Violet Crazy',
         artist: 'DPR IAN',
-        views : '611.1k',
+        views : '611.1K',
         link  : 'VioletCrazy.html'
     },
     {
         imgSrc: 'Image-source/Collections/starboy.jpg',
         title : 'Die For You',
         artist: 'The Weeknd',
-        views : '611.1k',
+        views : '4.3M',
         link  : '#'
     },
     {
         imgSrc: 'Image-source/Collections/starboy.jpg',
         title : 'Starboy',
         artist: 'The Weeknd',
-        views : '611.1k',
+        views : '8.9M',
         link  : '#'
     },
     {
         imgSrc: 'Image-source/Collections/MoodswingsInThisOrder.jpg',
         title : 'So Beautiful',
         artist: 'DPR IAN',
-        views : '611.1k',
+        views : '90.1K',
         link  : '#'
+    },
+    {
+        imgSrc: 'Image-source/Collections/chungTaCuaTuongLai.jpg',
+        title : 'Chúng Ta Của Tương Lai',
+        artist: 'Sơn Tùng M-TP',
+        views : '6.3M',
+        link  : 'chungTaCuaTuongLai.html'
     },
 
 ];
@@ -236,9 +225,9 @@ document.addEventListener("DOMContentLoaded", function () {
             audioPlay.style.background = "none";
             audioPlay.style.border = "none";
             audioPlay.style.left = "3em";
-            audioPlay.style.width = "8em";
+            audioPlay.style.width = "10%";
             audioPlay.style.transition = "350ms";
-
+            
             imgAudio.style.width = "fit-content";
             imgAudio.style.borderRadius = "50%";
             imgAudio.style.boxShadow = ".1em .2em .8em rgba(0, 0, 0, .25)";
@@ -255,16 +244,20 @@ document.addEventListener("DOMContentLoaded", function () {
             logoAudio.style.display = "none";
 
             vinylDisk.style.opacity = "1";
-            vinylDisk.style.marginLeft = "-2.7em"
+            vinylDisk.style.marginLeft = "-2.7em";
+            vinylDisk.style.transition = "550ms";
+            vinylDisk.style.transitionDelay = "200ms";
             pioneer.style.opacity = "1";
             pioneer.style.transform = "rotate(-30deg)";
+            pioneer.style.transition = "550ms";
+            pioneer.style.transitionDelay = "350ms";
         }else {
             audioPlay.style.backdropFilter = "blur(10px)";
             audioPlay.style.boxShadow = ".1em .2em .8em rgba(0, 0, 0, .25)";
             audioPlay.style.background = "rgba(255, 255, 255, .3)";
             audioPlay.style.border = ".1em solid #000";
-            audioPlay.style.left = "13em";
-            audioPlay.style.width = "76em";
+            audioPlay.style.left = "10%";
+            audioPlay.style.width = "calc(90% - 10%)";
 
             imgAudio.style.width = "23em";
             imgAudio.style.borderRadius = "0";
@@ -280,9 +273,11 @@ document.addEventListener("DOMContentLoaded", function () {
             logoAudio.style.display = "flex";
 
             vinylDisk.style.opacity = "0";
-            vinylDisk.style.marginLeft = "-3em"
+            vinylDisk.style.marginLeft = "-3em";
+            vinylDisk.style.transition = "0ms";
             pioneer.style.opacity = "0";
             pioneer.style.transform = "rotate(-45deg)";
+            pioneer.style.transition = "0ms";
         }
         
         imgAudio.classList.toggle('rotateAudio');

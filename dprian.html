@@ -16,7 +16,6 @@
 
     <!-- link css -->
     <link rel="stylesheet" href="dprian.css">
-    <!-- <link rel="stylesheet" href="common.css"> -->
     <link rel="icon" href="Image-source/logo-J.png">
 
     <title>Juowle | Fav Songs & Lyrics</title>
@@ -49,6 +48,7 @@
         <input type="checkbox" id="hamburger">
         <label for="hamburger" id="hamburger-label"><i class="fa-solid fa-bars-staggered" id="bars-icon"></i></label>
 
+        <!-- Bars -->
         <div class="bars">
             <ul id="head-bars">
                 <li id="header-menu" class="clfeatured"><a href="#featured">Featured</a></li>
@@ -78,39 +78,93 @@
     </header>
 
     <!-- Slide -->
-    <div class="swiper-slide">
+    <div class="wrapper-slide">
+        <div class="slide" id="slide1">
+            <figure>
+                <video id="video" src="Video-source/DPR IAN - Nerves - video.mp4" autoplay muted loop></video>
+                <figcaption>
+                    <h1>Nerves</h1>
+                    <h6><span style="color: #feec93;">|</span> DPR IAN</h6>
+                    <button><a href="https://youtu.be/KlEbnOZ9DZQ?si=Pii4HoZl-A6-ob5t" target="_blank" id="listen">
+                            LISTEN NOW
+                        </a>
+                    </button>
 
-        <figure>
-            <video id="video" src="Video-source/DPR IAN - Nerves - video.mp4"></video>
-            <figcaption>
-                <h1>Nerves</h1>
-                <h6><span style="color: #feec93;">|</span> DPR IAN</h6>
-                <button><a href="https://youtu.be/KlEbnOZ9DZQ?si=Pii4HoZl-A6-ob5t" target="_blank" id="listen">
-                        LISTEN NOW
-                    </a>
-                </button>
-            </figcaption>
-        </figure>
+                    <div class="play-song">
+                        <input type="range" id="range">
+                        <div id="playBtn">
+                            <i class="bi bi-play-circle "></i>
+                        </div>
+                        <audio id="audio" src="Music-source/DPR IAN - Nerves.mp3"></audio>
+                    </div>
+                </figcaption>
+            </figure>
 
-        <div class="play-song">
-            <input type="range" id="range">
-            <div id="playBtn">
-                <i class="bi bi-play-circle "></i>
-            </div>
-            <audio id="audio" src="Music-source/DPR IAN - Nerves.mp3"></audio>
+            <article>
+                <p>"Made a lot of bad decisions in my life You know for whatever it's worth I sure it built me to become
+                    who
+                    I am now. But... honestly, there are times where I regret a lot of my decisions "Nerves" was one of the
+                    songs that I had to make to express that"
+                </p>
+            </article>
         </div>
 
-        <article class="px-5">
-            <p>"Made a lot of bad decisions in my life You know for whatever it's worth I sure it built me to become who
-                I
-                am now. But... honestly, there are times where I regret a lot of my decisions "Nerves" was one of the
-                songs
-                that
-                I had to make to express that"
-            </p>
-        </article>
-    </div>
+        <div class="slide" id="slide2">
+            <figure>
+                <video id="video" src="Video-source/Creepin' (Remix) - video.mp4" autoplay muted loop></video>
+                <figcaption>
+                    <h1>Creepin'</h1>
+                    <h6><span style="color: #feec93;">|</span> Metro Boomin, The Weeknd & 21 Savage</h6>
+                    <button><a href="https://youtu.be/6DWjiWEmxME?si=cFqYsEPZc1QEebn9" target="_blank" id="listen">
+                            LISTEN NOW
+                        </a>
+                    </button>
 
+                    <div class="play-song">
+                        <input type="range" id="range">
+                        <div id="playBtn">
+                            <i class="bi bi-play-circle "></i>
+                        </div>
+                        <audio id="audio" src="Music-source/Metro Boomin, The Weeknd, 21 Savage - Creepin' .mp3"></audio>
+                    </div>
+                </figcaption>
+            </figure>
+            <article>
+                <p> A person in a relationship being suspicious that their partner is cheating on them. The song brings
+                    up various aspects of infidelity, such as being seen with someone else and questioning whether their
+                    partner is treating them better than they treat them
+                </p>
+            </article>
+        </div>
+
+        <div class="slide" id="slide3">
+            <figure>
+                <video id="video" src="Video-source/The Weeknd - After Hours (Short Film).mp4" autoplay muted loop></video>
+                <figcaption>
+                    <h1>After Hours</h1>
+                    <h6><span style="color: #feec93;">|</span> The Weeknd</h6>
+                    <button><a href="https://youtu.be/ygTZZpVkmKg?si=kj772mrysX6pWIH7" target="_blank" id="listen">
+                            LISTEN NOW
+                        </a>
+                    </button>
+
+                    <div class="play-song">
+                        <input type="range" id="range">
+                        <div id="playBtn">
+                            <i class="bi bi-play-circle "></i>
+                        </div>
+                        <audio id="audio" src="Music-source/The Weeknd - After Hours (Audio).mp3"></audio>
+                    </div>
+                </figcaption>
+            </figure>
+            <article>
+                <p> A person in a relationship being suspicious that their partner is cheating on them. The song brings
+                    up various aspects of infidelity, such as being seen with someone else and questioning whether their
+                    partner is treating them better than they treat them
+                </p>
+            </article>
+        </div>
+    </div>
 
     <!-- Main -->
     <main>
@@ -234,7 +288,7 @@
                         allowfullscreen></iframe></div>
                 <div class="title">
                     <h1>BLUE</h1>
-                    <p>explores the aftermath of a breakup, with the narrator struggling to move on and feeling stuck in
+                    <p>Explores the aftermath of a breakup, with the narrator struggling to move on and feeling stuck in
                         sadness and longing for their past relationship. The color blue symbolizes the emotional state
                         of feeling down and melancholic, despite trying to convince themselves that they are over the
                         person. The recurring motif of trying to live in black and white represents the desire for
@@ -326,6 +380,7 @@
 
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script src="dprian.js"></script>
+
 </body>
 
 </html>

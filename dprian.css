@@ -42,6 +42,7 @@
   border-radius: 0.3em;
 }
 
+/* MOBILE */
 @media screen and (max-width: 768px) {
   body header {
     width: 100%;
@@ -60,6 +61,10 @@
   header .bars #header-menu a{
     font-size: 1em;
   }
+
+  body header .bars #head-bars {
+    height: 100%;
+  }
   
   header .bars footer {
     position: absolute;
@@ -70,28 +75,34 @@
     line-height: 1.5em;
   }
 
+  body header .bars .search-box {
+    position: absolute;
+    opacity: 1;
+    right: 0;
+    z-index: 10;
+  }
+
+  /* Main */
   body figure {
     margin: 0;
     padding: 0;
     width: 100%;
-    display: grid;
-    place-items: center;
   }
 
   body figure video {
     margin: 0;
     padding: 0;
-    width: 150%;
+    width: 100%;
     height: 60vh;
   }
 
   body figcaption {
-    top: 4em;
+    margin-top: -12em;
     font-size: 1.6em;
   }
 
   body figcaption h6 {
-    font-size: 1.1em;
+    font-size: 1em;
   }
 
   body figcaption button {
@@ -102,7 +113,9 @@
 
   body article {
     width: 100%;
-    margin: 0 0 -3em 0;
+    position: relative;
+    margin-top: -35em;
+    padding: 1% 5%;
     font-size: 0.8em;
   }
 
@@ -174,10 +187,13 @@
 
   .videos :is(.song1, .song2) div.title {
     width: 100%;
-    padding: 0 0 0 0;
+    padding: 0;
     margin: 0 0 1em 0;
-    text-align: center;
     font-size: 0.8em;
+  }
+
+  .videos :is(.song1, .song2) div.title p {
+    text-align: left;
   }
 
   .videos div.title :is(h1, p) {
@@ -189,11 +205,12 @@
 
   body .videos .title h1 {
     margin-bottom: 0.6em;
+    text-align: left;
   }
 
   .videos iframe {
     width: 18em;
-    height: 13em;
+    height: 10em;
     padding: 0.1em;
   }
 
@@ -206,14 +223,15 @@
   }
 }
 
-@media screen and (min-width: 1000px) and (max-width: 1284px) {
+/* DESK, LAP */
+@media screen and (min-width: 1000px) and (max-width: 1280px) {
 
   body main {
-    padding: 0 5em;
+    padding: 0 3%;
   }  
 
-  body figcaption {
-    top: 3em;
+  body .wrapper-slide figcaption {
+    padding-top: 2em;
   }
 
   body figcaption :is(h1, h6) {
@@ -246,6 +264,18 @@
 
   body .reference {
     margin-bottom: 8em;
+  }
+
+  body :is(.song1, .song2) {
+    margin-bottom: 3em;
+  }
+
+  body .videos .song1 .title {
+    padding:0 2em 0 0;
+  }
+  
+  body .videos .song2 .title {
+    padding: 0 0 0 2em;
   }
 
   body iframe {
@@ -466,19 +496,24 @@ input[type=checkbox] {
 }
 
 /* // TODO: NAV    */
+figure {
+  width: 100%;
+  height: 106.6vh;
+  z-index: -5;
+}
 figure video {
   width: 100%;
     margin-top: -4.3em;
-  z-index: -3;
+  z-index: -5;
 }
 
 figcaption {
+  width: 100%;
   text-align: left;
   font-size: 4em;
-  position: absolute;
-  top: 26%;
-  left: 10%;
-  z-index: 1;
+  margin-top: -10em;
+  padding-left: 10%;
+  z-index: -5;
 }
 
 figcaption :is(h1, h6) {
@@ -509,44 +544,70 @@ button {
   cursor: pointer;
 }
 
-button a {
-  color: #fff;
-  z-index: 3;
-}
-
 button:hover {
   box-shadow: 0px 0px 10px rgba(254, 236, 147, 0.8), 0px 0px 25px rgba(254, 236, 147, 0.8);
   background-color: transparent;
 }
+
+button a {
+  position: relative;
+  color: #fff;
+  z-index: 5;
+}
+
 button:hover a {
   color: #000;
 }
 
 figcaption button::before {
+  position: absolute;
   content: "";
   width: 0em;
   height: 100%;
   background-color: var(--black-blur);
-  position: absolute;
   right: 0;
   margin-top: -0.6em;
   transition: 300ms ease;
-  z-index: -1;
+  z-index: 1;
 }
 
 figcaption button:hover::before {
   width: 100%;
   background-color: var(--color-main);
   left: 0;
+  z-index: 1;
 }
 
-/* Play song */
-.play-song {
+/* //todo SLIDE */
+.wrapper-slide {
+  width: 100%;
+  gap: 1em;
   display: flex;
-  position: absolute;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: x proximity;
+}
+
+/* .wrapper-slide::-webkit-scrollbar {
+  display: none;
+} */
+
+.slide {
+  scroll-snap-align: start;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+
+/* //todo Play song */
+.play-song {
+  /* position: absolute; */
+  display: flex;
   align-items: center;
-  top: 45vh; right: -3em;
-  width: 25em; height: 4em;
+  margin-top: -5em;
+  margin-left: 17em;
+
+  width: 8em; height: 4em;
   align-items: center;
   z-index: 10;
   cursor: pointer;
@@ -554,9 +615,9 @@ figcaption button:hover::before {
 }
   
 .play-song i {
-  font-size: 2.5em;
+  font-size: .6em;
   position: absolute;
-  top: -.2em; margin-left: .5em;
+  top: 2.4em; margin-left: .5em;
   padding: .2em;
   transform: rotate(-90deg);
 }
@@ -567,7 +628,6 @@ figcaption button:hover::before {
 }
 
 input[type="range"] {
-  /* -webkit-appearance: none; */
   appearance: none; 
   overflow: hidden;
   width: 100%; height: .3em;
@@ -577,10 +637,8 @@ input[type="range"] {
 }
 
 input[type="range"]::-webkit-slider-thumb {
-  /* -webkit-appearance: none; */
   appearance: none;
   width: .5em; height: .5em;
-  /* background-color: #feec93; */
   border-radius: 50%;
   box-shadow: -50em 0em 0em 50em var(--color-white);
   transition: 50ms ease;
@@ -589,15 +647,14 @@ input[type="range"]::-webkit-slider-thumb {
 /* Quote */
 
 article {
-  position: absolute;
-  bottom: 0em;
+  position: relative;
+  margin-top: -6em;
   width: 100%;
   padding: .5em 6em;
   background: linear-gradient(to top, black, rgba(0, 0, 0, 0.3));
   box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.3);
   text-align: center;
   font-size: 1.3em;
-
 }
 
 article p {
@@ -751,7 +808,7 @@ article p {
 /* // TODO  Video / Songs  */
 .videos {
   opacity: 0;
-  margin-top: 20em;
+  margin-top: 10em;
   margin-bottom: 10em;
 }
 
