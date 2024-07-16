@@ -1,5 +1,37 @@
+// todo Hamburger
+$('#hamburger-label').on('click', function() {
+    const bars = $('.bars');
+    const barsIcon = $('#bars-icon');
+    const hbgCheckbox = $('#hamburger');
+    
+    if (hbgCheckbox.is(':checked')) {
+        barsIcon.css({
+        transform: 'rotate(180deg)',
+        color: '#feec93',
+        });
+    
+        bars.css({
+        transform: 'translateX(-15em)',
+        opacity: '1',
+        boxShadow: '-10em 0px 10px rgba(0, 0, 0, 0.6)',
+        zIndex: '20'
+        });
+    } else {
+        barsIcon.css({
+        transform: 'rotate(0deg)',
+        color: '#fff',
+        });
+    
+        bars.css({
+        transform: 'translateX(0em)',
+        opacity: '0',
+        boxShadow: 'none',
+        zIndex: '1',
+        });
+    }
+});
 
-// todo  Search 
+// todo  Search icon
 const search = document.getElementById('search');
 const searchBox = document.getElementById('search-box');
 
@@ -22,10 +54,9 @@ search.addEventListener('change', function(){
 });
 
 
-// todo Suggest   
-const searchSuggest = document.getElementById('search-suggest');
+// TODO Suggest   
+const searchSuggest = $('#search-suggest');
 
-// FIX song 
 const songs = [
     {
         imgSrc: 'Image-source/Collections/MoodswingsInThisOrder.jpg',
@@ -121,41 +152,43 @@ const songs = [
 
 ];
 
-searchBox.addEventListener('input', () => {
-    const query = searchBox.value.toLowerCase();
+// TODO sự kiện tìm kiếm 
 
-    searchSuggest.innerHTML = '';
+$('#search-box').on('input', function() {
+    const query = $(this).val().toLowerCase();
+
+    searchSuggest.empty();
 
     if(query) {
         const filterSong = songs.filter(song => song.title.toLowerCase().includes(query));
 
         filterSong.forEach(song => {
-            const songElement = document.createElement('div');
-            songElement.classList.add('suggestion-item');
-            songElement.innerHTML = `
+            const songElement = $('<div>').addClass('suggestion-item');
+            songElement.html(`
                 <img src="${song.imgSrc}">
-            <div>
-                <p class= "title" >${song.title}</p>
-                <p class= "artist">${song.artist}</p>
-                <p class= "views" >${song.views} views</p>
-            </div>
-            `;
-            songElement.addEventListener('click', () => {
-                window.location.href = song.link; // fix chuyển hướng tới link
+                <div>
+                    <p class="title">${song.title}</p>
+                    <p class="artist">${song.artist}</p>
+                    <p class="views">${song.views}</p>
+                </div>
+            `);
+            songElement.on('click', function() {
+                window.location.href = song.link;
             });
-            searchSuggest.appendChild(songElement);
+            searchSuggest.append(songElement);
         });
     }
 });
 
-// todo icon search 
-document.querySelector('label i.fa-magnifying-glass').addEventListener('click', () => {
-    const query = searchBox.value.toLowerCase();
+
+$('label i.fa-magnifying-glass').on('click', function() {
+    const query = searchBox.val().toLowerCase();
     const toSong = songs.find(song => song.title.toLowerCase() === query);
     if(toSong) {
         window.location.href = toSong.link;
     }
-} );
+});
+
 
 // todo  CONTROL SONG
 document.addEventListener("DOMContentLoaded", function () {
@@ -369,5 +402,3 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-
-

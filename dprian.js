@@ -16,29 +16,27 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 
-// TODO Search 
-const search = document.getElementById('search');
-const searchBox = document.getElementById('search-box');
+// TODO Search icon 
 
-search.addEventListener('change', function(){
-    if(this.checked) {
-        searchBox.style.display = "block";
-        searchBox.style.backgroundColor = "#eff0f3";
-        searchBox.style.marginRight = "0em";
-        searchBox.style.width = "10em";
-        searchBox.style.transition = "350ms";
-        searchBox.style.padding = "0 0.6em 0";
-        searchBox.style.position = "relative";
-    }else {
-        searchBox.style.width = "0";
-        searchBox.style.backgroundColor = "#0000";
-        searchBox.style.marginRight = "-1.15em";
-        searchBox.style.padding = "0";
-        searchBox.style.transition = "350ms";
-    }
+$('#search').on('change', function() {
+    $(this).is(':checked') ? 
+      $('#search-box').css({
+        backgroundColor: '#eff0f3',
+        marginRight: '0em',
+        width: '10em',
+        transition: '350ms',
+        padding: '0 0.6em 0',
+      }) : 
+      $('#search-box').css({
+        width: '0',
+        backgroundColor: '#0000',
+        marginRight: '-1.15em',
+        padding: '0',
+        transition: '350ms',
+      });
 });
 
-// Hamburger
+// todo Hamburger
 $('#hamburger-label').on('click', function() {
 const bars = $('.bars');
 const barsIcon = $('#bars-icon');
@@ -47,30 +45,34 @@ const hbgCheckbox = $('#hamburger');
 if (hbgCheckbox.is(':checked')) {
     barsIcon.css({
     transform: 'rotate(180deg)',
-    color: '#feec93'
+    color: '#feec93',
     });
 
     bars.css({
     transform: 'translateX(-15em)',
     opacity: '1',
-    boxShadow: '-10em 0px 10px rgba(0, 0, 0, 0.6)'
+    boxShadow: '-10em 0px 10px rgba(0, 0, 0, 0.6)',
+    zIndex: '20'
     });
 } else {
     barsIcon.css({
     transform: 'rotate(0deg)',
-    color: '#fff'
+    color: '#fff',
     });
 
     bars.css({
     transform: 'translateX(0em)',
     opacity: '0',
-    boxShadow: 'none'
+    boxShadow: 'none',
+    zIndex: '1',
     });
 }
 });
 
 // TODO audio swiper-slide 
 
+
+// todo nav audio 
 $(document).ready(function(){
     const $audio = $('#audio');
     const $range = $('#range');
@@ -233,6 +235,8 @@ const songs = [
 
 ];
 
+// TODO sự kiện tìm kiếm 
+
 $('#search-box').on('input', function() {
     const query = $(this).val().toLowerCase();
 
@@ -259,7 +263,7 @@ $('#search-box').on('input', function() {
     }
 });
 
-// TODO sự kiện cho icon search 
+
 $('label i.fa-magnifying-glass').on('click', function() {
     const query = searchBox.val().toLowerCase();
     const toSong = songs.find(song => song.title.toLowerCase() === query);
