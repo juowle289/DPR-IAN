@@ -49,7 +49,7 @@
 
   /* Bars */
   body header .bars #head-bars{
-    display: block;
+    display: inline-flex;
   }
 
   body header #hamburger-label #bars-icon {
@@ -99,18 +99,29 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+  
+  body nav .album-img {
+    width: 100%; height: 0;
+    margin: 0;
+  }
 
-  body nav img {
-    position: relative;
+  body nav #imgCollections {
+    position: relative; z-index: 2;
     width: 10em; height: 10em;
     margin: 3.3em 0 0 0;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, .8);
     /* image-rendering: pixelated; */
   }
-  
-  body nav .album-img {
-    width: 100%; height: 0;
-    margin: 0;
+
+  body nav .album-img #vinylRecordAlbum {
+    position: relative; z-index: 1;
+    display: block;
+    top: -2.9em;
+    right: -9.6em;
+    width: 11em; height: 11em;
+    box-shadow: none;
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, .4));
+    animation: spin 2s infinite linear ;
   }
   
   body nav .song-info {
@@ -133,15 +144,26 @@
   body nav  .song-info .pre h2 {
     font-size: 1em;
     margin: 1.5em 0 .3em 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 65%; 
+  }
+
+  body nav .song-info .pre p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 65%;
   }
   
   body nav .song-info .meta {
-    display: flex;
+      display: block;
     position: absolute;
     bottom: .3em; right: 5%;
     padding: 0;
     gap: .6em;
-    font-size: .8em;
+    font-size: .7em;
   }
 
   /* lyric song */
@@ -190,6 +212,11 @@
 
   body main :is(.about, .QapsA, .comments) .summary-title {
     font-size: 1.2em;
+  }
+
+  body main .QapsA iframe {
+    width: 100%;
+    height: auto;
   }
 
   /* play song */
@@ -375,7 +402,7 @@ body header .fa-bars-staggered {
   display: block;
   position: absolute;
   top: 0;
-  right: -15em;
+  right: -20em;
   background-color: #000;
   width: 20em;
   height: 100vh;
@@ -390,7 +417,7 @@ body header .fa-bars-staggered {
   display: flex;
   font-size: .8em;
   margin: 5em 0;
-  justify-content: center;
+  height: 0;
 }
 
 .bars #foot-bars {
@@ -509,12 +536,16 @@ nav img {
   /* image-rendering: pixelated; */
 }
 
+nav #vinylRecordAlbum {
+  display: none;
+}
+
 .album-img {
   width: 22em; height: 22em;
   object-fit: contain;
   border-radius: 0.1em;
   margin: 0 1.3em 0 0;
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 
 .song-info {

@@ -26,7 +26,7 @@ $('#hamburger-label').on('click', function() {
         transform: 'translateX(0em)',
         opacity: '0',
         boxShadow: 'none',
-        zIndex: '1',
+        zIndex: '-1',
         });
     }
 });
