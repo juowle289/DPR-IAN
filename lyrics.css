@@ -999,7 +999,7 @@ footer .logo {
 /*  HEADER EFFECT   */
 .effHeader {
   border-bottom: 0.01px solid var(--color-main);
-  background-color: #000;
+  background-color: #000; color: #fff;
   transition: 250ms ease;
 }
 
