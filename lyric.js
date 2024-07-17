@@ -358,6 +358,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+$('#closeSpotifyIcon').on('click', function() {
+    $('#spotifyIcon').hide();
+    $(this).hide();
+});
+
 // todo EFFECT  
 document.addEventListener('DOMContentLoaded', function () {
     const header = document.getElementById('header');

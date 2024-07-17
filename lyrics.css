@@ -9,7 +9,7 @@
 
   body footer {
     margin: 0;
-    padding: 2em 1em;
+    padding: 2em 1em 6em 1em;
     position: relative;
     z-index: 1;
   }
@@ -95,7 +95,7 @@
     margin: 0;
     padding: 0 5%;
     width: 100%;
-    height: 50vh;
+    height: 55vh;
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -115,17 +115,17 @@
 
   body nav .album-img #vinylRecordAlbum {
     position: relative; z-index: 1;
-    display: block;
     top: -2.9em;
     right: -9.6em;
     width: 11em; height: 11em;
     box-shadow: none;
     filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, .4));
     animation: spin 2s infinite linear ;
+          display: none; /* -----show disk-------*/
   }
   
   body nav .song-info {
-    width: 100%; height: 7em;
+    width: 100%;
     margin: 0;
       flex: none;
   }
@@ -160,7 +160,7 @@
   body nav .song-info .meta {
       display: block;
     position: absolute;
-    bottom: .3em; right: 5%;
+    bottom: .6em; right: 5%;
     padding: 0;
     gap: .6em;
     font-size: .7em;
@@ -222,8 +222,12 @@
   /* play song */
   html body article .audio-play {
     display: flex;
-      width: calc(95% - 5%); height: 3.5em;
-      bottom: 6%; left: 5%;
+      /* width: calc(95% - 5%); height: 3.5em; */
+      width: 99.5%; height: 3.5em;
+      bottom: 0; left: .2%;
+      backdrop-filter: blur(50px);
+      background: #ffffffce;
+      box-shadow: -.1em -.2em .8em rgba(0, 0, 0, .25);
     column-gap: .2em;
     padding: 0 .3em;
     z-index: 10;
@@ -250,12 +254,6 @@
     display: none;
   }
 
-  body article .audio-play {
-    backdrop-filter: blur(20px);
-    background: #ffffffad;
-
-  }
-
   body article .audio-play .time {
     display: flex;
     width: 100%;
@@ -273,6 +271,30 @@
 
   body article .logo {
     display: none;
+  }
+
+  /* Advertisement */
+  body .ads{
+    position: fixed; z-index: 20;
+    bottom: 3.5em; right: 0;
+    width: 4em; height: 4em;
+    margin: 0 .5em .5em 0;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+  }
+
+  body .ads #spotifyIcon{ /* icon */
+    font-size: 2.5em;
+    color: #1ed760;
+    
+  }
+
+  body .ads #closeSpotifyIcon { /* x */
+    position: absolute;
+    right: 0;
+    background: #fff;
+    border-radius: 50%;
   }
 
   html {
@@ -804,38 +826,27 @@ input[type="range"]::-webkit-slider-thumb {
   transition: 50ms ease-in-out;
 }
 
+
 input[type="range"]::-webkit-slider-thumb:hover {
   background: #feec93;
   border: .1em solid #000;
 }
 
-input[type="range"]::-webkit-slider-thumb:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #4CAF50;
-  border-radius: 50%;
-  transform: translateX(-100%);
-}
-
 input[type="range"]::-webkit-slider-runnable-track {
   appearance: none;
-  background: #ccc;
+  /* background: #ccc; */
+  background: #000;
   border-radius: 1em;
   height: .3em;
 }
 
-input[type="range"]::-ms-fill-lower {
-  background: #000;
-  border-radius: 5px;
-}
+  input[type="range"]::-ms-fill-lower {
+    background: #000;
+  }
 
-input[type="range"]::-ms-fill-upper {
-  background: #ccc;
-}
+  input[type="range"]::-ms-fill-upper {
+    background: #ccc;
+  }
 
 article .time {
   display: flex;
