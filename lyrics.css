@@ -275,26 +275,17 @@
 
   /* Advertisement */
   body .ads{
-    position: fixed; z-index: 20;
     bottom: 3.5em; right: 0;
     width: 4em; height: 4em;
     margin: 0 .5em .5em 0;
-    border-radius: 50%;
-    display: grid;
-    place-content: center;
   }
 
   body .ads #spotifyIcon{ /* icon */
     font-size: 2.5em;
-    color: #1ed760;
-    
   }
 
   body .ads #closeSpotifyIcon { /* x */
-    position: absolute;
-    right: 0;
-    background: #fff;
-    border-radius: 50%;
+    font-size: 1em;
   }
 
   html {
@@ -783,7 +774,7 @@ article .img-control {
   display: flex;
   width: 23em;
   align-items: center;
-  column-gap: .3em;
+  column-gap: .6em;
   cursor: grab;
 }
 
@@ -958,6 +949,35 @@ article .logo {
 .comment {
   padding: 1.3em;
   border-bottom: var(--border-black);
+}
+
+/* Advertisement */
+.ads{
+  position: fixed; z-index: 20;
+  bottom: 20%; right: 1%;
+  width: 5em; height: 5em;
+  margin: 0 .5em .5em 0;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+
+.ads #spotifyIcon{ /* icon */
+  font-size: 3.5em;
+  color: #1ed760;
+}
+
+.ads #closeSpotifyIcon { /* x */
+  position: absolute;
+  right: 0;
+  background: #fff;
+  border-radius: 50%;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+.ads #closeSpotifyIcon:hover {
+  color: #be0000;
 }
 
 /*  FOOTER  */

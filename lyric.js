@@ -73,11 +73,32 @@ const songs = [
         link  : 'ballroomExtravaganza.html'
     },
     {
+        imgSrc: 'Image-source/Collections/Chungtacuatuonglai.jpg',
+        title : 'Chúng Ta Của Tương Lai',
+        artist: 'Sơn Tùng M-TP',
+        views : '6.3M',
+        link  : 'chungTaCuaTuongLai.html'
+    },
+    {
+        imgSrc: 'Image-source/Collections/hayTraoChoAnh.jpg',
+        title : 'Hãy Trao Cho Anh',
+        artist: 'Sơn Tùng M-TP',
+        views : '270M',
+        link  : 'hayTraoChoAnh.html'
+    },
+    {
         imgSrc: 'Image-source/Collections/oneOfTheGirls.jpg',
         title : 'One Of The Girls',
         artist: 'The Weeknd, JENNIE, Lily-Rose Deep',
         views : '1.1M',
         link  : 'oneOfTheGirls.html'
+    },
+    {
+        imgSrc: 'Image-source/Collections/afterHours.jpg',
+        title : 'After Hours',
+        artist: 'The Weeknd',
+        views : '212M',
+        link  : 'afterHours.html'
     },
     {
         imgSrc: 'Image-source/Collections/popular.png',
@@ -98,14 +119,14 @@ const songs = [
         title : 'CHIHIRO',
         artist: 'Billie Eilish',
         views : '856.1K',
-        link  : 'chihiro.html'
+        link  : '#'
     },
     {
         imgSrc: 'Image-source/Collections/DrawnFM.jpg',
         title : 'Is There Someone Else',
         artist: 'The Weeknd',
         views : '830.7K',
-        link  : 'isThereSomeOneElse.html'
+        link  : '#'
     },
     {
         imgSrc: 'Image-source/Collections/Dear-Melancholy.jpg',
@@ -142,15 +163,8 @@ const songs = [
         views : '90.1K',
         link  : '#'
     },
-    {
-        imgSrc: 'Image-source/Collections/chungTaCuaTuongLai.jpg',
-        title : 'Chúng Ta Của Tương Lai',
-        artist: 'Sơn Tùng M-TP',
-        views : '6.3M',
-        link  : 'chungTaCuaTuongLai.html'
-    },
-
 ];
+
 
 // TODO sự kiện tìm kiếm 
 
@@ -376,7 +390,7 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', function () {
         const scrollPos = window.scrollY || document.documentElement.scrollTop;
         
-        if (scrollPos > 100) { // fix header 
+        if (scrollPos > 50) { // fix header 
             header.classList.add('effHeader');
         }else {
             header.classList.remove('effHeader');
