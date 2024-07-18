@@ -1046,3 +1046,41 @@ footer .logo {
   border: 0.01em solid #feec93;
 }
 
+/* Loader */
+.loader {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; height: 100%;
+  background: #000; color: #fff;
+  column-gap: .9em;
+  z-index: 56;
+}
+
+.dot {
+  width: 1em; height: 1em;
+  border-radius: 50%;
+  background: #fff;
+  animation: pulse 2s infinite;
+}
+
+.dot:nth-child(2) { animation-delay: 200ms;}
+.dot:nth-child(3) { animation-delay: 400ms;}
+
+@keyframes pulse {
+  0% {
+    transform: scale(.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(.5);
+    opacity: 0;
+  }
+}
+
+

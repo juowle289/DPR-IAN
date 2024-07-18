@@ -421,3 +421,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+$(document).ready(function() {
+    setTimeout(function() {
+        $('.loader').fadeOut(500, function() {
+            $(this).remove();
+        });
+    }, 1600);
+});
