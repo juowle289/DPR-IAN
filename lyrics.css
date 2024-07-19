@@ -27,7 +27,7 @@
     display: none;
   }
 
-  body header ul li i{
+  body header .fa-magnifying-glass{
     position: absolute;
     right: 4em;
     top: 1.1em;
@@ -48,13 +48,14 @@
   }
 
   /* Bars */
-  body header .bars #head-bars{
-    display: inline-flex;
-  }
 
   body header #hamburger-label #bars-icon {
     position: relative;
     z-index: 21;
+  }
+
+  body header #head-bars #header-menu {
+    display: flex;
   }
 
   body header #head-bars li {
@@ -66,14 +67,10 @@
     display: block;
   }
 
-  header .bars #header-menu a{
+  header .bars #head-bars a{
     font-size: 1em;
   }
 
-  body header .bars #head-bars {
-    height: 100%;
-  }
-  
   header .bars footer {
     position: absolute;
     bottom: 0;
@@ -259,6 +256,15 @@
     width: 100%;
     margin: 0 0 0 .8em;
     column-gap: .8em;
+  }
+
+  body article input[type="range"]::-webkit-slider-runnable-track {
+    height: .2em;
+  }
+
+  body article input[type="range"]::-webkit-slider-thumb {
+    font-size: .8em;
+    margin-top: -.4em;
   }
 
   body article .fa-play {
@@ -485,8 +491,10 @@ input[type=checkbox] {
   top: 4.5em; right: 10em;
   flex-direction: column;
   overflow-y: auto;
+     display: none;
 }
 
+/* Add class */
 .suggestion-item {
   display: flex;
   padding: 10px;
@@ -714,6 +722,10 @@ details {
   border: var(--border-black);
 }
 
+summary::-webkit-details-marker {
+  display: none;
+}
+
 :is(.about, .QapsA, .comments) {
   width: calc(90% - 30%);
   margin-left: 10%;
@@ -830,14 +842,6 @@ input[type="range"]::-webkit-slider-runnable-track {
   border-radius: 1em;
   height: .3em;
 }
-
-  input[type="range"]::-ms-fill-lower {
-    background: #000;
-  }
-
-  input[type="range"]::-ms-fill-upper {
-    background: #ccc;
-  }
 
 article .time {
   display: flex;

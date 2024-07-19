@@ -196,6 +196,7 @@ $('#search-box').on('input', function() {
 
 
 $('label i.fa-magnifying-glass').on('click', function() {
+    searchSuggest.toggle();
     const query = searchBox.val().toLowerCase();
     const toSong = songs.find(song => song.title.toLowerCase() === query);
     if(toSong) {
