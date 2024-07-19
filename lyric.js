@@ -234,7 +234,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const durationSecond = Math.floor(duration % 60);
 
         timeEl.textContent = `${currMinute}:${currSecond.toString().padStart(2, '0')}`;
-        durationEl.textContent = `-${durationMinute - currMinute}:${Math.abs(durationSecond - currSecond).toString().padStart(2, '0')}`;
+        durationEl.textContent = `${durationMinute - currMinute}:${Math.abs(durationSecond - currSecond).toString().padStart(2, '0')}`;
     });
 
     range.addEventListener('input', () => {
