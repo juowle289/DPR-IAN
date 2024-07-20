@@ -246,6 +246,13 @@ const songs = [
         views : '90.1K',
         link  : '#'
     },
+    {
+        imgSrc: 'Image-source/Collections/theColorViolet.jpg',
+        title : 'The Color Violet',
+        artist: 'Tory Lanez',
+        views : '31M',
+        link  : 'theColorViolet.html'
+    },
 ];
 
 // TODO sự kiện tìm kiếm 
@@ -278,6 +285,7 @@ $('#search-box').on('input', function() {
 
 
 $('label i.fa-magnifying-glass').on('click', function() {
+    searchSuggest.toggle();
     const query = searchBox.val().toLowerCase();
     const toSong = songs.find(song => song.title.toLowerCase() === query);
     if(toSong) {
@@ -324,4 +332,12 @@ $(window).on('scroll', function() {
     } else {
         $('.clsongs').removeClass('border');
     }
+});
+
+$(document).ready(function() {
+    setTimeout(function() {
+        $('.loader').fadeOut(500, function() {
+            $(this).remove();
+        });
+    }, 1600);
 });
