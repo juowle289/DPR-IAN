@@ -7,13 +7,13 @@
   outline: none;
   border: none;
   scroll-behavior: smooth;
-  color: #eff0f3;
+  color: #f5f5fc;
   font-family: var(--font-Anton);
 }
 
 :root {
   --color-main: #feec93;
-  --color-white: #eff0f3;
+  --color-white: #f5f5fc;
   --black-blur: rgba(0, 0, 0, 0.3);
   --font-NiveauGrotesk: "Niveau Grotesk", sans-serif;
   --font-Anton: "Anton", sans-serif;
@@ -741,10 +741,9 @@ article p {
   font-size: 3.6em;
   font-weight: 300;
   text-align: center;
-  margin: 1.1em 0;
-    letter-spacing: 0.5em;
-    margin-top: 3em;
-    opacity: 0;
+  margin: 3em 0 1.1em 0;
+    animation: textAppear linear;
+    animation-timeline: view();
 }
 
 .play-list {
@@ -753,13 +752,15 @@ article p {
   display: flex;
   justify-content: space-around;
   margin-bottom: 5em;
-    margin-top: 6em;
-    opacity: 0;
 }
 
 .collection {
+  height: fit-content;
   border: 1px solid rgba(0, 0, 0, 0);
   cursor: pointer;
+    animation: scale linear;
+    animation-timeline: view();
+    /* animation-range: entry 0% cover 40%; */
 }
 
 .play-list .collection:hover {
@@ -789,8 +790,9 @@ article p {
   gap: 8em;
   padding: 5em 0;
   margin-bottom: 5em;
-    opacity: 0;
-    margin-left: -10em;
+    animation: translateX linear;
+    animation-timeline: view();
+    /* animation-range: entry 0% cover 30%; */
 }
 
 .reference :is(.title, .img) {
@@ -840,6 +842,17 @@ article p {
   font-weight: 300;
 }
 
+.reference .title h1 {
+  animation: textY linear;
+  animation-timeline: view();
+  /* animation-range: entry 35% cover 38%; */
+}
+.reference .title h5 {
+  animation: textX linear;
+  animation-timeline: view();
+  /* animation-range: entry 35% cover 38%; */
+}
+
 .reference .title button {
   position: relative;
   width: 30em;
@@ -849,6 +862,9 @@ article p {
   outline: none;
   transition: 250ms ease;
   cursor: pointer;
+    animation: scale linear;
+    animation-timeline: view();
+    /* animation-range: entry 35% cover 38%; */
 }
 
 .reference button a {
@@ -880,8 +896,7 @@ article p {
 
 /* // TODO  Video / Songs  */
 .videos {
-  opacity: 0;
-  margin-top: 10em;
+  margin-top: 3em;
   margin-bottom: 10em;
 }
 
@@ -896,6 +911,8 @@ article p {
   display: grid;
   place-content: center;
   flex-wrap: wrap;
+    animation: translateX linear;
+    animation-timeline: view();
 }
 
 .videos :is(.song1, .song2) .title h1 {
@@ -924,6 +941,8 @@ article p {
 .videos iframe {
   border: 0.01em solid var(--color-main);
   padding-bottom: 0.01em;
+  animation: scale linear;
+  animation-timeline: view();
 }
 
 .contact {
@@ -1098,24 +1117,45 @@ footer .logo {
   transition: 250ms ease;
 }
 
-.toPos {
-  opacity: 1;
-  margin-top: 1em;
-  letter-spacing: 0;
-  transition: 1s ease;
+
+@keyframes textAppear {
+  0%  { opacity: 0; letter-spacing: .5em;}
+  25% { opacity: 1; letter-spacing: 0em;}
+  50% { opacity: 1; letter-spacing: 0;}
+  75% { opacity: 1; letter-spacing: 0;}
+  100%{ opacity: 0; letter-spacing: .1em;}
 }
 
-.leftPos {
-  opacity: 1;
-  margin-left: 0;
-  transition: 1s ease;
+@keyframes scale {
+  0%  { opacity: 0; scale:.8;}
+  25% { opacity: 1; scale: 1;}
+  50% { opacity: 1; scale: 1;}
+  75% { opacity: 1; scale: 1;}
+  100%{ opacity: 0; scale:1.1;}
 }
 
-.reveal {
-  opacity: 1;
-  letter-spacing: 0;
-  margin-top: 0;
-  transition: 1s ease;
+@keyframes translateX{
+  0%  { opacity: 0; transform: translateX(-5em);}
+  25% { opacity: 1; transform: translateX(0em);}
+  50% { opacity: 1; transform: translateX(0em);}
+  75% { opacity: 1; transform: translateX(0em);}
+  100%{ opacity: 0; transform: translateX(5em);}
+}
+
+@keyframes textY {
+  0%  { opacity: 0; transform: translateY(-.6em);}
+  25% { opacity: 1; transform: translateY(0em);}
+  50% { opacity: 1; transform: translateY(0em);}
+  75% { opacity: 1; transform: translateY(0em);}
+  100%{ opacity: 0; transform: translateY(.6em);}
+}
+
+@keyframes textX {
+  0%  { opacity: 0; transform: translateX(-.6em);}
+  25% { opacity: 1; transform: translateX(0em);}
+  50% { opacity: 1; transform: translateX(0em);}
+  75% { opacity: 1; transform: translateX(0em);}
+  100%{ opacity: 0; transform: translateX(.6em);}
 }
 
 .border{

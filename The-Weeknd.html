@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- famework -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <!-- font family -->
+    <link href="https://fonts.cdnfonts.com/css/niveau-grotesk-regular" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/tanamera" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/anton" rel="stylesheet">
+
+    <link rel="icon" href="Image-source/logo-J.png">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="artist.css">
+
+    <title>Juowle | The Weeknd</title>
+</head>
+
+<body>
+    <style>
+        .bio_artist {
+            background: linear-gradient(270deg, rgb(41, 47, 58) 0%, rgba(41, 47, 58, 0.1) 100%, rgb(245, 245, 251) 100%);
+        }
+    </style>
+    <header id="header">
+        <div class="logo">
+            <a href="dprian.html"><img src="Image-source/logo-J.png"></a>
+            <!-- Juowle -->
+            <ul>
+                <li id="header-menu" class="clProfile"><a href="#profile">Profile </a></li>
+                <li id="header-menu" class="clTopTracks"><a href="#topTracks">Top Tracks </a></li>
+                <li id="header-menu" class="clFanbase"><a href="#fanbase">Fanbase </a></li>
+                <li id="header-menu" class="clPopularSongs"><a href="#popularSongs">Popular Songs </a></li>
+                <li id="header-menu" class="clAlbums"><a href="#albums">Albums </a></li>
+            </ul>
+        </div>
+        <ul>
+            <input type="checkbox" id="search">
+            <input type="search" name="search" id="search-box" placeholder="Search for songs">
+            <label for="search">
+                <li><i class="fa-solid fa-magnifying-glass"></i></li>
+            </label>
+            <!-- suggest -->
+            <div id="search-suggest" class="suggestions"></div>
+
+            <li id="signUp"><a href="signup.html">Sign Up</a></li>
+            <li id="logIn"><a href="login.html">Log In</a></li>
+        </ul>
+
+        <input type="checkbox" id="hamburger">
+        <label for="hamburger" id="hamburger-label"><i class="fa-solid fa-bars-staggered" id="bars-icon"></i></label>
+
+        <!-- Bar -->
+        <div class="bars">
+            <ul id="head-bars">
+                <li id="header-menu" class="clProfile"><a href="#profile">Profile </a></li>
+                <li id="header-menu" class="clPopularSongs"><a href="#popularSongs">Popular Songs </a></li>
+                <li id="header-menu" class="clAlbum"><a href="#album">Album </a></li>
+            </ul>
+
+            <footer>
+                <div class="logo"><img src="Image-source/logo-J.png" alt=""></div>
+                <div id="foot-bars">
+                    <p>&copy;2024 Juowle. All Rights Reserved.</p>
+                    <p id="text-underline">Terms & conditions.</p>
+                    <p id="text-underline">Privacy Policy.</p>
+                    <p id="text-underline">Cookie Policy.</p>
+                </div>
+            </footer>
+        </div>
+
+    </header>
+
+    <!-- <div class="loader">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div> -->
+
+    <!-- FIGURE -->
+    <figure>
+        <img id="cover-img" class="w-100 position-fixed z-n1" src="Image-source/Artist/TheWeeknd-coverImg.jpg"
+            alt="mtp-coverimg">
+        <figcaption>
+            <img id="avt-artist" class="rounded-circle" src="Image-source/Artist/TheWeeknd-avtArtist.jpg"
+                alt="mtp-avtArtist">
+        </figcaption>
+    </figure>
+
+    <main>
+        <!-- Profile Artist -->
+        <section class="header_profile row d-flex col-12">
+            <!-- Profile -->
+            <div id="profile" class="profile_artist col-6">
+                <div class="name_artist">
+                    <p class="h2 w-75 p-0 text-center">The Weeknd</p>
+                    <div class="country_artist w-75 d-flex text-center justify-content-center align-middle">
+                        <img src="Image-source/Flag/Canada.webp" alt="">
+                        <a href="#" class="text-dark">Canada</a>
+                    </div>
+                </div>
+
+                <div class="infor_artist d-flex">
+                    <div class="bio_artist w-75">
+                        <table class="caption-top table table-responsive0 table-borderless table-hover">
+
+                            <caption class="ps-2">Bio Artist</caption>
+
+                            <tbody>
+                                <tr>
+                                    <td><i class="fa-solid fa-user me-1"></i>AKA</td>
+                                    <td class="text-end">Abel Makkonen Tesfaye</td>
+                                </tr>
+
+                                <tr>
+                                    <td><i class="fa-solid fa-calendar me-1"></i>Active Years</td>
+                                    <td class="text-end">13</td>
+                                </tr>
+
+                                <tr>
+                                    <td><i class="fa-solid fa-drum me-1"></i>Genres</td>
+                                    <td class="text-end">Pop, R&B/Soul, Electronic</td>
+                                </tr>
+
+                                <tr>
+                                    <td><i class="fa-solid fa-location-dot me-1"></i>Birth Place</td>
+                                    <td class="text-end">Scarborough, Ontario, Canada</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Links Artist -->
+                    <div class="links_artist w-25">
+                        <table class=" caption-top table table-responsive table-borderless">
+
+                            <caption class="caption_links ps-2 mb-2">Links</caption>
+
+                            <tbody>
+                                <tr>
+                                    <td class="text-center fs-6">
+                                        <a href="https://open.spotify.com/artist/5dfZ5uSmzR7VQK0udbAVpf"
+                                            target="_blank">
+                                            <i class="fa-brands fa-spotify me-1"
+                                                style="color: rgba(30, 215, 96, 1);"></i>
+                                        </a>
+                                    </td>
+                                    <td class="text-center fs-6">
+                                        <a href="https://www.youtube.com/channel/UClyA28-01x4z60eWQ2kiNbA"
+                                            target="_blank">
+                                            <i class="fa-brands fa-youtube me-1" style="color: rgba(255, 0, 0, 1);"></i>
+                                        </a>
+                                    </td>
+                                    <td class="text-center fs-6">
+                                        <a href="https://music.amazon.com/artists/B00L24NPPA" target="_blank">
+                                            <i class="fa-brands fa-apple" style="color: #000;"></i>
+                                        </a>
+                                    </td>
+                                    <td class="text-center fs-6">
+                                        <a href="https://facebook.com/mtp.fan" target="_blank">
+                                            <i class="fa-brands fa-facebook" style="color: rgba(0, 98, 255, 1);"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center fs-6">
+                                        <a href="https://instagram.com/sontungmtp" target="_blank">
+                                            <i class="fa-brands fa-instagram" style="color: rgba(193, 61, 160, 1);"></i>
+                                        </a>
+                                    </td>
+                                    <td class="text-center fs-6">
+                                        <a href="https://twitter.com/sontungmtp777" target="_blank">
+                                            <i class="fa-brands fa-x-twitter" style="color: rgba(0, 0, 0, 1);"></i>
+                                        </a>
+                                    </td>
+                                    <td class="text-center fs-6">
+                                        <a href="https://tiktok.com/@tiger050794" target="_blank">
+                                            <i class="fa-brands fa-tiktok" style="color: rgba(0, 0, 0, 1);"></i>
+                                        </a>
+                                    </td>
+                                    <td class="text-center fs-6">
+                                        <a href="https://music.amazon.com/artists/B00L24NPPA" target="_blank">
+                                            <i class="fa-brands fa-amazon" style="color: rgba(0, 0, 0, 1);"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center fs-6">
+                                        <a href="https://soundcloud.com/theweeknd" target="_blank">
+                                            <i class="fa-brands fa-soundcloud" style="color: rgba(255, 84, 29, 1);"></i>
+                                        </a>
+                                    </td>
+                                    <td class="text-center fs-6">
+                                        <a href="https://www.theweeknd.com" target="_blank">
+                                            <i class="fa-solid fa-house-chimney" style="color: rgba(0, 0, 0, 1);"></i>
+                                        </a>
+                                    </td>
+                                    <td class="text-center fs-6">
+                                    </td>
+                                    <td class="text-center fs-6">
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Introduction -->
+                <div class="about_artist p-3">
+                    <p>
+                        The Weeknd took over pop music & culture on his own terms filtering R&B, Pop,& hip-hop through
+                        an ambitious widescreen lens. The multi-platinum 3X GRAMMY Award winner has emerged as one of
+                        the most successful & significant artists of the modern era. 2012's 3X platinum Trilogy collated
+                        3 breakout mixtapes—House of Balloons, Thursday & Echoes of Silence—into his 1st chart-topping
+                        collection followed by his debut LP Kiss Land in 2013. <br><br>
+                        Two years later, “Earned It (Fifty Shades
+                        of Grey)” won “Best R&B Performance” & received an Academy Award nod for “Best Original Song” &
+                        4X Platinum Beauty Behind The Madness won a GRAMMY for “Best Urban Contemporary Album.” In 2018,
+                        Starboy won the same award, making him the 1st artist ever to win twice. His 6-track project My
+                        Dear Melancholy marked his 3rd consecutive #1 bow on the Billboard Top 200, & “Pray For Me” with
+                        Kendrick Lamar & Niels was featured in the trailer for the Academy Award winning Marvel film
+                        Black Panther. <br><br>
+                        In 2020 the 80's-nostalgic track Blinding Lights became a worldwide sensation,
+                        igniting viral dance challenges across social media, peaking at #1 in 30+ countries & headlining
+                        Mercedes Benz EQC campaign. After Hours held the #1 spot on Billboard 200 for 4 consecutive
+                        weeks, marking his 4th #1 album & becoming the first to ever rank #1 on the Billboard 200, Hot
+                        100, and Artist 100 simultaneously. After Hours is the #1 R&B streaming album of all time
+                        (followed by Starboy at #2).
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Top Track -->
+            <div class="top_song wrapped_around row col-6">
+
+                <div class="header_title mb-4 ps-4 d-flex">
+                    <h1 id="topTracks" class="display-5 fw-bold ">Top Tracks</h1>
+                </div>
+
+                <!-- Name Top Song -->
+                <div class="name_topSong d-flex p-4">
+                    <div class="poster_song w-50 d-flex flex-column p-3 me-4 ">
+                        <img src="Image-source/Collections/afterHours.jpg" alt="">
+                        <p class="h4 text-center position-relative pt-3 m-0">
+                            Blinding Lights
+                            <span class="position-absolute opacity-50">℗ 2024 M-TP Entertainment Ltd.</span>
+                        </p>
+                    </div>
+
+
+                    <div class="song_achiev w-50">
+
+                        <div class="detail_infor ps-4">
+                            <div class="d-flex">
+                                <div class="d-flex flex-column text-uppercase mb-4">
+                                    <div class="number_songAchiev h5 fw-bold">
+                                        <span>#1</span>
+                                    </div>
+                                    <span>Billboard Hot 100</span>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="flex-column text-uppercase mb-4">
+                                    <div class="number_songAchiev h5 fw-bold">
+                                        <span>#1</span>
+                                    </div>
+                                    <span>GLOBAL SPOTIFY STREAMS</span>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="flex-column text-uppercase mb-4">
+                                    <div class="number_songAchiev h5 fw-bold">
+                                        <span>#1</span>
+                                    </div>
+                                    <span>APPLE MUSIC GLOBAL</span>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="flex-column text-uppercase mb-4">
+                                    <div class="number_songAchiev h5 fw-bold">
+                                        <span>86 Weeks</span>
+                                    </div>
+                                    <span>TOP 10 BILLBOARD HOT 100</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- About song -->
+                <div class="about_song row col-12 pt-3 justify-content-end">
+                    <p class="about_songP">
+                        The Weeknd's hit song 'Blinding Lights' is a vibrant blend of '80s synth-pop with modern R&B,
+                        encapsulating a sense of longing and desire within its pulsating beats. The lyrics convey a deep
+                        sense of yearning for connection and the intoxicating rush of rekindled love. The Weeknd, known
+                        for his emotive voice and often dark, introspective themes, explores the duality of isolation
+                        and the craving for companionship in this chart-topping track.
+                        <br><br>
+                        The opening lines set the stage for a narrative of personal struggle and the need for another's
+                        presence to navigate through life's challenges. The reference to 'Sin City' being 'cold and
+                        empty' suggests a feeling of loneliness and desolation, a common theme in The Weeknd's music,
+                        which often delves into the complexities of relationships and self-discovery. The chorus, with
+                        its repeated exclamations of being 'blinded by the lights,' could symbolize the overwhelming
+                        nature of love and fame, or the disorienting effect that a significant other has on the
+                        protagonist's life. The inability to 'sleep until I feel your touch' speaks to a deep dependency
+                        and the transformative power of human connection.
+                        <br><br>
+                        The song's bridge, where The Weeknd insists he's 'just coming back to let you know' and that he
+                        'can never say it on the phone,' emphasizes the importance of physical presence and the
+                        limitations of distant communication. It's a modern take on the age-old adage that actions speak
+                        louder than words, and in the context of the song, it underscores the urgency and sincerity
+                        behind the protagonist's feelings. 'Blinding Lights' resonates with listeners not just for its
+                        catchy melody, but for its portrayal of the universal human experience of seeking light in the
+                        darkness of our own solitude.
+                    </p>
+                    <div class="act-abtSong flex-nowrap d-flex px-2 justify-content-end">
+                        <i id="actIcon" class="bi bi-caret-down-fill"></i>
+                        <div id="btnAbtSong">Expand</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Fanbase -->
+        <section class="wrapped_around" style="margin: 0 2.3%;">
+
+            <div class="header_title mb-4 mt-4 ps-3 pb-0 d-flex justify-content-between py-4">
+                <h1 id="fanbase" class="display-5 fw-bold pb-4">Fanbase</h1>
+            </div>
+
+            <div class="fanbase px-3 pb-3">
+                <div class="wrapper_fanbase py-1 d-flex">
+                    <div class="platform_horizontal d-flex justify-content-between flex-column text-center cursor-pointer"
+                        style="background-color: #e0ffe0;">
+                        <div class="logo_platform">
+                            <i class="fa-brands fa-spotify me-1" style="color: rgba(30, 215, 96, 1);"></i>
+                            <span class="title opacity-75">Spotify</span>
+                        </div>
+                        <span class="number fs-4">86.6M</span>
+                        <span class="text opacity-75">Followers</span>
+                    </div>
+                    <div class="platform_horizontal d-flex justify-content-between flex-column text-center cursor-pointer"
+                        style="background-color: rgba(193, 61, 160, .19);">
+                        <div class="logo_platform">
+                            <i class="fa-brands fa-instagram" style="color: rgba(193, 61, 160, 1);"></i>
+                            <span class="title opacity-75">Instagram</span>
+                        </div>
+                        <span class="number fs-4">75.5M</span>
+                        <span class="text opacity-75">Followers</span>
+                    </div>
+                    <div class="platform_horizontal d-flex justify-content-between flex-column text-center cursor-pointer"
+                        style="background-color: #ffe0e0;">
+                        <div class="logo_platform">
+                            <i class="fa-brands fa-youtube" style="color: rgba(255, 0, 0, 1);"></i>
+                            <span class="title opacity-75">YouTube</span>
+                        </div>
+                        <span class="number fs-4">35.4</span>
+                        <span class="text opacity-75">Subscribers</span>
+                    </div>
+                    <div class="platform_horizontal d-flex justify-content-between flex-column text-center cursor-pointer"
+                        style="background-color: rgba(0, 98, 255, .19);">
+                        <div class="logo_platform">
+                            <i class="fa-brands fa-facebook" style="color: rgba(0, 98, 255, 1);"></i>
+                            <span class="title opacity-75">Facebook</span>
+                        </div>
+                        <span class="number fs-4">17.6M</span>
+                        <span class="text opacity-75">Followers</span>
+                    </div>
+                    <div class="platform_horizontal d-flex justify-content-between flex-column text-center cursor-pointer"
+                        style="background-color: rgba(0, 0, 0, .19);">
+                        <div class="logo_platform">
+                            <i class="fa-brands fa-x-twitter" style="color: rgba(0, 0, 0, 1);"></i>
+                            <span class="title opacity-75">Twitter</span>
+                        </div>
+                        <span class="number fs-4">17.1M</span>
+                        <span class="text opacity-75">Followers</span>
+                    </div>
+                    <div class="platform_horizontal d-flex justify-content-between flex-column text-center cursor-pointer"
+                        style="background-color: #f0f0f0;">
+                        <div class="logo_platform">
+                            <i class="fa-brands fa-tiktok" style="color: rgba(0, 0, 0, 1);"></i>
+                            <span class="title opacity-75">TikTok</span>
+                        </div>
+                        <span class="number fs-4">9.6M</span>
+                        <span class="text opacity-75">Followers</span>
+                    </div>
+                    <div class="platform_horizontal d-flex justify-content-between flex-column text-center cursor-pointer"
+                        style="background-color: rgba(255, 84, 29, .19);">
+                        <div class="logo_platform">
+                            <i class="fa-brands fa-soundcloud" style="color: rgba(255, 84, 29, 1);"></i>
+                            <span class="title opacity-75">SoundCloud</span>
+                        </div>
+                        <span class="number fs-4">7M</span>
+                        <span class="text opacity-75">Followers</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Popular Songs -->
+        <section class="wrapped_around" style="margin: 0 2.3%;">
+
+            <div class="header_title mb-4 ps-3 mt-4 d-flex justify-content-between">
+                <h1 id="popularSongs" class="display-5 fw-bold py-4">Popular Songs</h1>
+                <div class="act-ppSong d-flex justify-content-between pt-4">
+                    <div class="scroll d-flex">
+                        <i class="bi bi-chevron-left px-3 me-3"></i>
+                        <i class="bi bi-chevron-right px-3"></i>
+                    </div>
+                    <div class="comprehensive">See All</div>
+                </div>
+            </div>
+
+            <div class="popular_song px-3 pb-3">
+                <div class="wrapper_ppsong d-flex flex-column flex-wrap">
+
+                    <a href="#" class="song_horizontal d-flex" target="_blank">
+                        <img src="Image-source/Collections/afterHours.jpg" alt="">
+                        <div class="flex-column d-flex justify-content-between py-1">
+                            <div class="name_songHoriz">
+                                <h5 class="fw-bold mb-1">Blinding Lights</h5>
+                                <span>The Weeknd</span>
+                            </div>
+                            <div class="releaseDate_songHoriz d-flex">
+                                <i class="bi bi-calendar4-event me-1"></i>
+                                <span>Release Date: Nov 29. 20219</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="chungTaCuaTuongLai.html" class="song_horizontal d-flex" target="_blank">
+                        <img src="Image-source/Collections/theHills.jpg" alt="">
+                        <div class="flex-column d-flex justify-content-between py-1">
+                            <div class="name_songHoriz">
+                                <h5 class="fw-bold mb-1">The Hills</h5>
+                                <span>The Weeknd</span>
+                            </div>
+                            <div class="releaseDate_songHoriz d-flex"></i>
+                                <i class="bi bi-calendar4-event me-1"></i>
+                                <span>Release Date: May 27. 2015</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="song_horizontal d-flex" target="_blank">
+                        <img src="Image-source/Collections/starboy.jpg" alt="">
+                        <div class="flex-column d-flex justify-content-between py-1">
+                            <div class="name_songHoriz">
+                                <h5 class="fw-bold mb-1">Starboy</h5>
+                                <span>The Weeknd</span>
+                            </div>
+                            <div class="releaseDate_songHoriz d-flex">
+                                <i class="bi bi-calendar4-event me-1"></i>
+                                <span>Release Date: Sep 22. 2016</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="song_horizontal d-flex" target="_blank">
+                        <img src="Image-source/Collections/popular.png" alt="">
+                        <div class="flex-column d-flex justify-content-between py-1">
+                            <div class="name_songHoriz">
+                                <h5 class="fw-bold mb-1">Popular</h5>
+                                <span>The Weeknd</span>
+                            </div>
+                            <div class="releaseDate_songHoriz d-flex">
+                                <i class="bi bi-calendar4-event me-1"></i>
+                                <span>Release Date: Feb 22. 2024</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="oneOfTheGirls.html" class="song_horizontal d-flex" target="_blank">
+                        <img src="Image-source/Collections/oneOfTheGirls.jpg" alt="">
+                        <div class="flex-column d-flex justify-content-between py-1">
+                            <div class="name_songHoriz">
+                                <h5 class="fw-bold mb-1">One Of The Girls</h5>
+                                <span>The Weeknd</span>
+                            </div>
+                            <div class="releaseDate_songHoriz d-flex">
+                                <i class="bi bi-calendar4-event me-1"></i>
+                                <span>Release Date: Feb 5. 2021</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="hayTraoChoAnh.html" class="song_horizontal d-flex" target="_blank">
+                        <img src="Image-source/Collections/afterHours.jpg" alt="">
+                        <div class="flex-column d-flex justify-content-between py-1">
+                            <div class="name_songHoriz">
+                                <h5 class="fw-bold mb-1">Save Your Tears</h5>
+                                <span>The Weeknd</span>
+                            </div>
+                            <div class="releaseDate_songHoriz d-flex">
+                                <i class="bi bi-calendar4-event me-1"></i>
+                                <span>Release Date: Mar 20. 2020</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="song_horizontal d-flex" target="_blank">
+                        <img src="Image-source/Collections/Dear-Melancholy.jpg" alt="">
+                        <div class="flex-column d-flex justify-content-between py-1">
+                            <div class="name_songHoriz">
+                                <h5 class="fw-bold mb-1">Call Out My Name</h5>
+                                <span>The Weeknd</span>
+                            </div>
+                            <div class="releaseDate_songHoriz d-flex">
+                                <i class="bi bi-calendar4-event me-1"></i>
+                                <span>Release Date: Mar 29. 2018</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="song_horizontal d-flex" target="_blank">
+                        <img src="Image-source/Collections/Creepin.jpg" alt="">
+                        <div class="flex-column d-flex justify-content-between py-1">
+                            <div class="name_songHoriz">
+                                <h5 class="fw-bold mb-1">Creepin' (with The Weeknd & 21 Savage)</h5>
+                                <span>Metro Boomin, The Weeknd, 21 Savage</span>
+                            </div>
+                            <div class="releaseDate_songHoriz d-flex">
+                                <i class="bi bi-calendar4-event me-1"></i>
+                                <span>Release Date: Dec 2. 2022</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="song_horizontal d-flex" target="_blank">
+                        <img src="Image-source/Collections/afterHours.jpg" alt="">
+                        <div class="flex-column d-flex justify-content-between py-1">
+                            <div class="name_songHoriz">
+                                <h5 class="fw-bold mb-1">After Hours</h5>
+                                <span>The Weeknd</span>
+                            </div>
+                            <div class="releaseDate_songHoriz d-flex">
+                                <i class="bi bi-calendar4-event me-1"></i>
+                                <span>Release Date: Feb 19. 2020</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="song_horizontal d-flex" target="_blank">
+                        <img src="Image-source/Collections/Dear-Melancholy.jpg" alt="">
+                        <div class="flex-column d-flex justify-content-between py-1">
+                            <div class="name_songHoriz">
+                                <h5 class="fw-bold mb-1">Privilege</h5>
+                                <span>The Weeknd</span>
+                            </div>
+                            <div class="releaseDate_songHoriz d-flex">
+                                <i class="bi bi-calendar4-event me-1"></i>
+                                <span>Release Date: Mar 29. 2018</span>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Albums -->
+        <section class="wrapped_around" style="margin: 0 2.3%;">
+            <div class="header_title mb-4 mt-4 ps-4 pb-0 d-flex justify-content-between py-4">
+                <h1 id="albums" class="display-5 fw-bold pb-4">Albums</h1>
+            </div>
+
+            <div class="albums px-3 pb-3">
+                <div class="wrapper_album p-2 d-flex">
+                    <div class="album_horizontal">
+                        <img src="Image-source/Collections/album-ChungTaEP.jpg" alt="">
+                        <div>
+                            <h5 class="fw-bold mb-1 text-center pt-2">Chúng Ta - EP</h5>
+                            <span>Album 2024</span>
+                        </div>
+                    </div>
+
+                    <div class="album_horizontal">
+                        <img src="Image-source/Collections/album-Sky-Tour.jpg" alt="">
+                        <div>
+                            <h5 class="fw-bold mb-1 text-center pt-2">Sky Tour</h5>
+                            <span>Album 2020</span>
+                        </div>
+                    </div>
+
+                    <div class="album_horizontal">
+                        <img src="Image-source/Collections/album-mtpMTP.jpg" alt="">
+                        <div>
+                            <h5 class="fw-bold mb-1 text-center pt-2">m-tp M-TP</h5>
+                            <span>Album 2017</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommended Artists -->
+        <section class="wrapped_around" style="margin: 0 2.3%;">
+            <div class="header_title mb-4 mt-4 ps-4 pb-0 d-flex justify-content-between py-4">
+                <h1 id="recommended" class="display-5 fw-bold pb-4">Recommended Artist</h1>
+            </div>
+
+            <div class="recommend px-3 pb-3">
+                <div class="wrapper_recommended d-flex">
+                    <a href="The-Weeknd.html" class="recommended_horizontal" target="_blank">
+                        <img class="avt_recommened" src="Image-source/Artist/TheWeeknd-avtArtist.jpg" alt="">
+                        <div class="footer_recommended d-flex justify-content-between align-items-center p-3">
+                            <h5 class="fw-bold mb-1">The Weeknd</h5>
+                            <img src="Image-source/Flag/Canada.webp" alt="">
+                        </div>
+                    </a>
+                    <a href="Billie-Eilish.html" class="recommended_horizontal" target="_blank">
+                        <img class="avt_recommened" src="Image-source/Artist/billieEilish-avtArtist.jpg" alt="">
+                        <div class="footer_recommended d-flex justify-content-between align-items-center p-3">
+                            <h5 class="fw-bold mb-1">Billie Eilish</h5>
+                            <img src="Image-source/Flag/US.webp" alt="">
+                        </div>
+                    </a>
+                    <a href="DPR-IAN.html" class="recommended_horizontal" target="_blank">
+                        <img class="avt_recommened" src="Image-source/Artist/DPRIAN-avtartist.jpg" alt="">
+                        <div class="footer_recommended d-flex justify-content-between align-items-center p-3">
+                            <h5 class="fw-bold mb-1">DPR IAN</h5>
+                            <img src="Image-source/Flag/SouthKorea.webp" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
+        </section>
+    </main>
+
+    <footer class="bg-black">
+        <div class="logo z-0"><img src="Image-source/logo-J.png" alt=""></div>
+        <ul>
+            <p>&copy;2024 Juowle. All Rights Reserved.</p>
+            <p id="text-underline">Terms & conditions.</p>
+            <p id="text-underline">Privacy Policy.</p>
+            <p id="text-underline">Cookie Policy.</p>
+        </ul>
+        <ul>
+            <li><a href="https://www.facebook.com/Duocthattha"><i class="fa-brands fa-facebook"></i></a></li>
+
+            <li><a href="https://open.spotify.com/user/31pm2sncp7nyw7o7i4ncnep25k3i?si=4a087f6556c94839"><i
+                        class="fa-brands fa-spotify"></i></a></li>
+
+            <li><a href="https://www.instagram.com/juowlee/"><i class="fa-brands fa-instagram"></i></a></li>
+        </ul>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="lyric.js"></script>
+    <script src="artist.js"></script>
+
+
+
+
+</body>
+
+</html>

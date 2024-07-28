@@ -310,24 +310,24 @@ $(window).on('scroll', function() {
     }
 
     if (600 < scrollPos && scrollPos < 1449) {
-        $('.play-list').addClass('toPos');
-        $('.title-large').addClass('toPos');
+        // $('.play-list').addClass('toPos');
+        // $('.title-large').addClass('toPos');
         $('.clfeatured').addClass('border');
     } else {
         $('.clfeatured').removeClass('border');
     }
 
     if (1450 < scrollPos && scrollPos < 2099) {
-        $('.reference').addClass('leftPos');
+        // $('.reference').addClass('leftPos');
         $('.clnews').addClass('border');
     } else {
         $('.clnews').removeClass('border');
     }
 
     if (scrollPos > 2100) {
-        $('#songs').addClass('reveal');
-        $('#contact').addClass('reveal');
-        $('.videos').addClass('toPos');
+        // $('#songs').addClass('reveal');
+        // $('#contact').addClass('reveal');
+        // $('.videos').addClass('toPos');
         $('.clsongs').addClass('border');
     } else {
         $('.clsongs').removeClass('border');
