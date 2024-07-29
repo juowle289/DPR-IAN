@@ -24,8 +24,16 @@
 </head>
 
 <body>
+    <style>
+        .links_artist {
+            background: rgb(185, 169, 157);
+        }
+        .links_artist table i {
+            background: var(--color-white);
+        }
+    </style>
     <header id="header">
-        <div class="logo">
+        <div class="logo d-flex">
             <a href="dprian.html"><img src="Image-source/logo-J.png"></a>
             <!-- Juowle -->
             <ul>
@@ -73,18 +81,18 @@
 
     </header>
 
-    <!-- <div class="loader">
+    <div class="loader">
         <div class="dot"></div>
         <div class="dot"></div>
         <div class="dot"></div>
-    </div> -->
+    </div>
 
     <!-- FIGURE -->
     <figure>
-        <img id="cover-img" class="w-100 position-fixed z-n1" src="Image-source/Artist/mtp-coverimg.jpg"
+        <img id="cover-img" class="w-100 position-fixed z-n1" src="Image-source/Artist/mtp-coverimg2.jpg"
             alt="mtp-coverimg">
         <figcaption>
-            <img id="avt-artist" class="rounded-circle" src="Image-source/Artist/mtp-avtArtist.jpg" alt="mtp-avtArtist">
+            <img id="avt-artist" class="rounded-circle user-select-none" src="Image-source/Artist/mtp-avtArtist.jpg" alt="mtp-avtArtist">
         </figcaption>
     </figure>
 
@@ -428,8 +436,8 @@
                 <h1 id="popularSongs" class="display-5 fw-bold py-4">Popular Songs</h1>
                 <div class="act-ppSong d-flex justify-content-between pt-4">
                     <div class="scroll d-flex">
-                        <i class="bi bi-chevron-left px-3 me-3"></i>
-                        <i class="bi bi-chevron-right px-3"></i>
+                        <i class="bi-1 bi-chevron-left px-3 me-3"></i>
+                        <i class="bi-1 bi-chevron-right px-3"></i>
                     </div>
                     <div class="comprehensive">See All</div>
                 </div>
@@ -587,6 +595,13 @@
         <section class="wrapped_around" style="margin: 0 2.3%;">
             <div class="header_title mb-4 mt-4 ps-4 pb-0 d-flex justify-content-between py-4">
                 <h1 id="albums" class="display-5 fw-bold pb-4">Albums</h1>
+                <div class="act-ppSong d-flex justify-content-between pt-4">
+                    <div class="scroll d-flex">
+                        <i class="bi-2 bi-chevron-left px-3 me-3"></i>
+                        <i class="bi-2 bi-chevron-right px-3"></i>
+                    </div>
+                    <div class="comprehensive">See All</div>
+                </div>
             </div>
 
             <div class="albums px-3 pb-3">
@@ -654,8 +669,8 @@
         </section>
     </main>
 
-    <footer>
-        <div class="logo"><img src="Image-source/logo-J.png" alt=""></div>
+    <footer class="bg-black">
+        <div class="logo z-0"><img src="Image-source/logo-J.png" alt=""></div>
         <ul>
             <p>&copy;2024 Juowle. All Rights Reserved.</p>
             <p id="text-underline">Terms & conditions.</p>
@@ -675,51 +690,6 @@
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script src="lyric.js"></script>
     <script src="artist.js"></script>
-
-    <hidden class="
-    container container-fluid row 
-    bg-primary bg-secondary bg-info bg-warning bg-danger bg-light bg-dark
-    border border-top border-right border-bottom border-left border-0 border-primary border-secondary border-success border-info border-warning border-danger
-    text-primary text-secondary text-success text-info text-warning text-danger text-light text-dark text-body
-    d-inline d-inline-block d-block d-flex d-inline-flex d-none
-    flex-row flex-column flex-wrap flex-nowrap flex-fill
-    float-left float-right float-none
-    cursor-pointer cursor-default
-    link-primary link-secondary link-success link-info link-warning link-danger
-    object-fit-cover object-fit-contain object-fit-fill
-    opacity-25 opacity-50 opacity-75 opacity-100
-    overflow-auto overflow-hidden overflow-visible overflow-scroll
-    position-static position-relative position-absolute position-fixed position-sticky
-    fixed-top fixed-bottom
-    sticky-top sticky-bottom
-    shadow shadow-sm shadow-lg shadow-none
-    w-25 w-50 w-75 w-100 h-25 h-50 h-75 h-100
-    m-0 m-1 m-2 m-3 m-4 m-5 mt-0 mt-1 mt-2 mt-3 mt-4 mt-5
-    me-0 me-1 me-2 me-3 me-4 me-5 mb-0 mb-1 mb-2 mb-3 mb-4 mb-5
-    ms-0 ms-1 ms-2 ms-3 ms-4 ms-5 mx-0 mx-1 mx-2 mx-3 mx-4 mx-5 my-0 my-1 my-2 my-3 my-4 my-5
-    p-0 p-1 p-2 p-3 p-4 p-5 pt-0 pt-1 pt-2 pt-3 pt-4 pt-5
-    pe-0 pe-1 pe-2 pe-3 pe-4 pe-5 pb-0 pb-1 pb-2 pb-3 pb-4 pb-5
-    ps-0 ps-1 ps-2 ps-3 ps-4 ps-5 px-0 px-1 px-2 px-3 px-4 px-5 py-0 py-1 py-2 py-3 py-4 py-5
-    g-0 g-1 g-2 g-3 g-4 g-5 gx-0 gx-1 gx-2 gx-3 gx-4 gx-5 gy-0 gy-1 gy-2 gy-3 gy-4 gy-5
-    text-start text-center text-end
-    align-baseline align-top align-middle align-bottom align-text-bottom align-text-top align-items-center
-    justify-content-start justify-content-end justify-content-center justify-content-between justify-content-around
-    visible invisible
-    z-0 z-1 z-2 z-3 z-n1
-    col-1 col-2 col-3 col-4 col-5 col-6 col-7 col-8 col-9 col-10 col-11 col-12
-    col-sm-1 col-sm-2 col-sm-3 col-sm-4 col-sm-5 col-sm-6 col-sm-7 col-sm-8 col-sm-9 col-sm-10 col-sm-11 col-sm-12
-    col-md-1 col-md-2 col-md-3 col-md-4 col-md-5 col-md-6 col-md-7 col-md-8 col-md-9 col-md-10 col-md-11 col-md-12
-    col-lg-1 col-lg-2 col-lg-3 col-lg-4 col-lg-5 col-lg-6 col-lg-7 col-lg-8 col-lg-9 col-lg-10 col-lg-11 col-lg-12
-    col-xl-1 col-xl-2 col-xl-3 col-xl-4 col-xl-5 col-xl-6 col-xl-7 col-xl-8 col-xl-9 col-xl-10 col-xl-11 col-xl-12
-    h1 h2 h3 h4 h5 h6
-    lead fw-bold fw-normal fw-light fw-italic fw-bold fw-semi-bold
-    fs-1 fs-2 fs-3 fs-4 fs-5 fs-6
-    fst-italic fst-normal
-    lh-1 lh-sm lh-base lh-lg
-    table table-bordered table-striped table-hover table-dark table-sm table-responsive
-"></hidden>
-
-
 </body>
 
 </html>

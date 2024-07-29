@@ -69,6 +69,8 @@ body {
 header {
   display: flex;
   position: fixed;
+  justify-content: space-between;
+  align-items: center;
   inset: 0;
   width: 100%; height: 4.3em;
   padding: 0em 1.8em;
@@ -77,8 +79,6 @@ header {
   border-bottom: 0.01em solid rgba(0, 0, 0, 0);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   font-weight: 500;
-  justify-content: space-between;
-  align-items: center;
   z-index: 56;
 }
 
@@ -98,6 +98,7 @@ ul {
   color: var(--color-white);
   gap: 1.3em;
   z-index: 55;
+  margin: 0;
 }
 
 ul li {
@@ -229,61 +230,62 @@ input[type=checkbox] {
 
 /* Add class */
 .suggestion-item {
+  height: 4.8em;
   display: flex;
   padding: 10px;
+  font-family: var(--font-NiveauGrotesk);
   border-bottom: 1px solid var(--color-white);
   background: #000;
   cursor: pointer;
 }
-
 .suggestion-item:hover {
+  color: #000;
   background-color: var(--color-main);
 }
-
-.suggestion-item:hover p,
-.suggestion-item:hover p.views {
+.suggestion-item:hover span,
+.suggestion-item:hover span.views {
   color: #000;
 }
-
 .suggestion-item img {
   width: 50px;
   height: 50px;
   margin-right: 10px;
 }
-
 .suggestion-item div {
   display: flex;
   flex-direction: column;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
-.suggestion-item p {
-  margin: 0;
+  height: 3.5em;}
+.suggestion-item span {
+  font-family: var(--font-NiveauGrotesk);
   font-size: 1em;
 }
-
-.suggestion-item p.title {
+.suggestion-item span.title { /*name song*/
   font-family: var(--font-Anton);
 }
-
-.suggestion-item p.artist {
+.suggestion-item span.artist { /*name artist*/
+  display: flex; align-items: center;
   font-size: 0.87em;
 }
-
-.suggestion-item p.views {
-  color: #7b7b7b;
+.suggestion-item span.artist i { /* DOT . */
+  font-weight: bold;
+  font-size: 1.3em;
+}
+.suggestion-item span.views { /*views*/
+  font-family: var(--font-NiveauGrotesk);
+  color: #ccc;
   font-size: 0.8em;
+}
+.suggestion-item .avtArtistSugg { /*avt artistSugg*/
+  border-radius: 50%;
 }
 
 footer {
   flex-wrap: wrap;
   font-size: 0.8em;
-  margin: 0 3.3em;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.6em 0;
+  padding: 2.6em 3.3em;
   color: var(--color-white);
   border-top: 0.1em solid var(--color-main);
 }
@@ -310,6 +312,7 @@ footer img {
 
 footer .logo {
   width: 100%;
+  padding-left: 3.3em;
 }
 
 /*  HEADER EFFECT   */

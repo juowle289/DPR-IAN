@@ -21,6 +21,7 @@ figcaption #avt-artist {
     margin: 40vh 0 0 10%;
     width: 20em;
     filter: drop-shadow(var(--drop-shadowXL));
+    pointer-events: none;
 }
 
 .profile_artist {
@@ -76,9 +77,9 @@ figcaption #avt-artist {
 
 .links_artist {
     margin-left: 3.5%;
+    margin-bottom: 3.5%;
+    border-radius: .3em;
 }
-
-.links_artist caption {}
 
 .links_artist table tr td  {
     background: transparent;
@@ -231,6 +232,7 @@ figcaption #avt-artist {
 /* Fanbase compare */
 .fanbase {
     scroll-snap-type: x proximity;
+    user-select: none;
 }
 
 .wrapper_fanbase {
@@ -270,7 +272,7 @@ figcaption #avt-artist {
 }
 
 :is(.wrapper_recommended, .wrapper_fanbase, .wrapper_album, .wrapper_ppsong)::-webkit-scrollbar {
-  height: .4em;
+  height: .35em;
 }
 
 .song_horizontal {
@@ -293,25 +295,27 @@ figcaption #avt-artist {
 }
 
 .name_songHoriz h5 {
-    font-size: 1.15em;
+     font-size: 1.15em;
     color: var(--color-blue);
+    max-width: 15em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
 }
 
 .name_songHoriz span {
-    font-size: 1em;
+     font-size: 1em;
 }
 
 .name_songHoriz {
         width: 15.5em;
     border-bottom: var(--border-gray);
-}
-
-.name_songHoriz :is(h5, span) {
-        max-width: 15.5em;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
 
 .releaseDate_songHoriz span {
     font-size: .8em;
@@ -354,7 +358,7 @@ figcaption #avt-artist {
 
 .wrapper_album {
     width: fit-content;
-    height: fit-content;
+    height: 21em;
     gap: 1em;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -378,12 +382,14 @@ figcaption #avt-artist {
 }
 
 .album_horizontal h5 {
+    font-size: 1.15em;
     margin: 0 0 0 0;
     color: var(--color-blue);
 }
 
 .album_horizontal span {
-    justify-content: center;
+    color: var(--color-gray2);
+    font-size: 1em;
 }
 
 /* Recommend */

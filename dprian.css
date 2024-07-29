@@ -532,16 +532,14 @@ input[type=checkbox] {
   background: #000;
   cursor: pointer;
 }
-
 .suggestion-item:hover {
+  color: #000;
   background-color: var(--color-main);
 }
-
-.suggestion-item:hover p,
-.suggestion-item:hover p.views {
+.suggestion-item:hover span,
+.suggestion-item:hover span.views {
   color: #000;
 }
-
 .suggestion-item img {
   width: 50px;
   height: 50px;
@@ -553,21 +551,30 @@ input[type=checkbox] {
   height: -moz-fit-content;
   height: fit-content;
 }
-.suggestion-item p {
+.suggestion-item span {
   font-family: var(--font-NiveauGrotesk);
   margin: 0;
   font-size: 1em;
 }
-.suggestion-item p.title {
+.suggestion-item span.title {
   font-family: var(--font-Anton);
 }
-.suggestion-item p.artist {
+.suggestion-item span.artist {
+  display: flex; align-items: center;
   font-size: 0.87em;
 }
-.suggestion-item p.views {
+.suggestion-item span.artist i { /* DOT . */
+  font-weight: bold;
+  font-size: 1.3em;
+  margin: 0; padding: 0;
+}
+.suggestion-item span.views {
   font-family: var(--font-NiveauGrotesk);
   color: #ccc;
   font-size: 0.8em;
+}
+.suggestion-item .avtArtistSugg {
+  border-radius: 50%;
 }
 
 /* // TODO: NAV    */

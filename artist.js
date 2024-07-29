@@ -33,41 +33,66 @@ $(document).ready(function() {
     });
 
     // Act Chevron Popular Song
-    const wrapperPPSong = $('.wrapper_ppsong');
-    const songHoriz = $('.song_horizontal');
-    const chevronL = $('.bi-chevron-left');
-    const chevronR = $('.bi-chevron-right');
+    const chevronL1 = $('.bi-1.bi-chevron-left');
+    const chevronR1 = $('.bi-1.bi-chevron-right');
 
-    let currentIndex = 0;
+    let currentIndexPPSong = 0;
     let sizePPSong = 4; let mobileSizePPSong = 2;
-    let totalItems = songHoriz.length;
+    let totalItemsPPSong = $('.song_horizontal').length;
 
     if ($(window).width() <= 768) {
         sizePPSong = mobileSizePPSong;
     }
 
-    chevronL.on('click', function() {
-        currentIndex -= sizePPSong;
-        if (currentIndex < 0) {
-            currentIndex = totalItems - sizePPSong;
+    chevronL1.on('click', function() {
+        currentIndexPPSong -= sizePPSong;
+        if (currentIndexPPSong < 0) {
+            currentIndexPPSong = totalItemsPPSong - sizePPSong;
         }
-        wrapperPPSong.animate({
-            scrollLeft : currentIndex * songHoriz.width()
+        $('.wrapper_ppsong').animate({
+            scrollLeft : currentIndexPPSong * $('.song_horizontal').width()
         }, 500);
     });
 
-    chevronR.on('click', function() {
-        currentIndex += sizePPSong;
-        if (currentIndex >= totalItems) {
-            currentIndex = 0;
+    chevronR1.on('click', function() {
+        currentIndexPPSong += sizePPSong;
+        if (currentIndexPPSong >= totalItemsPPSong) {
+            currentIndexPPSong = 0;
         }
-        wrapperPPSong.animate({
-            scrollLeft: currentIndex * songHoriz.width()
+        $('.wrapper_ppsong').animate({
+            scrollLeft: currentIndexPPSong * $('.song_horizontal').width()
         }, 500);
     });
 
+    // Act Chevron Albums
+    const chevronL2 = $('.bi-2.bi-chevron-left');
+    const chevronR2 = $('.bi-2.bi-chevron-right');
+
+    let currentIndexAlbums = 0;
+    let sizeAlbums = 6;
+    let totalItemsAlbums = $('.album_horizontal').length;
+
+    chevronL2.on('click', function() {
+        currentIndexAlbums -= sizeAlbums;
+        if (currentIndexAlbums < 0) {
+            currentIndexAlbums = totalItemsAlbums - sizeAlbums;
+        }
+        $('.wrapper_album').animate({
+            scrollLeft : currentIndexAlbums * $('.album_horizontal').width()
+        }, 500);
+    });
+
+    chevronR2.on('click', function() {
+        currentIndexAlbums += sizeAlbums;
+        if (currentIndexAlbums >= totalItemsAlbums) {
+            currentIndexAlbums = 0;
+        }
+        $('.wrapper_album').animate({
+            scrollLeft: currentIndexAlbums * $('.album_horizontal').width()
+        }, 500);
+    });
     // Hover .song_horizontal 
-    songHoriz.hover(
+    $('.song_horizontal').hover(
         function(){
             $(this).css({
                 transition: '350ms ease',

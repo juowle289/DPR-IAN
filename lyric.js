@@ -57,6 +57,29 @@ search.addEventListener('change', function(){
 // TODO Suggest   
 const searchSuggest = $('#search-suggest');
 
+const artists = [
+    {
+        avtArtist : 'Image-source/Artist/mtp-avtArtist.jpg',
+        nameArtist: 'Sơn Tùng M-TP',
+        link      : 'Son-Tung-MTP.html' 
+    },
+    {
+        avtArtist : 'Image-source/Artist/TheWeeknd-avtArtist.jpg',
+        nameArtist: 'The Weeknd',
+        link      : 'The-Weeknd.html' 
+    },
+    {
+        avtArtist : 'Image-source/Artist/billieEilish-avtArtist.jpg',
+        nameArtist: 'Billie Eilish',
+        link      : '#' 
+    },
+    {
+        avtArtist : 'Image-source/Artist/DPRIAN-avtartist.jpg',
+        nameArtist: 'DPR IAN',
+        link      : '#' 
+    },
+];
+
 const songs = [
     {
         imgSrc: 'Image-source/Collections/MoodswingsInThisOrder.jpg',
@@ -182,14 +205,35 @@ $('#search-box').on('input', function() {
     if(query) {
         const filterSong = songs.filter(song => song.title.toLowerCase().includes(query));
 
+        const filterArist = artists.filter(artist => artist.nameArtist.toLowerCase().includes(query));
+
+        filterArist.forEach(artist => {
+            const artistElement = $('<div>').addClass('suggestion-item');
+            artistElement.html(`
+                <img src="${artist.avtArtist}" class="avtArtistSugg">    
+                <div>
+                    <span class="title">${artist.nameArtist}</span>
+                    <span class="artist">
+
+                     Artist 
+                    <i class="bi bi-dot"></i>
+                     Pop<span>
+                </div>
+            `);
+            artistElement.on('click', function() {
+                window.location.href = artist.link;
+            });
+            searchSuggest.append(artistElement);
+        });
+        
         filterSong.forEach(song => {
             const songElement = $('<div>').addClass('suggestion-item');
             songElement.html(`
                 <img src="${song.imgSrc}">
                 <div>
-                    <p class="title">${song.title}</p>
-                    <p class="artist">${song.artist}</p>
-                    <p class="views">${song.views}</p>
+                    <span class="title">${song.title}</span>
+                    <span class="artist">${song.artist}</span>
+                    <span class="views"><i class="bi bi-eye"></i> ${song.views}</span>
                 </div>
             `);
             songElement.on('click', function() {
@@ -197,6 +241,7 @@ $('#search-box').on('input', function() {
             });
             searchSuggest.append(songElement);
         });
+
     }
 });
 
