@@ -1,7 +1,8 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-    const inputUsername = document.getElementById('lg-userName');
-    const inputPassword = document.getElementById('lg-password');
+    const inputUsername = document.getElementById('su-userName');
+    const inputPassword = document.getElementById('su-password');
+    const inputComfirmPS = document.getElementById('su-confirm-password');
     const iconRevealPw = document.getElementById('revealPw');
 
     const iconCheckUsername = document.getElementById('iconCheckUsername');
@@ -56,5 +57,66 @@ document.addEventListener('DOMContentLoaded', () => {
             header.classList.remove('hidden');
         }
     });
+});
+
+$(document).ready(function() {
+    // Hàm để xử lý sự kiện đăng ký
+    $('#signup-form').submit(function(event) {
+        event.preventDefault();
+        
+        var username = $('#su-userName').val();
+        var email = $('#su-email').val();
+        var password = $('#su-password').val();
+        var confirmPassword = $('#su-confirm-password').val();
+        
+        if (password !== confirmPassword) {
+            alert("Passwords do not match!");
+            return;
+        }
+        
+        // Lưu thông tin người dùng vào localStorage
+        var users = JSON.parse(localStorage.getItem('users')) || [];
+        var userExists = users.some(function(user) {
+            return user.username === username;
+        });
+        
+        if (userExists) {
+            alert("Username already exists!");
+            return;
+        }
+        
+        users.push({ username: username, email: email, password: password });
+        localStorage.setItem('users', JSON.stringify(users));
+        
+        alert("Sign up successful!");
+        window.location.href = 'login.html';
+    });
     
+    // Hàm để xử lý sự kiện đăng nhập
+    $('#login-form').submit(function(event) {
+        event.preventDefault();
+        
+        var username = $('#lg-username').val();
+        var password = $('#lg-password').val();
+        
+        // Kiểm tra thông tin đăng nhập
+        var users = JSON.parse(localStorage.getItem('users')) || [];
+        var user = users.find(function(user) {
+            return user.username === username && user.password === password;
+        });
+        
+        if (user) {
+            alert("Login successful!");
+            window.location.href = 'dprian.html';
+        } else {
+            alert("Invalid username or password!");
+        }
+
+        let loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+        if (loggedInUser) {
+            // Update header to show logged-in user's name
+            $('#signUp').remove();
+            $('#logIn').replaceWith(`<li id="userGreeting">Hello, ${loggedInUser.username}</li>`);
+        }
+    });
 });
