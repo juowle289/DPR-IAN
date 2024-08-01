@@ -581,12 +581,10 @@ input[type=checkbox] {
 figure {
   width: 100%;
   height: 106.6vh;
-  z-index: -5;
 }
 figure video {
   width: 100%;
     margin-top: -4.3em;
-  z-index: -5;
 }
 
 figcaption {
@@ -595,7 +593,6 @@ figcaption {
   font-size: 4em;
   margin-top: -10em;
   padding-left: 10%;
-  z-index: -5;
 }
 
 figcaption :is(h1, h6) {
@@ -610,8 +607,14 @@ figcaption h1 {
 }
 
 figcaption h6 {
-  font-weight: 100;
+  position: relative;
+  z-index: 1;
   font-size: .7em;
+  font-weight: 100;
+}
+figcaption h6 a:hover {
+  text-decoration: underline;
+  color: var(--color-main);
 }
 
 button {

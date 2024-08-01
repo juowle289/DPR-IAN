@@ -239,7 +239,7 @@ figcaption #avt-artist {
     gap: 1em;
     overflow-x: scroll;
     overflow-y: hidden;
-    scroll-snap-align: start;
+    scroll-snap-align: center;
 }
 
 .platform_horizontal {
@@ -264,7 +264,7 @@ figcaption #avt-artist {
     gap: 1em;
     overflow-x: scroll;
     overflow-y: hidden;
-    scroll-snap-align: start;
+    scroll-snap-align: center;
 }
 
 :is(.wrapper_recommended, .wrapper_fanbase, .wrapper_album, .wrapper_ppsong)::-webkit-scrollbar-thumb {
@@ -362,7 +362,7 @@ figcaption #avt-artist {
     gap: 1em;
     overflow-x: scroll;
     overflow-y: hidden;
-    scroll-snap-align: start;
+    scroll-snap-align: center;
 }
 
 .album_horizontal {
@@ -394,7 +394,12 @@ figcaption #avt-artist {
 
 /* Recommend */
 .wrapper_recommended {
+    width: fit-content;
+    height: 21em;
     gap: 1em;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-align: center;
 }
 
 .recommended_horizontal {
