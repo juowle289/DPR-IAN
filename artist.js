@@ -33,9 +33,6 @@ $(document).ready(function() {
     });
 
     // Act Chevron Popular Song
-    const chevronL1 = $('.bi-1.bi-chevron-left');
-    const chevronR1 = $('.bi-1.bi-chevron-right');
-
     let currentIndexPPSong = 0;
     let sizePPSong = 4; let mobileSizePPSong = 2;
     let totalItemsPPSong = $('.song_horizontal').length;
@@ -44,7 +41,7 @@ $(document).ready(function() {
         sizePPSong = mobileSizePPSong;
     }
 
-    chevronL1.on('click', function() {
+    $('.chevronPPsongL').on('click', function() {
         currentIndexPPSong -= sizePPSong;
         if (currentIndexPPSong < 0) {
             currentIndexPPSong = totalItemsPPSong - sizePPSong;
@@ -54,7 +51,7 @@ $(document).ready(function() {
         }, 500);
     });
 
-    chevronR1.on('click', function() {
+    $('.chevronPPsongR').on('click', function() {
         currentIndexPPSong += sizePPSong;
         if (currentIndexPPSong >= totalItemsPPSong) {
             currentIndexPPSong = 0;
@@ -65,14 +62,11 @@ $(document).ready(function() {
     });
 
     // Act Chevron Albums
-    const chevronL2 = $('.bi-2.bi-chevron-left');
-    const chevronR2 = $('.bi-2.bi-chevron-right');
-
     let currentIndexAlbums = 0;
     let sizeAlbums = 6;
     let totalItemsAlbums = $('.album_horizontal').length;
 
-    chevronL2.on('click', function() {
+    $('.chevronAlbumL').on('click', function() {
         currentIndexAlbums -= sizeAlbums;
         if (currentIndexAlbums < 0) {
             currentIndexAlbums = totalItemsAlbums - sizeAlbums;
@@ -82,7 +76,7 @@ $(document).ready(function() {
         }, 500);
     });
 
-    chevronR2.on('click', function() {
+    $('.chevronAlbumR').on('click', function() {
         currentIndexAlbums += sizeAlbums;
         if (currentIndexAlbums >= totalItemsAlbums) {
             currentIndexAlbums = 0;
@@ -91,6 +85,32 @@ $(document).ready(function() {
             scrollLeft: currentIndexAlbums * $('.album_horizontal').width()
         }, 500);
     });
+
+
+    let currentIndexRecommended = 0;
+    let sizeRecommended = 6;
+    let totalItemsRecommended = $('.recommended_horizontal').length;
+
+    $('.chevronRecommendedL').on('click', function() {
+        currentIndexRecommended -= sizeRecommended;
+        if (currentIndexRecommended < 0) {
+            currentIndexRecommended = totalItemsRecommended - sizeRecommended;
+        }
+        $('.wrapper_recommended').animate({
+            scrollLeft : currentIndexRecommended * $('.recommended_horizontal').width()
+        }, 500);
+    });
+
+    $('.chevronRecommendedR').on('click', function() {
+        currentIndexRecommended += sizeRecommended;
+        if (currentIndexRecommended >= totalItemsRecommended) {
+            currentIndexRecommended = 0;
+        }
+        $('.wrapper_recommended').animate({
+            scrollLeft: currentIndexRecommended * $('.recommended_horizontal').width()
+        }, 500);
+    });
+
     // Hover .song_horizontal 
     $('.song_horizontal').hover(
         function(){
