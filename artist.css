@@ -1,5 +1,132 @@
 @import url('https://fonts.cdnfonts.com/css/banner');
 
+@media screen and (max-width: 768px) {
+    body header {
+      width: 100%;
+      font-size: 0.9em;
+      height: 4em;
+    }
+  
+    body footer {
+      margin: 0;
+      padding: 2em 1em;
+      position: relative;
+      z-index: 1;
+    }
+  
+    body footer ul {
+      display: flex;
+      gap: 0em;
+      font-size: 1em;
+    }
+  
+    body footer ul li {
+      margin-right: .6em;
+    }
+
+    body footer .logo {
+        padding: 0;
+    }
+  
+    body header  :is(#header-menu, #signUp, #logIn) {
+      display: none;
+    }
+  
+    body header ul li i{
+      position: absolute;
+      right: 4em;
+      top: 1.1em;
+      z-index: -100;
+    }
+  
+    body header #search-box {
+      /* position: relative;
+      z-index: -1; */
+      width: 0;
+      height: 2em;
+      margin-left: -3em;
+    }
+  
+    body header #search-suggest {
+      width: 100%;
+      top: 4em;
+      left: 0;
+    }
+  
+    /* Bars */
+    body header .bars #head-bars{
+      display: block;
+    }
+  
+    body header #hamburger-label #bars-icon {
+      position: relative;
+      z-index: 21;
+    }
+  
+    body header #head-bars li {
+        display: block;
+      margin-bottom: 1em;
+      padding: .5em;
+    }
+  
+    body header #hamburger-label {
+      display: block;
+    }
+  
+    header .bars #header-menu a{
+      font-size: 1em;
+    }
+  
+    body header .bars #head-bars {
+      height: 100%;
+    }
+    
+    header .bars footer {
+      position: absolute;
+      bottom: 0;
+    }
+  
+    header .bars footer p {
+      line-height: 1.5em;
+    }
+
+    /* MAIN */
+    body figure {
+        height: 40vh;
+        justify-content: center;
+        display: flex;
+    }
+
+    body figcaption #avt-artist{
+        margin: 100% 0 0 0;
+        width: 13em;
+    }
+
+    body figure #cover-img {
+        height: 40vh;
+    }
+
+    section .profile_artist {
+        width: 100%;
+    }
+
+    section .name_artist {
+        margin-left: 25%;
+    }
+
+    section .bio_artist {
+        width: 100%;
+    }
+
+    section .links_artist {
+        width: 100%;
+        display: none;
+        flex-wrap: wrap;
+    }
+
+
+}  
+
 body {color: #000;}
 main {
     margin-top: -1em; padding-bottom: 2.3%;
@@ -8,7 +135,7 @@ main {
 
 figure {
     height: 60vh; /*Height CoverImage*/
-    width: 100 ;
+    /* width: 100 ; */
     background: linear-gradient(rgba(0, 0, 0, 0.25) 10%, var(--color-white));
 }
 
@@ -51,6 +178,7 @@ figcaption #avt-artist {
 }
 
 .bio_artist {
+    width: 75%;
     border-radius: .3em;
     /* background: #fff; */
     margin-bottom: 3.5%;
