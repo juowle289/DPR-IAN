@@ -1,6 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/banner');
 
 @media screen and (max-width: 768px) {
+    body {overflow-x: hidden;}
     body header {
       width: 100%;
       font-size: 0.9em;
@@ -104,6 +105,7 @@
 
     body figure #cover-img {
         height: 40vh;
+        width: 100vh;
     }
 
     section .profile_artist {
@@ -114,16 +116,150 @@
         margin-left: 25%;
     }
 
+    section .infor_artist {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
     section .bio_artist {
         width: 100%;
+        margin: 0 -3.3% 0 3.3%;
+        font-size: .9em;
     }
 
     section .links_artist {
         width: 100%;
-        display: none;
-        flex-wrap: wrap;
+        margin: 2.3% -3.3% 2.3% 3.3%;
+        background: linear-gradient(270deg,
+        rgb(185, 169, 157) 0%,
+        rgba(185, 169, 157, 0.1) 100%,
+        rgb(245, 245, 251) 100%);
     }
 
+    section .about_artist {
+        margin: 2.3% -3.3% 3.3% 2.3%;
+        font-size: .9em;
+    }
+
+    section .top_song {
+        width: 96%;
+        margin: 2.3% 3.3% 2.3% 5.3%;
+        padding: 0;
+    }
+    
+    .top_song .poster_song {
+        width: 100%;
+        height: fit-content;
+        padding: -2.3%;
+        margin: 0;
+    }
+
+    .top_song .poster_song .catago_legal {
+        left: -1em;
+        margin-top: -1em;
+        font-size: .5em;
+    }
+
+    .top_song .name_topSong {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .top_song .song_achiev {
+        font-size: .8em;
+        width: 100%;
+        margin: 0; 
+        padding: 0;
+    }
+
+    .song_achiev .detail_infor {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        padding-left: 0;
+        border-left: none;
+    }
+
+    .song_achiev .detail_infor span {
+        font-size: .8em;
+    }
+
+    .song_achiev .detail_infor .d-flex {
+        width: 5em;
+    }
+
+    .song_achiev .detail_infor_items {
+        margin-bottom: -5em;
+    }
+
+    .top_song .number_songAchiev {
+        font-size: 1.3em;
+    }
+
+    .about_song .about_songP {
+        font-size: .9em;
+    }
+
+    .top_song .about_song {
+        height: 16em;
+    }
+
+    .top_song .about_songP{
+        -webkit-line-clamp: 10; line-clamp: 10;
+    }
+
+    .fanbase .platform_horizontal {
+        width: 6.3em; height: 6.3em;
+    }
+
+    .fanbase .wrapper_fanbase {
+        height: 7em;
+    }
+
+    .fanbase .platform_horizontal span{
+        font-size: .9em;
+    }
+
+    .act-ppSong i {
+        display: none;
+    }
+
+    body .header_title h1 {
+        font-size: x-large;
+        width: 100%;
+    }
+    
+    .popular_song .song_horizontal {
+        font-size: .9em;
+    }
+
+    .popular_song .song_horizontal:active {
+        font-size: .88em;
+    }
+
+    .popular_song .wrapper_ppsong {
+        height: 14.2em;
+        margin: -1.3em 0;
+    }
+
+    .recommend .recommended_horizontal,
+    .albums .album_horizontal {
+        font-size: .86em;
+    }
+
+    .recommended_horizontal:active,
+    .album_horizontal:active {
+        font-size: .84em;
+    }
+    
+    .albums {
+        height: fit-content;
+    }
+
+    .albums .wrapper_album {
+        margin: -.6em 0 -3.6em -.6em;
+    }
+    
 
 }  
 
@@ -256,6 +392,7 @@ figcaption #avt-artist {
 }
 
 .poster_song {
+        width: 50%;
         height: 25.3em;
     border-radius: 0.3em;
     border: var(--border-gray);
@@ -267,7 +404,7 @@ figcaption #avt-artist {
     font-family: var(--font-Anton);
 }
 
-.poster_song span {
+.poster_song .catago_legal {
     left: -2.5em; top: 5em;
     font-size: .55em;
 }
@@ -284,12 +421,14 @@ figcaption #avt-artist {
 }
 
 .song_achiev {
+    width: 50%;
     height: fit-content;
 }
 
 .detail_infor {
-        height: 25.3em;
+        /* height: 25.3em; */
     border-left: .2em solid var(--color-gray);
+    padding-left: 1.6em;
 }
 
 .detail_infor .number_songAchiev {
@@ -360,13 +499,14 @@ figcaption #avt-artist {
 /* Fanbase compare */
 .fanbase {
     scroll-snap-type: x proximity;
-    user-select: none;
 }
 
 .wrapper_fanbase {
+    width: fit-content;
+    height: 12em;
     gap: 1em;
-    overflow-x: scroll;
     overflow-y: hidden;
+    overflow-x: scroll;
     scroll-snap-align: center;
 }
 
@@ -410,6 +550,12 @@ figcaption #avt-artist {
     border-radius: .3em;
     border: var(--border-gray);
     box-shadow: var(--box-shadowS);
+}
+
+:is(.song_horizontal,
+.album_horizontal,
+.recommended_horizontal):active {
+    filter: brightness(.8);
 }
 
 .song_horizontal img {
