@@ -265,7 +265,7 @@
 
   body article input[type="range"]::-webkit-slider-thumb {
     font-size: .8em;
-    margin-top: -.4em;
+    margin-top: -.3em;
   }
 
   body article .fa-play {
