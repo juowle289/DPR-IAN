@@ -98,8 +98,15 @@
         display: flex;
     }
 
+    body figcaption {
+        width: 100%;
+        height: fit-content;
+        margin: 0;
+        padding-top: 30vh;
+    }
+
     body figcaption #avt-artist{
-        margin: 100% 0 0 0;
+        margin: 0vh 0 0 0;
         width: 13em;
     }
 
@@ -116,6 +123,10 @@
         margin-left: 25%;
     }
 
+    section .country_artist img{
+        height: .9em;
+    }
+
     section .infor_artist {
         display: flex;
         flex-wrap: wrap;
@@ -130,15 +141,26 @@
     section .links_artist {
         width: 100%;
         margin: 2.3% -3.3% 2.3% 3.3%;
-        background: linear-gradient(270deg,
-        rgb(185, 169, 157) 0%,
-        rgba(185, 169, 157, 0.1) 100%,
-        rgb(245, 245, 251) 100%);
+    }
+    
+    section .links_artist a:active {
+        filter: brightness(.8);
+        font-size: .9em;
     }
 
-    section .about_artist {
+    section .about_artist { /*abt artist*/
         margin: 2.3% -3.3% 3.3% 2.3%;
         font-size: .9em;
+        height: fit-content;
+    }
+    
+    section .about_artist p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 13;
+        -webkit-box-orient: vertical;
+        font-size: 1.1em;
     }
 
     section .top_song {
@@ -196,7 +218,7 @@
         font-size: 1.3em;
     }
 
-    .about_song .about_songP {
+    .about_song .about_songP { /*abt song*/
         font-size: .9em;
     }
 
@@ -217,7 +239,7 @@
     }
 
     .fanbase .platform_horizontal span{
-        font-size: .9em;
+        font-size: .8em;
     }
 
     .act-ppSong i {
@@ -227,18 +249,37 @@
     body .header_title h1 {
         font-size: x-large;
         width: 100%;
+        text-shadow: none;
+    }
+
+    .top_song .header_title {
+        margin-top: 1.3em;
+    }
+
+    .header_title .comprehensive {
+        font-size: .8em;
     }
     
     .popular_song .song_horizontal {
-        font-size: .9em;
+        width: 22em;
+        font-size: .8em;
     }
+
+    .song_horizontal .name_songHoriz {
+        width: 13em;
+    }
+
+    .song_horizontal .name_songHoriz h5 {
+        max-width: 12em;
+    }
+    
 
     .popular_song .song_horizontal:active {
         font-size: .88em;
     }
 
     .popular_song .wrapper_ppsong {
-        height: 14.2em;
+        height: 13.3em;
         margin: -1.3em 0;
     }
 
@@ -258,6 +299,26 @@
 
     .albums .wrapper_album {
         margin: -.6em 0 -3.6em -.6em;
+    }
+
+    /* expand abt-song */
+    .expandAbtSong {
+        position: fixed;
+        background: #fff;
+        border: var(--border-black);
+        width: 100%;
+        height: fit-content;
+        top: 0;
+        left: 10%;
+            overflow: none;
+            text-overflow: none;
+            display: block;
+            -webkit-line-clamp: none; line-clamp: none;
+            -webkit-box-orient: none; box-orient: none;
+    }
+
+    .act-abtSong, .act-abtArtist {
+        font-size: .8em;
     }
     
 
@@ -280,8 +341,15 @@ figure #cover-img {
     object-fit: cover;
 }
 
+figcaption {
+    width: 35%;
+    margin-left: 2.3%;
+    padding-right: 2.3%;
+    padding-top: 40vh;
+}
+
 figcaption #avt-artist {
-    margin: 40vh 0 0 10%;
+    /* margin: 40vh 0 0 10%; */
     width: 20em;
     filter: drop-shadow(var(--drop-shadowXL));
     pointer-events: none;
@@ -373,7 +441,7 @@ figcaption #avt-artist {
 }
 
 .header_title {
-    border-bottom: var(--border-gray);    
+    border-bottom: var(--border-gray); 
 }
 .header_title h1 {
     text-shadow: var(--text-shadow);
@@ -450,20 +518,16 @@ figcaption #avt-artist {
     font-size: 1.1em;
 }
 
-.actIcon {
-    position: absolute;
-    margin-left: -2em;
-}
-
-.expanded {
+.expandAbtSong {
     position: fixed;
-    z-index: 100;
+    z-index: 1;
     background: #fff;
     border: var(--border-black);
-    width: 80vh;
+    width: 80%;
     height: fit-content;
     top: 20%;
-    left: 50%;
+    left: 10%;
+    border-radius: .3em;
         overflow: none;
         text-overflow: none;
         display: block;
@@ -471,7 +535,17 @@ figcaption #avt-artist {
         -webkit-box-orient: none; box-orient: none;
 }
 
-.act-abtSong {
+.expandAbtSong_mobile {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0;
+    font-size: 0.8em;
+    overflow-y: scroll;
+}
+
+.act-abtSong, .act-abtArtist {
     width: fit-content;
     height: fit-content;
     border-radius: 1em;
@@ -643,7 +717,7 @@ figcaption #avt-artist {
     height: fit-content;
     background: #fff;
     border-radius: .3em;
-    border: var(--color-gray);
+    border: var(--border-gray);
     box-shadow: var(--box-shadowS);
     cursor: pointer;
     text-align: center;
@@ -680,7 +754,7 @@ figcaption #avt-artist {
     height: fit-content;
     background: #fdfbfb;
     border-radius: .3em;
-    border: var(--color-gray);
+    border: var(--border-gray);
     box-shadow: var(--box-shadowS);
     cursor: pointer;
 }

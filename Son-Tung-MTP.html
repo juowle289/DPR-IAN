@@ -26,7 +26,10 @@
 <body>
     <style>
         .links_artist {
-            background: rgb(185, 169, 157);
+            background: linear-gradient(270deg,
+            rgb(185, 169, 157) 0%,
+            rgba(185, 169, 157, 0.1) 100%,
+            rgb(245, 245, 251) 100%);
         }
         .links_artist table i {
             background: var(--color-white);
@@ -91,7 +94,7 @@
     <figure>
         <img id="cover-img" class="w-100 position-fixed z-n1" src="Image-source/Artist/mtp-coverimg2.jpg"
             alt="mtp-coverimg">
-        <figcaption>
+        <figcaption class="d-flex justify-content-center">
             <img id="avt-artist" class="rounded-circle user-select-none" src="Image-source/Artist/mtp-avtArtist.jpg" alt="mtp-avtArtist">
         </figcaption>
     </figure>
@@ -215,7 +218,7 @@
                 
                 <!-- Introduction -->
                 <div class="about_artist p-3">
-                    <p>
+                    <p class="about_artistP">
                         Nguyễn Thanh Tùng, born in 1994, known professionally as Sơn Tùng M-TP, is a Vietnamese singer,
                         songwriter, producer, and actor. He is not only known as one of the most successful Vietnamese
                         artists and as the "Prince of V-pop", but also as the Chairman of three self-created companies:
@@ -239,6 +242,10 @@
                         ever
                         wanted to offer to the world around him with all his heart and soul.
                     </p>
+                    <div class="act-abtArtist flex-nowrap d-flex px-2 justify-content-end">
+                        <i id="actIcon" class="bi bi-caret-down-fill"></i>
+                        <div id="btnAbtArtist">Expand</div>
+                    </div>
                 </div>
 
             </div>
@@ -597,7 +604,7 @@
         <section class="wrapped_around" style="margin: 0 2.3%;">
             <div class="header_title mb-4 mt-4 ps-4 pb-0 d-flex justify-content-between py-4">
                 <h1 id="albums" class="display-5 fw-bold pb-4">Albums</h1>
-                <div class="act-ppSong d-flex justify-content-between pt-4">
+                <div class="act-ppSong d-flex justify-content-between">
                     <div class="scroll d-flex">
                         <i class="bi bi-chevron-left chevronAlbumL px-3 me-3"></i>
                         <i class="bi bi-chevron-right chevronAlbumR px-3"></i>

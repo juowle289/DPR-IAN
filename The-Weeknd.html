@@ -26,11 +26,17 @@
 <body>
     <style>
         .bio_artist {
-            background: linear-gradient(270deg, rgb(41, 47, 58) 0%, rgba(41, 47, 58, 0.1) 100%, rgb(245, 245, 251) 100%);
+            background: linear-gradient(270deg,
+            rgb(41, 47, 58) 0%, 
+            rgba(41, 47, 58, 0.1) 100%, 
+            rgb(245, 245, 251) 100%);
         }
 
         .links_artist {
-            background: rgba(41, 47, 58, .9);
+            background: linear-gradient(270deg,
+            rgb(41, 47, 58) 0%, 
+            rgba(41, 47, 58, 0.1) 100%, 
+            rgb(245, 245, 251) 100%);
         }
 
         .links_artist table i {
@@ -96,7 +102,7 @@
     <figure>
         <img id="cover-img" class="w-100 position-fixed z-n1" src="Image-source/Artist/TheWeeknd-coverImg.jpg"
             alt="mtp-coverimg">
-        <figcaption>
+        <figcaption class="d-flex justify-content-center">
             <img id="avt-artist" class="rounded-circle" src="Image-source/Artist/TheWeeknd-avtArtist.jpg"
                 alt="mtp-avtArtist">
         </figcaption>
@@ -224,7 +230,7 @@
 
                 <!-- Introduction -->
                 <div class="about_artist p-3">
-                    <p>
+                    <p class="about_artistP">
                         The Weeknd took over pop music & culture on his own terms filtering R&B, Pop,& hip-hop through
                         an ambitious widescreen lens. The multi-platinum 3X GRAMMY Award winner has emerged as one of
                         the most successful & significant artists of the modern era. 2012's 3X platinum Trilogy collated
@@ -244,6 +250,10 @@
                         100, and Artist 100 simultaneously. After Hours is the #1 R&B streaming album of all time
                         (followed by Starboy at #2).
                     </p>
+                    <div class="act-abtArtist flex-nowrap d-flex px-2 justify-content-end">
+                        <i id="actIcon" class="bi bi-caret-down-fill"></i>
+                        <div id="btnAbtArtist">Expand</div>
+                    </div>
                 </div>
 
             </div>
@@ -261,7 +271,7 @@
                         <img src="Image-source/Collections/afterHours.jpg" alt="">
                         <p class="h4 text-center position-relative pt-3 m-0">
                             Blinding Lights
-                            <span class="catago_legal text-start position-absolute opacity-50">℗ 2024 The Weeknd XO, Inc., marketed by Republic Records, a division of UMG Recordings, Inc.</span>
+                            <span class="catago_legal text-start position-absolute opacity-50">℗ 2024 The Weeknd XO, Inc.</span>
                         </p>
                     </div>
 
@@ -374,7 +384,7 @@
                             <i class="fa-brands fa-youtube" style="color: rgba(255, 0, 0, 1);"></i>
                             <span class="title opacity-75">YouTube</span>
                         </div>
-                        <span class="number fs-4">35.4</span>
+                        <span class="number fs-4">35.4M</span>
                         <span class="text opacity-75">Subscribers</span>
                     </div>
                     <div class="platform_horizontal d-flex justify-content-between flex-column text-center cursor-pointer"
@@ -640,7 +650,7 @@
         <section class="wrapped_around" style="margin: 0 2.3%;">
             <div class="header_title mb-4 mt-4 ps-4 pb-0 d-flex justify-content-between py-4">
                 <h1 id="albums" class="display-5 fw-bold pb-4">Albums</h1>
-                <div class="act-ppSong d-flex justify-content-between pt-4">
+                <div class="act-ppSong d-flex justify-content-between">
                     <div class="scroll d-flex">
                         <i class="bi bi-chevron-left chevronAlbumL px-3 me-3"></i>
                         <i class="bi bi-chevron-right chevronAlbumR px-3"></i>
