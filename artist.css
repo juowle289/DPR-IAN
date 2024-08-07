@@ -662,6 +662,16 @@ figcaption #avt-artist {
     object-fit: cover;
 }
 
+.song_horizontal:hover::before {
+    content: '\F4F2';
+    font-family:'Bootstrap-icons';
+    position: absolute; z-index: 1;
+    top: 22%; left: 8%;
+    font-size: 2.3em;
+    color: var(--color-main);
+    filter: drop-shadow(var(--drop-shadowXL));
+}
+
 .song_horizontal :is( .name_songHoriz span, .releaseDate_songHoriz) {
     color: var(--color-gray2);
 }
@@ -747,6 +757,16 @@ figcaption #avt-artist {
     text-align: center;
 }
 
+.album_horizontal:hover::before {
+    content: '\F607';
+    font-family:'Bootstrap-icons';
+    position: absolute; z-index: 1;
+    top: 55%; right: 5%;
+    font-size: 3em;
+    color: var(--color-main);
+    filter: drop-shadow(var(--drop-shadowXL));
+}
+
 .album_horizontal img {
     width: 15em; height: 15em;
     object-fit: cover;
@@ -781,6 +801,16 @@ figcaption #avt-artist {
     border: var(--border-gray);
     box-shadow: var(--box-shadowS);
     cursor: pointer;
+}
+
+.recommended_horizontal:hover::before {
+    content: '\F607';
+    font-family:'Bootstrap-icons';
+    position: absolute; z-index: 1;
+    top: 55%; right: 5%;
+    font-size: 3em;
+    color: var(--color-main);
+    filter: drop-shadow(var(--drop-shadowXL));
 }
 
 .avt_recommened {
