@@ -153,7 +153,7 @@ $(document).ready(function() {
     });
 
     // Hover .song_horizontal 
-    $('.song_horizontal').hover(
+    $('.song_horizontal, .album_horizontal, .recommended_horizontal').hover(
         function(){
             $(this).css({
                 transition: '350ms ease',
@@ -165,32 +165,22 @@ $(document).ready(function() {
             });
         }
     );
+    if ($(window).width() <= 768) {
+        $('.song_horizontal, .album_horizontal, .recommended_horizontal').hover(
+            function(){
+                $(this).css({
+                    transition: '350ms ease',
+                    transform: 'none'
+                });
+            },function(){
+                $(this).css({
+                    transform: 'none'
+                });
+            }
+        );
 
-    $('.album_horizontal').hover(
-        function(){
-            $(this).css({
-                transition: '350ms ease',
-                transform: 'translateY(-.5em)'
-            });
-        },function(){
-            $(this).css({
-                transform: 'translateY(0)'
-            });
-        }
-    );
-
-    $('.recommended_horizontal').hover(
-        function(){
-            $(this).css({
-                transition: '350ms ease',
-                transform: 'translateY(-.5em)'
-            });
-        },function(){
-            $(this).css({
-                transform: 'translateY(0)'
-            });
-        }
-    );
+        
+    }
 
     // Hover icon Links Artist
     $('.links_artist table i').hover(

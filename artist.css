@@ -241,6 +241,7 @@
     .fanbase .wrapper_fanbase {
         width: 100%;
         height: 8em;
+        margin: -.6em 0 -.6em 0;
     }
 
     .fanbase .platform_horizontal span{
@@ -289,7 +290,7 @@
     .popular_song .wrapper_ppsong {
         width: 100%;
         height: 12.3em;
-        margin: 0; padding: 0;
+        margin: 0 0 -.6em 0; padding: 0;
     }
 
     .recommend .recommended_horizontal,
@@ -308,10 +309,10 @@
     }
 
     .albums .wrapper_album {
-        margin: -.6em 0 0 -.6em;
+        margin: -.6em 0 -.6em -.6em;
         padding-bottom: 0;
         width: 100%;
-        height: 18em;
+        height: 18.3em;
     }
 
     /* expand abt-song */
