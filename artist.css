@@ -235,6 +235,7 @@
     }
 
     .fanbase .wrapper_fanbase {
+        width: 100%;
         height: 7em;
     }
 
@@ -281,6 +282,7 @@
     .popular_song .wrapper_ppsong {
         height: 13.3em;
         margin: -1.3em 0;
+        width: 100%;
     }
 
     .recommend .recommended_horizontal,
@@ -299,6 +301,7 @@
 
     .albums .wrapper_album {
         margin: -.6em 0 -3.6em -.6em;
+        width: 100%;
     }
 
     /* expand abt-song */
@@ -319,6 +322,10 @@
 
     .act-abtSong, .act-abtArtist {
         font-size: .8em;
+    }
+
+    .wrapper_recommended {
+        width: 100%;
     }
     
 
