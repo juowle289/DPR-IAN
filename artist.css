@@ -230,13 +230,17 @@
         -webkit-line-clamp: 10; line-clamp: 10;
     }
 
+    section .fanbase {
+        height: fit-content;
+    }
+
     .fanbase .platform_horizontal {
         width: 6.3em; height: 6.3em;
     }
 
     .fanbase .wrapper_fanbase {
         width: 100%;
-        height: 7em;
+        height: 8em;
     }
 
     .fanbase .platform_horizontal span{
@@ -260,6 +264,10 @@
     .header_title .comprehensive {
         font-size: .8em;
     }
+
+    section .popular_song {
+        height: fit-content;
+    }
     
     .popular_song .song_horizontal {
         width: 22em;
@@ -274,15 +282,14 @@
         max-width: 12em;
     }
     
-
     .popular_song .song_horizontal:active {
         font-size: .88em;
     }
 
     .popular_song .wrapper_ppsong {
-        height: 13.3em;
-        margin: -1.3em 0;
         width: 100%;
+        height: 12.3em;
+        margin: 0; padding: 0;
     }
 
     .recommend .recommended_horizontal,
@@ -295,13 +302,16 @@
         font-size: .84em;
     }
     
-    .albums {
+    section .albums {
         height: fit-content;
+        /* padding-bottom: 0; */
     }
 
     .albums .wrapper_album {
-        margin: -.6em 0 -3.6em -.6em;
+        margin: -.6em 0 0 -.6em;
+        padding-bottom: 0;
         width: 100%;
+        height: 18em;
     }
 
     /* expand abt-song */
@@ -324,8 +334,14 @@
         font-size: .8em;
     }
 
-    .wrapper_recommended {
+    section .recommend {
+        height: fit-content;
+    }
+
+    .recommend .wrapper_recommended {
         width: 100%;
+        height: 19em;
+        margin: -.6em 0 -.5em -.6em;
     }
     
 
