@@ -47,12 +47,13 @@
         <div class="logo">
             <a href="home.html"><img src="Image-source/logo-J.png"></a>
             <!-- Juowle -->
-            <ul>
-                <li id="header-menu" class="clProfile"><a href="#profile">Profile </a></li>
-                <li id="header-menu" class="clTopTracks"><a href="#topTracks">Top Tracks </a></li>
-                <li id="header-menu" class="clFanbase"><a href="#fanbase">Fanbase </a></li>
-                <li id="header-menu" class="clPopularSongs"><a href="#popularSongs">Popular Songs </a></li>
-                <li id="header-menu" class="clAlbums"><a href="#albums">Albums </a></li>
+            <ul class="header-menu">
+                <li><a href="#section1">Profile </a></li>
+                <li><a href="#section2">Top Tracks </a></li>
+                <li><a href="#section3">Fanbase </a></li>
+                <li><a href="#section4">Popular Songs </a></li>
+                <li><a href="#section5">Albums </a></li>
+                <li><a href="#section6">Recommended </a></li>
             </ul>
         </div>
         <ul>
@@ -73,11 +74,16 @@
 
         <!-- Bar -->
         <div class="bars">
-            <ul id="head-bars">
-                <li id="header-menu" class="clProfile"><a href="#profile">Profile </a></li>
-                <li id="header-menu" class="clPopularSongs"><a href="#popularSongs">Popular Songs </a></li>
-                <li id="header-menu" class="clAlbum"><a href="#album">Album </a></li>
-            </ul>
+            <div id="head-bars">
+                <ul class="header-menu">
+                    <li><a href="#section1">Profile </a></li>
+                    <li><a href="#section2">Top Tracks </a></li>
+                    <li><a href="#section3">Fanbase </a></li>
+                    <li><a href="#section4">Popular Songs </a></li>
+                    <li><a href="#section5">Albums </a></li>
+                    <li><a href="#section6">Recommended </a></li>
+                </ul>    
+            </div>
 
             <footer>
                 <div class="logo"><img src="Image-source/logo-J.png" alt=""></div>
@@ -112,7 +118,7 @@
         <!-- Profile Artist -->
         <section class="header_profile row d-flex col-12">
             <!-- Profile -->
-            <div id="profile" class="profile_artist col-6">
+            <div id="profile" class="profile_artist col-6" id="section1">
                 <div class="name_artist">
                     <p class="h2 w-75 p-0 text-center">The Weeknd</p>
                     <div class="country_artist w-75 d-flex text-center justify-content-center align-middle">
@@ -229,8 +235,9 @@
                 </div>
 
                 <!-- Introduction -->
-                <div class="about_artist p-3">
+                <div class="about_artist row p-3 justify-content-start">
                     <p class="about_artistP">
+                        <img class="about_artistImg" src="Image-source/Artist/TheWeeknd-coverImg.jpg" alt="">
                         The Weeknd took over pop music & culture on his own terms filtering R&B, Pop,& hip-hop through
                         an ambitious widescreen lens. The multi-platinum 3X GRAMMY Award winner has emerged as one of
                         the most successful & significant artists of the modern era. 2012's 3X platinum Trilogy collated
@@ -259,7 +266,7 @@
             </div>
 
             <!-- Top Track -->
-            <div class="top_song wrapped_around row col-6">
+            <div class="top_song wrapped_around row col-6" id="section2">
 
                 <div class="header_title mb-4 ps-4 d-flex">
                     <h1 id="topTracks" class="display-5 fw-bold ">Top Tracks</h1>
@@ -319,6 +326,7 @@
                 <!-- About song -->
                 <div class="about_song row col-12 pt-3 justify-content-end">
                     <p class="about_songP">
+                        <img class="about_songImg" src="Image-source/Artist/TheWeeknd-coverImg.jpg" alt="">
                         The Weeknd's hit song 'Blinding Lights' is a vibrant blend of '80s synth-pop with modern R&B,
                         encapsulating a sense of longing and desire within its pulsating beats. The lyrics convey a deep
                         sense of yearning for connection and the intoxicating rush of rekindled love. The Weeknd, known
@@ -352,7 +360,7 @@
         </section>
 
         <!-- Fanbase -->
-        <section class="wrapped_around" style="margin: 0 2.3%;">
+        <section class="wrapped_around" style="margin: 0 1.6%;" id="section3">
 
             <div class="header_title mb-4 mt-4 ps-3 pb-0 d-flex justify-content-between py-4">
                 <h1 id="fanbase" class="display-5 fw-bold pb-4">Fanbase</h1>
@@ -429,7 +437,7 @@
         </section>
 
         <!-- Popular Songs -->
-        <section class="wrapped_around" style="margin: 0 2.3%;">
+        <section class="wrapped_around" style="margin: 0 1.6%;" id="section4">
 
             <div class="header_title mb-4 ps-3 mt-4 d-flex justify-content-between">
                 <h1 id="popularSongs" class="display-5 fw-bold py-4">Popular Songs</h1>
@@ -647,7 +655,7 @@
         </section>
 
         <!-- Albums -->
-        <section class="wrapped_around" style="margin: 0 2.3%;">
+        <section class="wrapped_around" style="margin: 0 1.6%;" id="section5">
             <div class="header_title mb-4 mt-4 ps-4 pb-0 d-flex justify-content-between py-4">
                 <h1 id="albums" class="display-5 fw-bold pb-4">Albums</h1>
                 <div class="act-ppSong d-flex justify-content-between">
@@ -745,7 +753,7 @@
         </section>
 
         <!-- Recommended Artists -->
-        <section class="wrapped_around" style="margin: 0 2.3%;">
+        <section class="wrapped_around" style="margin: 0 1.6%;" id="section6">
             <div class="header_title mb-4 mt-4 ps-4 pb-0 d-flex justify-content-between py-4">
                 <h1 id="recommended" class="display-5 fw-bold pb-4">Recommended Artist</h1>
                 <div class="act-ppSong d-flex justify-content-between pt-4">

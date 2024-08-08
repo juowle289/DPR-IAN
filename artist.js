@@ -18,6 +18,7 @@ $(document).ready(function() {
         });
 
         $('.about_songP').toggleClass('expandAbtSong');
+        $('.about_songImg').toggle();
 
         $('.act-abtSong').css({
             marginTop: $(this).html() === 'Collapse' ? '22.5em' : '0em',
@@ -34,6 +35,7 @@ $(document).ready(function() {
         });
 
         $('.about_artistP').toggleClass('expandAbtSong');
+        $('.about_artistImg').toggle();
 
         $('.act-abtArtist').css({
             marginTop: $(this).html() === 'Collapse' ? '22.5em' : '0em',
@@ -152,16 +154,18 @@ $(document).ready(function() {
         }, 500);
     });
 
-    // Hover .song_horizontal 
+    // Hover Element - Horizontal 
     $('.song_horizontal, .album_horizontal, .recommended_horizontal').hover(
         function(){
             $(this).css({
                 transition: '350ms ease',
-                transform: 'translateY(-.5em)'
+                transform: 'translateY(-.5em)',
+                border: 'var(--border-main)',
             });
         },function(){
             $(this).css({
-                transform: 'translateY(0)'
+                transform: 'translateY(0)',
+                border: 'var(--border-gray)',
             });
         }
     );
@@ -195,6 +199,22 @@ $(document).ready(function() {
         }
     );
 
-    /* :active btn Expand*/
+    // border header-menu
+    $(window).on('scroll', function () {
+        var scrollPos = $(document).scrollTop();
+        var windowHeight = $(window).height();
+        var middleOfWindow = scrollPos + windowHeight / 2;
 
+        $('.header-menu li a').each(function () {
+            var currLink = $(this);
+            var refElement = $(currLink.attr('href'));
+
+            if (refElement.position().top <= middleOfWindow && refElement.position().top + refElement.height() > scrollPos) {
+                $('.header-menu li').removeClass('active');
+                currLink.parent().addClass('active');
+            } else {
+                currLink.parent().removeClass('active');
+            }
+        });
+    });
 });

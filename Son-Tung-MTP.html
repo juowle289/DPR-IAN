@@ -39,12 +39,13 @@
         <div class="logo d-flex">
             <a href="home.html"><img src="Image-source/logo-J.png"></a>
             <!-- Juowle -->
-            <ul>
-                <li id="header-menu" class="clProfile"><a href="#profile">Profile </a></li>
-                <li id="header-menu" class="clTopTracks"><a href="#topTracks">Top Tracks </a></li>
-                <li id="header-menu" class="clFanbase"><a href="#fanbase">Fanbase </a></li>
-                <li id="header-menu" class="clPopularSongs"><a href="#popularSongs">Popular Songs </a></li>
-                <li id="header-menu" class="clAlbums"><a href="#albums">Albums </a></li>
+            <ul class="header-menu">
+                <li><a href="#section1">Profile </a></li>
+                <li><a href="#section2">Top Tracks </a></li>
+                <li><a href="#section3">Fanbase </a></li>
+                <li><a href="#section4">Popular Songs </a></li>
+                <li><a href="#section5">Albums </a></li>
+                <li><a href="#section6">Recommended </a></li>
             </ul>
         </div>
         <ul>
@@ -65,11 +66,16 @@
 
         <!-- Bar -->
         <div class="bars">
-            <ul id="head-bars">
-                <li id="header-menu" class="clTopTracks"><a href="#topTracks">Top Tracks </a></li>
-                <li id="header-menu" class="clFanbase"><a href="#fanbase">Fanbase </a></li>
-                <li id="header-menu" class="clPopularSongs"><a href="#popularSongs">Popular Songs </a></li>
-                <li id="header-menu" class="clAlbums"><a href="#albums">Albums </a></li>            </ul>
+            <div id="head-bars">
+                <ul class="header-menu">
+                    <li><a href="#section1">Profile </a></li>
+                    <li><a href="#section2">Top Tracks </a></li>
+                    <li><a href="#section3">Fanbase </a></li>
+                    <li><a href="#section4">Popular Songs </a></li>
+                    <li><a href="#section5">Albums </a></li>
+                    <li><a href="#section6">Recommended </a></li>
+                </ul>    
+            </div>
 
             <footer>
                 <div class="logo"><img src="Image-source/logo-J.png" alt=""></div>
@@ -103,7 +109,7 @@
         <!-- Profile Artist -->
         <section class="header_profile row d-flex col-12">
             <!-- Profile -->
-            <div id="profile" class="profile_artist col-6">
+            <div class="profile_artist col-6" id="section1">
                 <div class="name_artist">
                     <p class="h2 w-75 p-0 text-center">Sơn Tùng M-TP</p>
                     <div class="country_artist w-75 d-flex text-center justify-content-center align-middle">
@@ -217,8 +223,9 @@
                 </div>
                 
                 <!-- Introduction -->
-                <div class="about_artist p-3">
+                <div class="about_artist row p-3 justify-content-start">
                     <p class="about_artistP">
+                        <img class="about_artistImg" src="Image-source/Artist/mtp-coverImg.jpg" alt="">
                         Nguyễn Thanh Tùng, born in 1994, known professionally as Sơn Tùng M-TP, is a Vietnamese singer,
                         songwriter, producer, and actor. He is not only known as one of the most successful Vietnamese
                         artists and as the "Prince of V-pop", but also as the Chairman of three self-created companies:
@@ -251,10 +258,10 @@
             </div>
 
             <!-- Top Track -->
-            <div class="top_song wrapped_around row col-6">
+            <div class="top_song wrapped_around row col-6" id="section2">
 
                 <div class="header_title mb-4 ps-4 d-flex">
-                    <h1 id="topTracks" class="display-5 fw-bold ">Top Tracks</h1>
+                    <h1 class="display-5 fw-bold ">Top Tracks</h1>
                 </div>
 
                 <!-- Name Top Song -->
@@ -337,6 +344,7 @@
                 <!-- About song -->
                 <div class="about_song row col-12 pt-3 justify-content-end">
                     <p class="about_songP">
+                        <img class="about_artistImg" src="Image-source/Artist/mtp-coverImg.jpg" alt="">
                         Son Tung M-TP's song 'Đừng Làm Trái Tim Anh Đau' is a heartfelt expression of deep love and
                         vulnerability. The lyrics reveal a man who is utterly devoted to the object of his affection, to
                         the point where his thoughts are consumed by her. He lies awake at night, unable to think of
@@ -368,10 +376,10 @@
         </section>
 
         <!-- Fanbase -->
-         <section class="wrapped_around" style="margin: 0 2.3%;">
+         <section class="wrapped_around" style="margin: 0 2.3%;" id="section3">
 
             <div class="header_title mb-4 mt-4 ps-3 pb-0 d-flex justify-content-between py-4">
-                <h1 id="fanbase" class="display-5 fw-bold pb-4">Fanbase</h1>
+                <h1 class="display-5 fw-bold pb-4">Fanbase</h1>
             </div>
 
             <div class="fanbase px-3 pb-3">
@@ -441,8 +449,8 @@
         <!-- Popular Songs -->
         <section class="wrapped_around" style="margin: 0 2.3%;">
         
-            <div class="header_title mb-4 ps-3 mt-4 d-flex justify-content-between">
-                <h1 id="popularSongs" class="display-5 fw-bold py-4">Popular Songs</h1>
+            <div class="header_title mb-4 ps-3 mt-4 d-flex justify-content-between" id="section4">
+                <h1 class="display-5 fw-bold py-4">Popular Songs</h1>
                 <div class="act-ppSong d-flex justify-content-between pt-4">
                     <div class="scroll d-flex">
                         <i class="bi bi-chevron-left chevronPPsongL px-3 me-3"></i>
@@ -601,9 +609,9 @@
         </section>
 
         <!-- Albums -->
-        <section class="wrapped_around" style="margin: 0 2.3%;">
+        <section class="wrapped_around" style="margin: 0 2.3%;" id="section5">
             <div class="header_title mb-4 mt-4 ps-4 pb-0 d-flex justify-content-between py-4">
-                <h1 id="albums" class="display-5 fw-bold pb-4">Albums</h1>
+                <h1 class="display-5 fw-bold pb-4">Albums</h1>
                 <div class="act-ppSong d-flex justify-content-between">
                     <div class="scroll d-flex">
                         <i class="bi bi-chevron-left chevronAlbumL px-3 me-3"></i>
@@ -643,7 +651,7 @@
         </section>
 
         <!-- Recommended Artists -->
-        <section class="wrapped_around" style="margin: 0 2.3%;">
+        <section class="wrapped_around" style="margin: 0 2.3%;" id="section6">
             <div class="header_title mb-4 mt-4 ps-4 pb-0 d-flex justify-content-between py-4">
                 <h1 id="recommended" class="display-5 fw-bold pb-4">Recommended Artist</h1>
                 <div class="act-ppSong d-flex justify-content-between pt-4">
