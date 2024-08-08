@@ -1,3 +1,4 @@
+// $(document).ready(function() {
 // todo Hamburger
 $('#hamburger-label').on('click', function() {
     const bars = $('.bars');
@@ -13,9 +14,14 @@ $('#hamburger-label').on('click', function() {
         bars.css({
         transform: 'translateX(-15em)',
         opacity: '1',
-        boxShadow: '-10em 0px 10px rgba(0, 0, 0, 0.6)',
+        boxShadow: '-19em 0em 10px rgba(0, 0, 0, 0.6)',
         zIndex: '20'
         });
+
+        // Remove scroll event Header
+        if($(window).width() <= 768){
+            $(window).off('scroll');
+        }
     } else {
         barsIcon.css({
         transform: 'rotate(0deg)',
@@ -28,10 +34,79 @@ $('#hamburger-label').on('click', function() {
         boxShadow: 'none',
         zIndex: '-1',
         });
+        
+        if($(window).width() <= 768){
+            var valueScrollTop = 0;
+            
+            $(window).scroll(function() {
+                const scrollPos = $(window).scrollTop();
+                
+                if (scrollPos > valueScrollTop) {
+                    // Cuộn lên
+                    $('header').removeClass('effHeader');
+                    $('header').css({
+                        transform: 'translateY(-100%)',
+                        transition: '400ms ease',
+                    });
+                    // $('header').slideUp({
+                        // duration: 500,
+                        // easing: 'swing'
+                    // });
+                } else {
+                    // Cuộn xuống
+                    $('header').addClass('effHeader');
+                    $('header').css({
+                        transform: 'translateY(0)',
+                    });
+            
+                    // $('header').slideDown({
+                        // duration: 500,
+                        // easing: 'swing'
+                    // });
+                }
+                
+                valueScrollTop = scrollPos;
+            });
+        }
     }
 });
 
-// todo  Search icon
+
+if($(window).width() <= 768){
+    var valueScrollTop = 0;
+    
+    $(window).scroll(function() {
+        const scrollPos = $(window).scrollTop();
+        
+        if (scrollPos > valueScrollTop) {
+            // Cuộn lên
+            $('header').removeClass('effHeader');
+            $('header').css({
+                transform: 'translateY(-100%)',
+                transition: '400ms ease',
+            });
+            // $('header').slideUp({
+                // duration: 500,
+                // easing: 'swing'
+            // });
+        } else {
+            // Cuộn xuống
+            $('header').addClass('effHeader');
+            $('header').css({
+                transform: 'translateY(0)',
+            });
+    
+            // $('header').slideDown({
+                // duration: 500,
+                // easing: 'swing'
+            // });
+        }
+        
+        valueScrollTop = scrollPos;
+    });
+}
+
+//todo  Search icon
 const search = document.getElementById('search');
 const searchBox = document.getElementById('search-box');
 
@@ -215,9 +290,9 @@ $('#search-box').on('input', function() {
                     <span class="title">${artist.nameArtist}</span>
                     <span class="artist">
 
-                     Artist 
+                    Artist 
                     <i class="bi bi-dot"></i>
-                     Pop<span>
+                    Pop<span>
                 </div>
             `);
             artistElement.on('click', function() {
@@ -254,8 +329,6 @@ $('label i.fa-magnifying-glass').on('click', function() {
         window.location.href = toSong.link;
     }
 });
-
-
 
 // todo  CONTROL SONG
 document.addEventListener("DOMContentLoaded", function () {
@@ -304,7 +377,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // fix disk 
+    // todo  disk 
     const audioPlay = document.querySelector('.audio-play');
     const imgAudio = document.querySelector('.img-control');
     const imgAudioSize = document.querySelector('.img-control img');
@@ -418,9 +491,8 @@ document.addEventListener("DOMContentLoaded", () => {
     function saveCmt(cmt) {
         const cmts = JSON.parse(localStorage.getItem('cmts')) || [];
         cmts.push(cmt);
-        localStorage.setItem('cmts', JSON.stringify(cmt));
+        localStorage.setItem('cmts', JSON.stringify(cmts));
     }
-
     loadCmt();
 
 });
@@ -441,55 +513,30 @@ $('.summary-title').on('click', function () {
     })
 });
 
-// todo EFFECT  
-document.addEventListener('DOMContentLoaded', function () {
-    const header = document.getElementById('header');
+// border header-menu
+$(window).on('scroll', function () {
+    $('header').toggleClass('effHeader', $(window).scrollTop() > 50);
 
-    const clLyrics = document.querySelector('.clLyrics');
-    const clAbout  = document.querySelector('.clAbout');
-    const clQamsA  = document.querySelector('.clQamsA');
-    const clcomments = document.querySelector('.clcomments');
+    var scrollPos = $(document).scrollTop();
+    var windowHeight = $(window).height();
+    var middleOfWindow = scrollPos + windowHeight / 2;
 
+    $('.header-menu li a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr('href'));
 
-    window.addEventListener('scroll', function () {
-        const scrollPos = window.scrollY || document.documentElement.scrollTop;
-        
-        if (scrollPos > 50) { // fix header 
-            header.classList.add('effHeader');
-        }else {
-            header.classList.remove('effHeader');
-        }
-
-        if(500 < scrollPos && scrollPos < 1999) { // fix Lyric 
-            clLyrics.classList.add('border');
-        }else {
-            clLyrics.classList.remove('border');
-        }
-
-        if(2000 < scrollPos && scrollPos < 2399) { // fix reference 
-            clAbout.classList.add('border');
-        }else {
-            clAbout.classList.remove('border');
-        }
-
-        if(2400 < scrollPos && scrollPos < 2599 ) { //  fix title 
-            clQamsA.classList.add('border');
-        }else {
-            clQamsA.classList.remove('border');
-        }
-
-        if(2600 < scrollPos && scrollPos < 2900) { // fix  songs
-            clcomments.classList.add('border');
-        }else {
-            clcomments.classList.remove('border');
+        if (refElement.position().top <= middleOfWindow && refElement.position().top + refElement.height() > scrollPos) {
+            $('.header-menu li').removeClass('active');
+            currLink.parent().addClass('active');
+        } else {
+            currLink.parent().removeClass('active');
         }
     });
 });
 
-$(document).ready(function() {
-    setTimeout(function() {
-        $('.loader').fadeOut(500, function() {
-            $(this).remove();
-        });
-    }, 600);
-});
+setTimeout(function() {
+    $('.loader').fadeOut(500, function() {
+        $(this).remove();
+    });
+}, 600);
+// });

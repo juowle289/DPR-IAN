@@ -260,12 +260,12 @@
   }
 
   body article input[type="range"]::-webkit-slider-runnable-track {
-    height: .2em;
+    height: .3em;
   }
 
   body article input[type="range"]::-webkit-slider-thumb {
-    font-size: .8em;
-    margin-top: -.3em;
+    font-size: .96em;
+    margin-top: -.23em;
   }
 
   body article .fa-play {

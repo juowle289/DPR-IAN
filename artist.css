@@ -33,11 +33,11 @@
         padding: 0;
     }
   
-    body header  :is(ul li, #signUp, #logIn) {
+    body header :is(.header-menu li, #signUp, #logIn) {
         display: none;
     }
   
-    body header ul li i{
+    body header ul .fa-magnifying-glass{ /*icon search*/
         position: absolute;
         right: 4em;
         top: 1.1em;
@@ -45,8 +45,6 @@
     }
   
     body header #search-box {
-        /* position: relative;
-        z-index: -1; */
         width: 0;
         height: 2em;
         margin-left: -3em;
@@ -62,7 +60,6 @@
     body header .bars #head-bars .header-menu{
         display: flex;
         flex-direction: column;
-
     }
   
     body header #hamburger-label #bars-icon {
@@ -842,6 +839,6 @@ figcaption #avt-artist {
     width: auto; height: 1em;
 }
 
-ul li.active {
+.header-menu li.active {
     border: var(--border-main);
 }
