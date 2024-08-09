@@ -44,12 +44,12 @@
         <div class="logo">
             <a href="dprian.html"><img src="Image-source/logo-J.png"></a>
             <!-- Juowle -->
-            <ul>
-                <li id="header-menu" class="clLyrics"><a href="#lyrics">Lyrics </a></li>
-                <li id="header-menu" class="clAbout"><a href="#about">About </a></li>
-                <li id="header-menu" class="clQamsA"><a href="#QampersandA">Q&A </a></li>
-                <li id="header-menu" class="clcomments"><a href="#cmt">Comments</a></li>
-            </ul>
+            <ul class="header-menu">
+                <li><a href="#section1">Lyrics </a></li>
+                <li><a href="#section2">About </a></li>
+                <li><a href="#section3">Q&A </a></li>
+                <li><a href="#section4">Comments </a></li>
+            </ul> 
         </div>
         <ul>
             <input type="checkbox" id="search">
@@ -68,12 +68,14 @@
         <label for="hamburger" id="hamburger-label"><i class="fa-solid fa-bars-staggered" id="bars-icon"></i></label>
 
         <div class="bars">
-            <ul id="head-bars">
-                <li class="clfeatured"><a href="#lyrics">lyrics</a></li>
-                <li class="clabout"><a href="#about">About</a></li>
-                <li class="clQampersandA"><a href="#QampersandA">Q&A</a></li>
-                <li class="clcmt"><a href="#cmt">Comments</a></li>
-            </ul>
+            <div id="head-bars">
+                <ul class="header-menu">
+                    <li><a href="#">Lyrics </a></li>
+                    <li><a href="#">About </a></li>
+                    <li><a href="#">Q&A </a></li>
+                    <li><a href="#">Comments </a></li>
+                </ul>     
+            </div>
             
             <footer>
                 <div class="logo"><img src="Image-source/logo-J.png" alt=""></div>
@@ -413,12 +415,15 @@
                 </div>
             </div>
             <div class="control">
-                <i class="fa-solid fa-play"></i>
+                <i class="bi bi-play-fill"></i>
             </div>
             <div class="time">
                 <span class="current-time">0:00</span>
                 <input type="range" value="0" class="range">
                 <span class="duration">-3:10</span>
+            </div>
+            <div class="full-screen">
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
             </div>
             <div class="logo"><img src="Image-source/logo-J.png" alt=""></div>
             <audio id="audio" src="Music-source/Billie Eilish - BLUE.mp3"></audio>

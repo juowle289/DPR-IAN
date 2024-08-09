@@ -359,7 +359,7 @@ footer .logo {
 }
 
 .dot {
-  width: 1em; height: 1em;
+  width: .8em; height: .8em;
   border-radius: 50%;
   background: #fff;
   animation: pulse 1s infinite;
@@ -381,4 +381,8 @@ footer .logo {
     transform: scale(.5);
     opacity: 0;
   }
+}
+
+.header-menu li.active {
+  border: var(--border-main);
 }

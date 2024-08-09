@@ -1,6 +1,6 @@
 /* MOBILE */
 @media screen and (max-width: 768px) {
-
+  body {overflow-x: hidden;}
   body header {
     width: 100%;
     font-size: 0.9em;
@@ -18,16 +18,20 @@
     display: flex;
     font-size: 1em;
   }
-
+  
   body footer ul li {
     margin-right: .6em;
   }
 
-  body header  :is(#header-menu, #signUp, #logIn) {
+  body footer .logo {
+    padding: 0;
+  }
+
+  body header :is(.header-menu li, #signUp, #logIn) {
     display: none;
   }
 
-  body header .fa-magnifying-glass{
+  body header ul .fa-magnifying-glass{
     position: absolute;
     right: 4em;
     top: 1.1em;
@@ -49,14 +53,16 @@
   }
 
   /* Bars */
+  
+  body header #head-bars .header-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+  }
 
   body header #hamburger-label #bars-icon {
     position: relative;
-    z-index: 100;
-  }
-
-  body header #head-bars #header-menu {
-    display: flex;
+    z-index: 21;
   }
 
   body header #head-bars li {
@@ -208,10 +214,6 @@
     font-size: 1.1em;
   }
 
-  /* body main .summary-title:focus {
-    background: var(--color-main);
-  } */
-
   body main .QapsA iframe {
     width: 100%;
     height: auto;
@@ -233,10 +235,10 @@
   
   body article .img-control {
     width: 4em;
-    column-gap: .3em;
+    column-gap: 0em;
     cursor: grab;
-      pointer-events: none; /*//todo sự kiện con trỏ/ nhấp chuột */
-      touch-action: none; /*// todo hành động chạm/ cảm ứng */
+      pointer-events: none; 
+      touch-action: none;
   }
 
   body article .img-control img {
@@ -255,8 +257,16 @@
   body article .audio-play .time {
     display: flex;
     width: 100%;
-    margin: 0 0 0 .8em;
-    column-gap: .8em;
+    margin: 0;
+    column-gap: .3em;
+  }
+  .audio-play .time span {
+    font-size: .9em;
+  }
+
+  article .full-screen i {
+    font-size: 1.2em;
+    padding: .3em;
   }
 
   body article input[type="range"]::-webkit-slider-runnable-track {
@@ -264,11 +274,11 @@
   }
 
   body article input[type="range"]::-webkit-slider-thumb {
-    font-size: .96em;
-    margin-top: -.23em;
+    font-size: 1em;
+    margin-top: -.26em;
   }
 
-  body article .fa-play {
+  body article .bi-play-fill {
     font-size: .3em;
   }
 
@@ -364,6 +374,8 @@ nav #vinylRecordAlbum {
   border-radius: 0.1em;
   margin: 0 1.3em 0 0;
   /* visibility: hidden; */
+  margin: 5.9em 2.3em 0 -.16em;
+  overflow: hidden;
 }
 
 .song-info {
@@ -630,7 +642,15 @@ article .img-control img {
 
 article .control i {
   cursor: pointer;
-  font-size: 1.6em;
+  font-size: 2.3em;
+}
+.full-screen i {
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+article i:hover {
+  transform: scale(1.1);
 }
 
 input[type="range"] {
@@ -672,20 +692,18 @@ input[type="range"]::-webkit-slider-runnable-track {
   height: .3em;
 }
 
-input[type="range"]::-webkit-slider-runnable-track:hover {
-  background: var(--color-main);
-  border: var(--border-black);
-}
-
 article .time {
   display: flex;
   width: 100%;
-  margin-right: 3.5em;
   column-gap: 1.3em;
 }
 
 article .content-control {
   flex-direction: column;
+}
+.content-control a {color: #000;}
+.content-control a:hover {
+  text-decoration: underline;
 }
 
 #singer {
@@ -696,7 +714,7 @@ article .content-control {
 }
 
 article .logo {
-  position: absolute;
+  /* position: absolute; */
   right: .3em;
   background: rgba(0, 0, 0, .8);
 }
@@ -803,7 +821,15 @@ article .logo {
 .ads #spotifyIcon{ /* icon */
   font-size: 3.5em;
   color: #1ed760;
+  animation: pulsate-fwd 0.75s ease-in-out infinite both;
 }
+
+@keyframes pulsate-fwd {
+  0%   {transform: scale(1);}
+  50%  {transform: scale(1.1);}
+  100% {transform: scale(1);}
+}
+
 
 .ads #closeSpotifyIcon { /* x */
   position: absolute;

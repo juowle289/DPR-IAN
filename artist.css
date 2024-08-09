@@ -838,7 +838,3 @@ figcaption #avt-artist {
 .footer_recommended img {
     width: auto; height: 1em;
 }
-
-.header-menu li.active {
-    border: var(--border-main);
-}

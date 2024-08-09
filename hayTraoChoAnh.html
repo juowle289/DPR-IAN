@@ -45,11 +45,11 @@
         <div class="logo">
             <a href="dprian.html"><img src="Image-source/logo-J.png"></a>
             <!-- Juowle -->
-            <ul>
-                <li id="header-menu" class="clLyrics"><a href="#lyrics">Lyrics </a></li>
-                <li id="header-menu" class="clAbout"><a href="#about">About </a></li>
-                <li id="header-menu" class="clQamsA"><a href="#QampersandA">Q&A </a></li>
-                <li id="header-menu" class="clcomments"><a href="#cmt">Comments</a></li>
+            <ul class="header-menu">
+                <li><a href="#section1">Lyrics </a></li>
+                <li><a href="#section2">About </a></li>
+                <li><a href="#section3">Q&A </a></li>
+                <li><a href="#section4">Comments </a></li>
             </ul>
         </div>
         <ul>
@@ -70,12 +70,14 @@
 
         <!-- Bar -->
         <div class="bars">
-            <ul id="head-bars">
-                <li class="clfeatured"><a href="#lyrics">lyrics</a></li>
-                <li class="clabout"><a href="#about">About</a></li>
-                <li class="clQampersandA"><a href="#QampersandA">Q&A</a></li>
-                <li class="clcmt"><a href="#cmt">Comments</a></li>
-            </ul>
+            <div id="head-bars">
+                <ul class="header-menu">
+                    <li><a href="#">Lyrics </a></li>
+                    <li><a href="#">About </a></li>
+                    <li><a href="#">Q&A </a></li>
+                    <li><a href="#">Comments </a></li>
+                </ul>     
+            </div>
 
             <footer>
                 <div class="logo"><img src="Image-source/logo-J.png" alt=""></div>
@@ -101,7 +103,7 @@
         <div class="album-img">
             <img id="vinylRecordAlbum" src="Image-source/Collections/vinylAlbumMobile.png" alt="">
         </div>
-
+        
         <img id="imgCollections" src="Image-source/Collections/hayTraoChoAnh.jpg" alt="">
 
         <div class="song-info">
@@ -121,7 +123,7 @@
                         sản phẩm tầm cỡ quốc tế.
                     </p>
                     <div class="expand">
-                        <a href="#about" style="color: #000;"><span>More <i class="bi bi-box-arrow-down"></i></span></a>
+                        <a href="#about" style="color: #000; border: var(--border-black);"><span>More <i class="bi bi-box-arrow-down"></i></span></a>
                     </div>
                 </div>
             </div>
@@ -135,7 +137,7 @@
     </nav>
 
     <main>
-        <section class="Lyric-song" id="lyrics">
+        <section class="Lyric-song" id="section1">
             <!-- Lyrics -->
             <div class="lyric">
                 <span><i class="fa-solid fa-circle-info"></i> Hãy Trao Cho Anh Lyrics</span>
@@ -340,7 +342,7 @@
         </section>
 
         <!-- About -->
-        <section class="about" id="about">
+        <section class="about" id="section2">
             <h1>About</h1>
             <div class="summary-content">
                 <p>
@@ -362,7 +364,7 @@
             </div>
         </section>
         <!-- Question and Answer -->
-        <section class="QapsA" id="QampersandA">
+        <section class="QapsA" id="section3">
             <h1>Q&A</h1>
             <details>
                 <summary class="summary-title">
@@ -405,7 +407,7 @@
             </details>
         </section>
         <!-- comment -->
-        <section class="comments" id="cmt">
+        <section class="comments" id="secton4">
             <h1>Comments</h1>
             <div class="summary-content">
                 <div class="cmt-container" id="cmt-container"></div>
@@ -428,12 +430,15 @@
                 </div>
             </div>
             <div class="control">
-                <i class="fa-solid fa-play"></i>
+                <i class="bi bi-play-fill"></i>
             </div>
             <div class="time">
                 <span class="current-time">0:00</span>
                 <input type="range" value="0" class="range">
                 <span class="duration">-4:05</span>
+            </div>
+            <div class="full-screen">
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
             </div>
             <div class="logo"><img src="Image-source/logo-J.png" alt=""></div>
             <audio id="audio" src="Music-source/Sơn Tùng M-TP, SnoopDogg - Hãy Trao Cho Anh - Audio.mp3"></audio>
